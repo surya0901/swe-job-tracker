@@ -58,6 +58,7 @@ export default function DirectoryView({ companies, jobs }) {
               <th className="px-4 py-3 font-medium">Company</th>
               <th className="px-4 py-3 font-medium">Industry</th>
               <th className="px-4 py-3 font-medium">Status</th>
+              <th className="px-4 py-3 font-medium">Coverage</th>
               <th className="px-4 py-3 font-medium">Open verified jobs</th>
               <th className="px-4 py-3 font-medium">Program / careers</th>
             </tr>
@@ -74,6 +75,25 @@ export default function DirectoryView({ companies, jobs }) {
                     {COMPANY_STATUS_LABELS[c.status]}
                   </span>
                 </td>
+                <td className="px-4 py-3">
+                  {c.status === 'connected' ? (
+                    c.coverageComplete ? (
+                      <span className="text-xs text-emerald-400">Fully checked</span>
+                    ) : (
+                      <span
+                        className="text-xs text-amber-400"
+                        title="Hit an operational cap (pagination or detail-fetch limit) this run — what we found is real, but we may not have seen everything"
+                      >
+                        Partial ({c.coverageStats?.candidatesFound ?? '?'} found,{' '}
+                        {c.coverageStats?.detailsFetched ?? '?'} detailed)
+                      </span>
+                    )
+                  ) : c.status === 'source_failing' ? (
+                    <span className="text-xs text-red-400">{c.failureCategory ?? 'failing'}</span>
+                  ) : (
+                    <span className="text-xs text-zinc-600">—</span>
+                  )}
+                </td>
                 <td className="px-4 py-3 text-zinc-400">{openCountByCompany.get(c.companyId) ?? 0}</td>
                 <td className="px-4 py-3">
                   {c.careersUrl ? (
@@ -87,7 +107,7 @@ export default function DirectoryView({ companies, jobs }) {
                     </a>
                   ) : c.source ? (
                     <span className="text-zinc-500">
-                      via {c.source.adapter} ({c.source.token})
+                      via {c.source.adapter} ({c.source.token ?? c.source.tenant})
                     </span>
                   ) : (
                     <span className="text-zinc-600">—</span>
@@ -97,7 +117,7 @@ export default function DirectoryView({ companies, jobs }) {
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-8 text-center text-zinc-600">
+                <td colSpan={6} className="px-4 py-8 text-center text-zinc-600">
                   No companies match.
                 </td>
               </tr>

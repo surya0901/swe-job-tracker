@@ -12,6 +12,7 @@ const jobs = Array.from({ length: 5 }, (_, i) => ({
   status: i === 4 ? 'closed' : 'open',
   location: i === 0 ? 'Remote' : 'New York, NY',
   country: i === 2 ? 'IN' : 'US',
+  locationScope: i === 2 ? 'International' : 'US',
   verified: i !== 3,
   postedAt: `2026-01-0${i + 1}T00:00:00.000Z`,
   firstSeenAt: `2026-01-0${i + 1}T00:00:00.000Z`,
@@ -39,20 +40,42 @@ describe('filterJobs', () => {
     expect(result[0].id).toBe('job-2')
   })
 
-  it('country=US excludes a job identified as a different specific country', () => {
-    const result = filterJobs(jobs, { country: 'US' })
+  it('locationScope=US excludes a job identified as International', () => {
+    const result = filterJobs(jobs, { locationScope: 'US' })
     expect(result.find((j) => j.id === 'job-2')).toBeUndefined()
   })
 
-  it('country=US does NOT hide a job with an unparsed/Unspecified country', () => {
-    const withUnspecified = [...jobs, { ...jobs[0], id: 'job-unspecified', country: 'Unspecified' }]
-    const result = filterJobs(withUnspecified, { country: 'US' })
-    expect(result.find((j) => j.id === 'job-unspecified')).toBeDefined()
+  it('locationScope=US does NOT include an Unknown-scope job unless explicitly toggled on', () => {
+    const withUnknown = [...jobs, { ...jobs[0], id: 'job-unknown-loc', locationScope: 'Unknown' }]
+    const excluded = filterJobs(withUnknown, { locationScope: 'US' })
+    expect(excluded.find((j) => j.id === 'job-unknown-loc')).toBeUndefined()
+    const included = filterJobs(withUnknown, { locationScope: 'US', includeUnknownLocations: true })
+    expect(included.find((j) => j.id === 'job-unknown-loc')).toBeDefined()
   })
 
-  it('country=International only returns non-US jobs', () => {
-    const result = filterJobs(jobs, { country: 'International' })
-    expect(result.every((j) => j.country !== 'US')).toBe(true)
+  it('an Unknown-scope job is never silently labeled International either', () => {
+    const withUnknown = [...jobs, { ...jobs[0], id: 'job-unknown-loc', locationScope: 'Unknown' }]
+    const result = filterJobs(withUnknown, { locationScope: 'International', includeUnknownLocations: true })
+    expect(result.find((j) => j.id === 'job-unknown-loc')).toBeUndefined()
+  })
+
+  it('locationScope=International only returns non-US jobs', () => {
+    const result = filterJobs(jobs, { locationScope: 'International' })
+    expect(result.every((j) => j.locationScope !== 'US')).toBe(true)
+  })
+
+  it('hides needs_review jobs by default, keeping "open" and "eligible" as separate axes', () => {
+    const withReview = jobs.map((j) => ({ ...j, reviewState: j.id === 'job-0' ? 'auto' : 'needs_review' }))
+    const result = filterJobs(withReview, {})
+    expect(result.every((j) => j.reviewState !== 'needs_review')).toBe(true)
+  })
+
+  it('includeNeedsReview shows needs_review jobs without changing their status', () => {
+    const withReview = jobs.map((j) => ({ ...j, reviewState: j.id === 'job-0' ? 'auto' : 'needs_review' }))
+    const result = filterJobs(withReview, { includeNeedsReview: true })
+    const reviewJob = result.find((j) => j.id === 'job-1')
+    expect(reviewJob).toBeDefined()
+    expect(reviewJob.status).toBe('open') // status untouched by the eligibility review gate
   })
 
   it('filters by eligibility category', () => {

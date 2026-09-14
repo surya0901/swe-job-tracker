@@ -1,73 +1,113 @@
-import { fetchWithRetry } from '../fetchWithRetry.mjs'
+import { fetchWithRetry, mapWithConcurrency } from '../fetchWithRetry.mjs'
+import { htmlToText } from '../htmlText.mjs'
 
 // Workday's CXS (career site) API. This is the same unauthenticated JSON
 // endpoint a company's own public careers page calls client-side — it is
 // not a documented public API the way Greenhouse/Lever/Ashby are, so each
-// tenant/site pair here has been individually verified by an actual
-// successful call (see scripts/companies.mjs comments), not guessed.
-//
-// A single tenant can host many thousands of postings across every job
-// family, and Workday's full-text search is fuzzy (it does not reliably
-// restrict to an exact phrase). To keep this bounded and reasonably
-// on-topic without a description-level fetch per posting (which would be
-// one HTTP call per job — infeasible at this scale), we run a short list
-// of targeted queries per tenant and merge+dedupe the results, then let
-// scripts/lib/classifyJob.mjs filter on title (Workday's list response
-// does not include full descriptions, only title/location/timeType/dates
-// — so unlike Greenhouse, Workday-sourced jobs are classified on title
-// only; this is a real, documented limitation, not an oversight).
+// tenant/site pair in scripts/companies.mjs has been individually
+// verified by an actual successful call, not guessed.
 const QUERIES = ['software engineer', 'technology development program', 'software developer']
 const PAGE_SIZE = 20
-const MAX_PAGES_PER_QUERY = 2
+const MAX_PAGES_PER_QUERY = 10 // operational cap — see listCoverageComplete
+const MAX_DETAIL_FETCHES = 120 // operational cap — see detailCoverageComplete
+const DETAIL_CONCURRENCY = 5
 
 export async function fetchWorkdayJobs({ tenant, wd, site }) {
   const base = `https://${tenant}.${wd}.myworkdayjobs.com/wday/cxs/${tenant}/${site}`
-  const seenPaths = new Map()
+  const candidatesByPath = new Map()
+  let listCoverageComplete = true
 
   for (const searchText of QUERIES) {
-    for (let page = 0; page < MAX_PAGES_PER_QUERY; page++) {
+    let page = 0
+    let total = null
+    while (page < MAX_PAGES_PER_QUERY) {
       const res = await fetchWithRetry(`${base}/jobs`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          appliedFacets: {},
-          limit: PAGE_SIZE,
-          offset: page * PAGE_SIZE,
-          searchText,
-        }),
+        body: JSON.stringify({ appliedFacets: {}, limit: PAGE_SIZE, offset: page * PAGE_SIZE, searchText }),
       })
       if (!res.ok) {
         if (page === 0 && searchText === QUERIES[0]) {
-          throw new Error(`Workday ${tenant}/${site}: HTTP ${res.status}`)
+          let detail = ''
+          try {
+            detail = (await res.text()).slice(0, 200)
+          } catch {
+            /* ignore */
+          }
+          throw new Error(`Workday ${tenant}/${site}: HTTP ${res.status} ${detail}`)
         }
-        break // later queries/pages failing after a first success is not fatal
+        // A later page/query failing does not invalidate what we already
+        // collected, but it DOES mean we didn't see the whole result set
+        // for this tenant this run — never silently call that "complete".
+        listCoverageComplete = false
+        break
       }
       const data = await res.json()
       const postings = Array.isArray(data.jobPostings) ? data.jobPostings : []
+      total = data.total ?? total
       for (const job of postings) {
         if (!job.externalPath) continue
-        if (!seenPaths.has(job.externalPath)) seenPaths.set(job.externalPath, job)
+        if (!candidatesByPath.has(job.externalPath)) candidatesByPath.set(job.externalPath, job)
       }
-      if (postings.length < PAGE_SIZE) break // last page for this query
+      page += 1
+      const seenSoFar = page * PAGE_SIZE
+      if (postings.length < PAGE_SIZE || (total !== null && seenSoFar >= total)) break // reached the end for this query
+      if (page >= MAX_PAGES_PER_QUERY) {
+        listCoverageComplete = false // hit the operational cap before `total`
+      }
     }
   }
 
-  return [...seenPaths.values()].map((job) => {
-    const parsedPosted = parseWorkdayRelativeDate(job.postedOn)
+  const candidates = [...candidatesByPath.values()]
+  const toFetchDetails = candidates.slice(0, MAX_DETAIL_FETCHES)
+  const detailCoverageComplete = candidates.length <= MAX_DETAIL_FETCHES
+
+  const details = await mapWithConcurrency(toFetchDetails, DETAIL_CONCURRENCY, async (job) => {
+    try {
+      const res = await fetchWithRetry(`${base}${job.externalPath}`, { timeoutMs: 10000, retries: 1 })
+      if (!res.ok) return { job, detail: null }
+      const data = await res.json()
+      return { job, detail: data.jobPostingInfo ?? null }
+    } catch {
+      return { job, detail: null }
+    }
+  })
+  const detailByPath = new Map(details.map((d) => [d.job.externalPath, d.detail]))
+
+  const jobs = candidates.map((job) => {
+    const detail = detailByPath.get(job.externalPath)
+    const parsedPosted = parseWorkdayRelativeDate(detail?.postedOn ?? job.postedOn)
+    const allLocations = detail
+      ? [detail.location, ...(detail.additionalLocations ?? [])].filter(Boolean).join('; ')
+      : job.locationsText || ''
+    const structuredCountry = detail?.country?.descriptor ?? null
     return {
       sourceJobId: job.externalPath,
       title: job.title ?? '',
-      location: job.locationsText ?? '',
+      location: allLocations,
+      structuredCountry,
       applyUrl: `https://${tenant}.${wd}.myworkdayjobs.com/${site}${job.externalPath}`,
       sourceUrl: `https://${tenant}.${wd}.myworkdayjobs.com/${site}${job.externalPath}`,
-      description: '', // not available from the list endpoint
+      description: detail?.jobDescription ? htmlToText(detail.jobDescription) : '',
       postedAt: parsedPosted,
       postedAtProvenance: parsedPosted ? 'relative_text_parsed' : 'unavailable',
-      postedAtRawText: job.postedOn ?? null,
+      postedAtRawText: detail?.postedOn ?? job.postedOn ?? null,
       sourceUpdatedAt: null,
       department: '',
+      detailFetched: detailByPath.has(job.externalPath) && detail !== null,
     }
   })
+
+  return {
+    jobs,
+    // A single boolean for collect.mjs's closure-eligibility gate; the
+    // granular list-vs-detail breakdown is still exposed for diagnostics.
+    coverageComplete: listCoverageComplete && detailCoverageComplete,
+    listCoverageComplete,
+    detailCoverageComplete,
+    candidatesFound: candidates.length,
+    detailsFetched: details.filter((d) => d.detail !== null).length,
+  }
 }
 
 // Workday's list API gives a relative string, not a real timestamp —
@@ -88,5 +128,5 @@ export function parseWorkdayRelativeDate(text, now = new Date()) {
   // precise.
   const exactDaysAgo = t.match(/^posted (\d+) days? ago$/)
   if (exactDaysAgo) return new Date(now.getTime() - Number(exactDaysAgo[1]) * dayMs).toISOString()
-  return null // "30+ Days Ago" and unrecognized formats stay unknown rather than guessed
+  return null
 }

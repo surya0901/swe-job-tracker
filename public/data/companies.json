@@ -9,7 +9,9 @@
       "token": "stripe"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "airbnb",
@@ -21,7 +23,9 @@
       "token": "airbnb"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "robinhood",
@@ -33,7 +37,9 @@
       "token": "robinhood"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "affirm",
@@ -45,7 +51,9 @@
       "token": "affirm"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "asana",
@@ -57,7 +65,9 @@
       "token": "asana"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "coinbase",
@@ -69,7 +79,9 @@
       "token": "coinbase"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "databricks",
@@ -81,7 +93,9 @@
       "token": "databricks"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "discord",
@@ -93,7 +107,9 @@
       "token": "discord"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "dropbox",
@@ -105,7 +121,9 @@
       "token": "dropbox"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "figma",
@@ -117,7 +135,9 @@
       "token": "figma"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "instacart",
@@ -129,7 +149,9 @@
       "token": "instacart"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "lyft",
@@ -141,7 +163,9 @@
       "token": "lyft"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "notion",
@@ -153,7 +177,9 @@
       "token": "notion"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "okta",
@@ -165,7 +191,9 @@
       "token": "okta"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "pinterest",
@@ -177,7 +205,9 @@
       "token": "pinterest"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "reddit",
@@ -189,7 +219,9 @@
       "token": "reddit"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "squarespace",
@@ -201,7 +233,9 @@
       "token": "squarespace"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "twilio",
@@ -213,7 +247,9 @@
       "token": "twilio"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "webflow",
@@ -225,7 +261,9 @@
       "token": "webflow"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "gusto",
@@ -237,7 +275,9 @@
       "token": "gusto"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "brex",
@@ -249,7 +289,9 @@
       "token": "brex"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "ramp",
@@ -261,7 +303,9 @@
       "token": "ramp"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "scale-ai",
@@ -273,7 +317,9 @@
       "token": "scaleai"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "anthropic",
@@ -285,7 +331,9 @@
       "token": "anthropic"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "mongodb",
@@ -297,7 +345,9 @@
       "token": "mongodb"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "elastic",
@@ -309,7 +359,9 @@
       "token": "elastic"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "gitlab",
@@ -321,7 +373,9 @@
       "token": "gitlab"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "datadog",
@@ -333,7 +387,9 @@
       "token": "datadog"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "pagerduty",
@@ -345,7 +401,9 @@
       "token": "pagerduty"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "amplitude",
@@ -357,7 +415,9 @@
       "token": "amplitude"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "braze",
@@ -369,7 +429,9 @@
       "token": "braze"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "duolingo",
@@ -381,7 +443,9 @@
       "token": "duolingo"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "roblox",
@@ -393,7 +457,9 @@
       "token": "roblox"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "cloudflare",
@@ -405,7 +471,9 @@
       "token": "cloudflare"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "samsara",
@@ -417,7 +485,9 @@
       "token": "samsara"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "toast",
@@ -429,7 +499,9 @@
       "token": "toast"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "carta",
@@ -441,7 +513,9 @@
       "token": "carta"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "palantir-technologies",
@@ -453,7 +527,9 @@
       "token": "palantir"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "linear",
@@ -465,7 +541,9 @@
       "token": "linear"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "vanta",
@@ -477,7 +555,9 @@
       "token": "vanta"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "mercury",
@@ -489,7 +569,9 @@
       "token": "mercury"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "watershed",
@@ -501,7 +583,9 @@
       "token": "watershed"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "modern-treasury",
@@ -513,7 +597,9 @@
       "token": "moderntreasury"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "deel",
@@ -525,7 +611,9 @@
       "token": "deel"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
   },
   {
     "companyId": "capital-one",
@@ -539,7 +627,14 @@
       "site": "Capital_One"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 440,
+      "detailsFetched": 120
+    }
   },
   {
     "companyId": "fidelity-investments",
@@ -553,7 +648,14 @@
       "site": "FidelityCareers"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 73,
+      "detailsFetched": 73
+    }
   },
   {
     "companyId": "pnc-financial-services",
@@ -567,7 +669,14 @@
       "site": "External"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 96,
+      "detailsFetched": 96
+    }
   },
   {
     "companyId": "u-s-bank",
@@ -581,7 +690,14 @@
       "site": "US_Bank_Careers"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 72,
+      "detailsFetched": 72
+    }
   },
   {
     "companyId": "vanguard",
@@ -595,7 +711,14 @@
       "site": "vanguard_external"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 96,
+      "detailsFetched": 96
+    }
   },
   {
     "companyId": "barclays",
@@ -609,7 +732,14 @@
       "site": "External_Career_Site_Barclays"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 417,
+      "detailsFetched": 120
+    }
   },
   {
     "companyId": "target",
@@ -623,7 +753,14 @@
       "site": "targetcareers"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 95,
+      "detailsFetched": 89
+    }
   },
   {
     "companyId": "cvs-health",
@@ -637,7 +774,14 @@
       "site": "CVS_Health_Careers"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": false,
+      "candidatesFound": 166,
+      "detailsFetched": 120
+    }
   },
   {
     "companyId": "caterpillar",
@@ -651,7 +795,14 @@
       "site": "CaterpillarCareers"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 88,
+      "detailsFetched": 66
+    }
   },
   {
     "companyId": "general-motors",
@@ -665,21 +816,14 @@
       "site": "Careers_GM"
     },
     "careersUrl": null,
-    "programName": null
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 109,
+      "detailsFetched": 79
+    }
   },
   {
     "companyId": "northrop-grumman",
@@ -693,7 +837,14 @@
       "site": "Northrop_Grumman_External_Site"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 442,
+      "detailsFetched": 55
+    }
   },
   {
     "companyId": "booz-allen-hamilton",
@@ -707,7 +858,119 @@
       "site": "BAH_Jobs"
     },
     "careersUrl": null,
-    "programName": null
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 109,
+      "detailsFetched": 52
+    }
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "wf",
+      "wd": "wd1",
+      "site": "WellsFargoJobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 75,
+      "detailsFetched": 36
+    }
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "usaa",
+      "wd": "wd1",
+      "site": "USAAJOBSWD"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 48,
+      "detailsFetched": 48
+    }
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 90,
+      "detailsFetched": 54
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 2,
+      "detailsFetched": 1
+    }
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "lowes",
+      "wd": "wd5",
+      "site": "LWS_External_CS"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 239,
+      "detailsFetched": 89
+    }
   },
   {
     "companyId": "doordash",
@@ -717,7 +980,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:doordash -> Greenhouse doordash: HTTP 404"
+    "error": "greenhouse:doordash -> Greenhouse doordash: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "snowflake",
@@ -727,7 +991,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:snowflake -> Greenhouse snowflake: HTTP 404"
+    "error": "greenhouse:snowflake -> Greenhouse snowflake: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "wealthfront",
@@ -737,7 +1002,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:wealthfront -> Greenhouse wealthfront: HTTP 404"
+    "error": "greenhouse:wealthfront -> Greenhouse wealthfront: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "plaid",
@@ -747,7 +1013,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:plaid -> Greenhouse plaid: HTTP 404"
+    "error": "greenhouse:plaid -> Greenhouse plaid: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "rippling",
@@ -757,7 +1024,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:rippling -> Greenhouse rippling: HTTP 404"
+    "error": "greenhouse:rippling -> Greenhouse rippling: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "openai",
@@ -767,7 +1035,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:openai -> Greenhouse openai: HTTP 404"
+    "error": "greenhouse:openai -> Greenhouse openai: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "hashicorp",
@@ -777,7 +1046,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:hashicorp -> Greenhouse hashicorp: HTTP 404"
+    "error": "greenhouse:hashicorp -> Greenhouse hashicorp: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "confluent",
@@ -787,7 +1057,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:confluent -> Greenhouse confluent: HTTP 404"
+    "error": "greenhouse:confluent -> Greenhouse confluent: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "grammarly",
@@ -797,7 +1068,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:grammarly -> Greenhouse grammarly: HTTP 404"
+    "error": "greenhouse:grammarly -> Greenhouse grammarly: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "unity",
@@ -807,7 +1079,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:unity -> Greenhouse unity: HTTP 404"
+    "error": "greenhouse:unity -> Greenhouse unity: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "benchling",
@@ -817,7 +1090,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "greenhouse:benchling -> Greenhouse benchling: HTTP 404"
+    "error": "greenhouse:benchling -> Greenhouse benchling: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "attentive",
@@ -827,7 +1101,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:attentive -> Lever attentive: HTTP 404"
+    "error": "lever:attentive -> Lever attentive: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "postman",
@@ -837,7 +1112,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:postman -> Lever postman: HTTP 404"
+    "error": "lever:postman -> Lever postman: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "betterment",
@@ -847,7 +1123,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:betterment -> Lever betterment: HTTP 404"
+    "error": "lever:betterment -> Lever betterment: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "seatgeek",
@@ -857,7 +1134,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:seatgeek -> Lever seatgeek: HTTP 404"
+    "error": "lever:seatgeek -> Lever seatgeek: HTTP 404",
+    "failureCategory": "not_found"
   },
   {
     "companyId": "retool",
@@ -867,7 +1145,41 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "ashby:retool -> Ashby retool: HTTP 404"
+    "error": "ashby:retool -> Ashby retool: HTTP 404",
+    "failureCategory": "not_found"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "jpmorgan-chase",
@@ -910,16 +1222,6 @@
     "error": null
   },
   {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.wellsfargojobs.com",
-    "programName": "Technology Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "citigroup",
     "name": "Citigroup",
     "industry": "Finance",
@@ -936,16 +1238,6 @@
     "status": "manual_verification_needed",
     "careersUrl": "https://www.americanexpress.com/en-us/careers",
     "programName": "Technology Rotation Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.statestreet.com/careers",
-    "programName": "Technology Rotational Program",
     "source": null,
     "error": null
   },
@@ -1050,16 +1342,6 @@
     "error": null
   },
   {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.usaajobs.com",
-    "programName": "Technology Development Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "progressive-insurance",
     "name": "Progressive Insurance",
     "industry": "Insurance",
@@ -1140,16 +1422,6 @@
     "error": null
   },
   {
-    "companyId": "cigna",
-    "name": "Cigna",
-    "industry": "Healthcare",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://jobs.cigna.com",
-    "programName": "Technology Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "unitedhealth-group",
     "name": "UnitedHealth Group",
     "industry": "Healthcare",
@@ -1226,16 +1498,6 @@
     "status": "manual_verification_needed",
     "careersUrl": "https://careers.walmart.com",
     "programName": "Software Engineering Development Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://talent.lowes.com",
-    "programName": "Technology Development Program",
     "source": null,
     "error": null
   },
@@ -1425,16 +1687,6 @@
     "industry": "Telecom",
     "status": "manual_verification_needed",
     "careersUrl": "https://www.verizon.com/about/careers",
-    "programName": "Technology Development Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.att.jobs",
     "programName": "Technology Development Program",
     "source": null,
     "error": null

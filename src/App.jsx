@@ -22,10 +22,17 @@ const EMPTY_FILTERS = {
   location: '',
   availability: 'All',
   // Defaults to US per spec — "clearly visible option for all countries"
-  // is the country selector itself, always present and switchable.
-  country: 'US',
+  // is the scope selector itself, always present and switchable. Unknown
+  // locations are a distinct state, gated by their own toggle rather than
+  // folded into US or International.
+  locationScope: 'US',
+  includeUnknownLocations: false,
   postedWithin: 'All',
   eligibility: 'All',
+  // Uncertain ("possibly eligible") matches are real and shown, but not
+  // by default — this keeps "posting is open" separate from "we're
+  // confident this fits a new grad."
+  includeNeedsReview: false,
 }
 const FILTERS_STORAGE_KEY = 'swe-tracker:filters:v1'
 
@@ -175,8 +182,14 @@ export default function App() {
   // when it was posted.
   const effectiveFilters = useMemo(() => {
     if (activeView === 'openings') return filters
-    const { country: _country, postedWithin: _postedWithin, ...rest } = filters
-    return rest
+    const {
+      locationScope: _locationScope,
+      includeUnknownLocations: _includeUnknownLocations,
+      postedWithin: _postedWithin,
+      includeNeedsReview: _includeNeedsReview,
+      ...rest
+    } = filters
+    return { ...rest, includeNeedsReview: true } // Tracker always shows everything the user tracked
   }, [filters, activeView])
 
   const filtered = useMemo(

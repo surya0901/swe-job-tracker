@@ -1,4 +1,5 @@
 import { fetchWithRetry } from '../fetchWithRetry.mjs'
+import { htmlToText } from '../htmlText.mjs'
 
 // Ashby's public job-board API — documented, CORS-open, designed for
 // embeddable job boards. https://developers.ashbyhq.com/docs/public-job-posting-api
@@ -13,25 +14,17 @@ export async function fetchAshbyJobs(boardToken) {
   // Ashby's `publishedAt` is documented as when the posting was published
   // to the public job board — the closest thing to a genuine posted date
   // among these three sources.
-  return jobs.map((job) => ({
+  return { jobs: jobs.map((job) => ({
     sourceJobId: String(job.id),
     title: job.title ?? '',
     location: job.location ?? job.locationName ?? '',
     applyUrl: job.applyUrl ?? job.jobUrl ?? '',
     sourceUrl: job.jobUrl ?? '',
-    description: stripHtml(job.descriptionPlain ?? ''),
+    description: htmlToText(job.descriptionPlain),
     postedAt: job.publishedAt ?? null,
     postedAtProvenance: job.publishedAt ? 'platform_published' : 'unavailable',
     sourceUpdatedAt: null,
     department: job.department ?? '',
-  }))
+  })), coverageComplete: true }
 }
 
-function stripHtml(html) {
-  return html
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 2000)
-}

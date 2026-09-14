@@ -30,14 +30,23 @@ export default function TopBar({
             SWE New Grad &amp; Rotational Program Tracker
           </h1>
           {meta && stats && (
-            <p className="text-xs text-zinc-500">
-              {stats.matchingJobs} verified open jobs at {stats.employersWithOpenings} employers
-              {' · '}
-              {meta.counts.connectedCompanies} connected / {meta.counts.totalCompanies} companies
-              researched
-              {' · '}
-              {stats.resultsAfterFilters} shown after current filters
-            </p>
+            <>
+              <p className="text-xs text-zinc-500">
+                {stats.matchingJobs} open postings at {stats.employersWithOpenings} employers
+                {' · '}
+                {meta.counts.connectedCompanies} connected ({meta.counts.fullyCheckedCompanies} fully checked,{' '}
+                {meta.counts.partiallyCheckedCompanies} partial) / {meta.counts.totalCompanies} researched
+                {' · '}
+                {stats.resultsAfterFilters} shown after current filters
+              </p>
+              <p className="text-xs text-zinc-600">
+                {meta.counts.supportedEarlyCareerJobs} supported early-career matches
+                {' · '}
+                {meta.counts.uncertainJobs} uncertain (needs review)
+                {' · '}
+                {meta.counts.softwareRotationalJobs} confirmed software rotational programs
+              </p>
+            </>
           )}
         </div>
 

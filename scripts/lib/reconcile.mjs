@@ -3,7 +3,7 @@
 
 import { detectProgramType } from './classifyJob.mjs'
 import { classifyEligibility } from './eligibility.mjs'
-import { detectCountry, detectWorkArrangement } from './geography.mjs'
+import { detectCountry, detectLocationScope, detectWorkArrangement } from './geography.mjs'
 
 function sourceKey(source) {
   return source.token ?? source.tenant
@@ -21,7 +21,8 @@ export function normalizeJob({ company, source, raw, nowIso, previousById }) {
     title: raw.title,
     programType: detectProgramType(raw.title),
     location: raw.location || 'Not specified',
-    country: detectCountry(raw.location),
+    country: detectCountry(raw.location, raw.structuredCountry),
+    locationScope: detectLocationScope(raw.location, raw.structuredCountry),
     workArrangement: detectWorkArrangement(raw.location),
     applyUrl: raw.applyUrl,
     sourceUrl: raw.sourceUrl,
@@ -50,6 +51,9 @@ export function normalizeJob({ company, source, raw, nowIso, previousById }) {
     verified: true,
     eligibility: eligibility.category,
     eligibilityEvidence: eligibility.evidence,
+    eligibilityExcerpts: eligibility.excerpts,
+    softwareRelevance: eligibility.softwareRelevance,
+    reviewState: eligibility.reviewState,
   }
 }
 

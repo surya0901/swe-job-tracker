@@ -114,15 +114,26 @@ export default function FilterBar({
       {showDateFilters && (
         <>
           <select
-            aria-label="Filter by country"
-            value={filters.country}
-            onChange={(e) => update('country', e.target.value)}
+            aria-label="Filter by location scope"
+            value={filters.locationScope}
+            onChange={(e) => update('locationScope', e.target.value)}
             className="rounded-md border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm text-zinc-200 focus:border-indigo-500 focus:outline-none"
           >
             <option value="US">US roles (default)</option>
-            <option value="All">All countries</option>
+            <option value="All">All locations</option>
             <option value="International">International only</option>
+            <option value="Mixed">US + international (mixed)</option>
           </select>
+
+          <label className="flex items-center gap-1.5 text-xs text-zinc-400">
+            <input
+              type="checkbox"
+              checked={filters.includeUnknownLocations}
+              onChange={(e) => update('includeUnknownLocations', e.target.checked)}
+              className="accent-indigo-500"
+            />
+            Include unknown locations
+          </label>
 
           <select
             aria-label="Filter by posted date"
@@ -137,6 +148,16 @@ export default function FilterBar({
               </option>
             ))}
           </select>
+
+          <label className="flex items-center gap-1.5 text-xs text-zinc-400" title="Uncertain matches are real postings — this only controls whether they're shown by default">
+            <input
+              type="checkbox"
+              checked={filters.includeNeedsReview}
+              onChange={(e) => update('includeNeedsReview', e.target.checked)}
+              className="accent-indigo-500"
+            />
+            Include roles needing review
+          </label>
         </>
       )}
 

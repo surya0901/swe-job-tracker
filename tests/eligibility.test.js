@@ -18,7 +18,7 @@ describe('classifyEligibility: description-aware classification', () => {
       description: 'We are excited to welcome candidates graduating in 2027 to our team.',
     })
     expect(result.category).toBe('explicit_new_grad')
-    expect(result.evidence[0]).toMatch(/graduating in 2027/)
+    expect(result.excerpts.join(' ')).toMatch(/graduating in 2027/)
   })
 
   it('does NOT exclude a new-grad role whose description mentions past internship experience', () => {
@@ -51,7 +51,9 @@ describe('classifyEligibility: description-aware classification', () => {
       description: 'Candidates must have a minimum of 5 years of professional experience.',
     })
     expect(result.category).toBe('excluded')
-    expect(result.evidence[0]).toMatch(/5\+ years/)
+    // Quotes the source's actual wording ("minimum of 5 years") — never a
+    // synthesized "5+ years" the posting didn't literally say.
+    expect(result.excerpts.join(' ')).toMatch(/minimum of 5 years/)
   })
 
   it('treats "0-2 years" required as entry level, not excluded', () => {
@@ -95,5 +97,95 @@ describe('classifyEligibility: description-aware classification', () => {
     const result = classifyEligibility({ title: 'Software Engineer', description: '' })
     expect(result.category).toBe('possibly_eligible')
     expect(result.evidence[0]).toMatch(/review/i)
+  })
+})
+
+describe('classifyEligibility: negative new-grad signals override keyword matches (the Stripe bug)', () => {
+  it('excludes a posting that tells new grads not to apply through it, even though "new grad" appears in the text', () => {
+    const result = classifyEligibility({
+      title: 'Backend/API Engineer, Money as a Service',
+      description:
+        'Note: if you are an intern, new grad, staff, front-end, or full-stack applicant, please do not apply using this link and visit our jobs page for those specific postings. Who we are: Stripe is a financial infrastructure platform.',
+    })
+    expect(result.category).toBe('excluded')
+    expect(result.excerpts[0]).toMatch(/please do not apply/i)
+  })
+
+  it('does not exclude a genuinely new-grad-accepting posting just because it also mentions interns elsewhere positively', () => {
+    const result = classifyEligibility({
+      title: 'Software Engineer, New Grad',
+      description: 'We welcome new grads and former interns who want to convert to full-time roles.',
+    })
+    expect(result.category).not.toBe('excluded')
+  })
+
+  it('excludes when a posting redirects graduates to a different program without an explicit negation word', () => {
+    const result = classifyEligibility({
+      title: 'Software Engineer',
+      description: 'New grad candidates should apply through our University Program instead — visit our jobs page for those specific postings.',
+    })
+    expect(result.category).toBe('excluded')
+  })
+})
+
+describe('classifyEligibility: software relevance vs. program structure (the Caterpillar bug)', () => {
+  it('does not treat a welding rotational program as software-relevant', () => {
+    const result = classifyEligibility({
+      title: '2027 Engineering Rotational Product Development Program-Welding',
+      description: '',
+    })
+    expect(result.category).toBe('excluded')
+    expect(result.softwareRelevance).toBe('not_software')
+  })
+
+  it('does not treat a materials rotational program as software-relevant', () => {
+    const result = classifyEligibility({
+      title: '2027 Engineering Rotational Product Development - Materials',
+      description: '',
+    })
+    expect(result.softwareRelevance).toBe('not_software')
+  })
+
+  it('marks a generic "Technology Development Program" title as uncertain, not confirmed, absent further evidence', () => {
+    const result = classifyEligibility({
+      title: 'Technology Development Program Associate',
+      description: '',
+    })
+    expect(result.category).toBe('rotational_tdp')
+    expect(result.softwareRelevance).toBe('uncertain')
+    expect(result.reviewState).toBe('needs_review')
+  })
+
+  it('confirms a rotational program as software-relevant when the title names an explicit software track', () => {
+    const result = classifyEligibility({
+      title: 'Technology Leadership Program - Application Development',
+      description: '',
+    })
+    expect(result.softwareRelevance).toBe('confirmed')
+  })
+
+  it('does not confirm software relevance from generic corporate boilerplate mentioning "software" incidentally', () => {
+    // Regression: a Sales/Account Executive posting at a software company
+    // whose "About Us" boilerplate says "our software powers millions of
+    // businesses" must not be classified as a software role.
+    const result = classifyEligibility({
+      title: 'Account Executive, Commercial',
+      description: 'Stripe is a financial infrastructure platform. Our software powers millions of businesses worldwide.',
+    })
+    expect(result.softwareRelevance).toBe('not_software')
+    expect(result.category).toBe('excluded')
+  })
+})
+
+describe('classifyEligibility: no fabricated ranges', () => {
+  it("quotes the source's actual wording instead of synthesizing a range like \"0-2 years\"", () => {
+    const result = classifyEligibility({
+      title: 'Software Engineer',
+      description: 'Candidates must have a minimum of two years of professional experience.',
+    })
+    // Whatever the outcome, nothing in the evidence/excerpts may contain
+    // an invented "0-2" range that the source never stated.
+    const allText = [...result.evidence, ...result.excerpts].join(' ')
+    expect(allText).not.toMatch(/0-2 years/)
   })
 })

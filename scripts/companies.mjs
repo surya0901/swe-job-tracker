@@ -82,7 +82,6 @@ export const atsCandidateCompanies = [
 // confirmed live feed. Status is always "manual_verification_needed".
 export const manualCompanies = [
   // Finance
-  ['Capital One', 'Finance', 'https://www.capitalonecareers.com', 'Technology Development Program (TDP)'],
   ['JPMorgan Chase', 'Finance', 'https://careers.jpmorgan.com', 'Software Engineer Program'],
   ['Goldman Sachs', 'Finance', 'https://www.goldmansachs.com/careers', 'New Analyst Program'],
   ['Morgan Stanley', 'Finance', 'https://www.morganstanley.com/careers', 'Technology Analyst Program'],
@@ -90,11 +89,8 @@ export const manualCompanies = [
   ['Wells Fargo', 'Finance', 'https://www.wellsfargojobs.com', 'Technology Rotational Program'],
   ['Citigroup', 'Finance', 'https://jobs.citi.com', 'Technology Development Program'],
   ['American Express', 'Finance', 'https://www.americanexpress.com/en-us/careers', 'Technology Rotation Program'],
-  ['Fidelity Investments', 'Finance', 'https://jobs.fidelity.com', 'Technology Leadership Program'],
   ['State Street', 'Finance', 'https://www.statestreet.com/careers', 'Technology Rotational Program'],
   ['BNY Mellon', 'Finance', 'https://www.bny.com/careers', 'Technology Early Talent Program'],
-  ['PNC Financial Services', 'Finance', 'https://www.pnc.com/careers', 'Technology Development Program'],
-  ['U.S. Bank', 'Finance', 'https://careers.usbank.com', 'Technology Leadership Program'],
   ['Charles Schwab', 'Finance', 'https://www.schwabjobs.com', 'Technology Rotational Program'],
   ['Visa', 'Finance', 'https://usa.visa.com/careers.html', 'Technology Engineering Rotational Program'],
   ['Mastercard', 'Finance', 'https://careers.mastercard.com', 'Software Engineer New Grad'],
@@ -123,7 +119,6 @@ export const manualCompanies = [
   ['GE HealthCare', 'Healthcare', 'https://www.gehealthcare.com/careers', 'Edison Engineering Development Program'],
   ['Stryker', 'Healthcare', 'https://careers.stryker.com', 'Engineering Development Program'],
   // Retail
-  ['Target', 'Retail', 'https://jobs.target.com', 'Technology Rotational Development Program'],
   ['Walmart', 'Retail', 'https://careers.walmart.com', 'Software Engineering Development Program'],
   ["Lowe's", 'Retail', 'https://talent.lowes.com', 'Technology Development Program'],
   ['The Home Depot', 'Retail', 'https://careers.homedepot.com', 'Technology Rotational Program'],
@@ -135,7 +130,6 @@ export const manualCompanies = [
   ['General Electric', 'Industrial', 'https://www.ge.com/careers', 'Edison Engineering Development Program'],
   ['Honeywell', 'Industrial', 'https://careers.honeywell.com', 'Technology Leadership Program'],
   ['3M', 'Industrial', 'https://www.3m.com/3M/en_US/careers-us', 'Engineering Rotational Program'],
-  ['Caterpillar', 'Industrial', 'https://www.caterpillar.com/en/careers.html', 'Engineering Development Program'],
   ['John Deere', 'Industrial', 'https://www.deere.com/en/our-company/careers', 'Technology & Engineering Leadership Program'],
   ['Emerson Electric', 'Industrial', 'https://www.emerson.com/en-us/careers', 'Engineering Development Program'],
   ['Parker Hannifin', 'Industrial', 'https://www.parker.com/us/en/careers.html', 'Engineering Leadership Development Program'],
@@ -143,8 +137,6 @@ export const manualCompanies = [
   ['Rockwell Automation', 'Industrial', 'https://www.rockwellautomation.com/en-us/company/careers.html', 'Engineering Development Program'],
   // Aerospace / defense
   ['Boeing', 'Aerospace/Defense', 'https://jobs.boeing.com', 'Engineering Rotation Program'],
-  ['RTX (Raytheon)', 'Aerospace/Defense', 'https://www.rtx.com/careers', 'Engineering Rotational Program'],
-  ['Northrop Grumman', 'Aerospace/Defense', 'https://www.northropgrumman.com/careers', 'Engineering & Technology Rotation Program'],
   ['Lockheed Martin', 'Aerospace/Defense', 'https://www.lockheedmartinjobs.com', 'Engineering Leadership Development Program'],
   ['General Dynamics', 'Aerospace/Defense', 'https://www.gd.com/careers', 'Engineering Development Program'],
   ['L3Harris Technologies', 'Aerospace/Defense', 'https://careers.l3harris.com', 'Engineering Rotational Program'],
@@ -162,7 +154,6 @@ export const manualCompanies = [
   ['EY', 'Consulting', 'https://www.ey.com/en_us/careers', 'Technology Consulting Program'],
   ['KPMG', 'Consulting', 'https://www.kpmguscareers.com', 'Technology Development Program'],
   ['McKinsey & Company', 'Consulting', 'https://www.mckinsey.com/careers', 'Technology Fellow Program'],
-  ['Booz Allen Hamilton', 'Consulting', 'https://www.boozallen.com/careers.html', 'Technology Rotational Program'],
   ['Capgemini', 'Consulting', 'https://www.capgemini.com/careers', 'Technology Development Program'],
   // Logistics
   ['UPS', 'Logistics', 'https://www.jobs-ups.com', 'Technology Development Program'],
@@ -196,4 +187,30 @@ export const manualCompanies = [
   ['Intuit', 'Fintech', 'https://jobs.intuit.com', 'Software Engineer, New Grad'],
   ['eBay', 'E-commerce', 'https://careers.ebayinc.com', 'Software Engineer, New Grad'],
   ['Uber', 'Transportation Tech', 'https://www.uber.com/careers', 'Software Engineer, New Grad'],
+]
+
+// Workday tenant/site pairs. Unlike the ATS candidates above, Workday has
+// no discoverable convention (tenant subdomain and internal "site" slug
+// are assigned per-customer and aren't guessable), so each entry here was
+// individually confirmed this session via a real POST to
+// https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs
+// returning a non-error response with a real `total` count — not guessed.
+// Workday's list endpoint doesn't include full descriptions, so these are
+// classified on title only (see scripts/lib/adapters/workday.mjs).
+const wd = (tenant, wdNum, site) => [{ adapter: 'workday', tenant, wd: wdNum, site }]
+
+export const workdayCandidateCompanies = [
+  ['Capital One', 'Finance', wd('capitalone', 'wd12', 'Capital_One')],
+  ['Fidelity Investments', 'Finance', wd('fmr', 'wd1', 'FidelityCareers')],
+  ['PNC Financial Services', 'Finance', wd('pnc', 'wd5', 'External')],
+  ['U.S. Bank', 'Finance', wd('usbank', 'wd1', 'US_Bank_Careers')],
+  ['Vanguard', 'Finance', wd('vanguard', 'wd5', 'vanguard_external')],
+  ['Barclays', 'Finance', wd('barclays', 'wd3', 'External_Career_Site_Barclays')],
+  ['Target', 'Retail', wd('target', 'wd5', 'targetcareers')],
+  ['CVS Health', 'Healthcare', wd('cvshealth', 'wd1', 'CVS_Health_Careers')],
+  ['Caterpillar', 'Industrial', wd('cat', 'wd5', 'CaterpillarCareers')],
+  ['General Motors', 'Automotive', wd('generalmotors', 'wd5', 'Careers_GM')],
+  ['RTX (Raytheon)', 'Aerospace/Defense', wd('globalhr', 'wd5', 'REC_RTX_Ext_Gateway')],
+  ['Northrop Grumman', 'Aerospace/Defense', wd('ngc', 'wd1', 'Northrop_Grumman_External_Site')],
+  ['Booz Allen Hamilton', 'Consulting', wd('bah', 'wd1', 'BAH_Jobs')],
 ]

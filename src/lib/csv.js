@@ -3,17 +3,32 @@ const COLUMNS = [
   'title',
   'industry',
   'programType',
+  'eligibility',
   'location',
+  'country',
+  'workArrangement',
   'status',
   'verified',
   'applyUrl',
   'postedAt',
-  'discoveredAt',
+  'postedAtProvenance',
+  'firstSeenAt',
+  'lastCheckedAt',
+  'closesAt',
   'notes',
 ]
 
+// Escapes a cell for CSV: doubles internal quotes and quotes any value
+// containing a comma/quote/newline. Also guards against CSV formula
+// injection — a cell starting with =, +, -, or @ can be interpreted as a
+// formula by Excel/Sheets when the file is opened, so such values are
+// prefixed with a leading apostrophe (a standard, widely-supported
+// neutralizer that displays harmlessly as text).
 function escapeCell(value) {
-  const str = String(value ?? '')
+  let str = String(value ?? '')
+  if (/^[=+\-@]/.test(str)) {
+    str = `'${str}`
+  }
   if (/[",\n]/.test(str)) return `"${str.replace(/"/g, '""')}"`
   return str
 }

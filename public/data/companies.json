@@ -528,6 +528,188 @@
     "programName": null
   },
   {
+    "companyId": "capital-one",
+    "name": "Capital One",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "capitalone",
+      "wd": "wd12",
+      "site": "Capital_One"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "fidelity-investments",
+    "name": "Fidelity Investments",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "fmr",
+      "wd": "wd1",
+      "site": "FidelityCareers"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "pnc",
+      "wd": "wd5",
+      "site": "External"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "u-s-bank",
+    "name": "U.S. Bank",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "usbank",
+      "wd": "wd1",
+      "site": "US_Bank_Careers"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "vanguard",
+      "wd": "wd5",
+      "site": "vanguard_external"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "barclays",
+    "name": "Barclays",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "barclays",
+      "wd": "wd3",
+      "site": "External_Career_Site_Barclays"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "target",
+      "wd": "wd5",
+      "site": "targetcareers"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "cvs-health",
+    "name": "CVS Health",
+    "industry": "Healthcare",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "cvshealth",
+      "wd": "wd1",
+      "site": "CVS_Health_Careers"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "cat",
+      "wd": "wd5",
+      "site": "CaterpillarCareers"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "generalmotors",
+      "wd": "wd5",
+      "site": "Careers_GM"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "bah",
+      "wd": "wd1",
+      "site": "BAH_Jobs"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
     "companyId": "doordash",
     "name": "DoorDash",
     "industry": "Logistics Tech",
@@ -688,16 +870,6 @@
     "error": "ashby:retool -> Ashby retool: HTTP 404"
   },
   {
-    "companyId": "capital-one",
-    "name": "Capital One",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.capitalonecareers.com",
-    "programName": "Technology Development Program (TDP)",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "jpmorgan-chase",
     "name": "JPMorgan Chase",
     "industry": "Finance",
@@ -768,16 +940,6 @@
     "error": null
   },
   {
-    "companyId": "fidelity-investments",
-    "name": "Fidelity Investments",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://jobs.fidelity.com",
-    "programName": "Technology Leadership Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "state-street",
     "name": "State Street",
     "industry": "Finance",
@@ -794,26 +956,6 @@
     "status": "manual_verification_needed",
     "careersUrl": "https://www.bny.com/careers",
     "programName": "Technology Early Talent Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.pnc.com/careers",
-    "programName": "Technology Development Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "u-s-bank",
-    "name": "U.S. Bank",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://careers.usbank.com",
-    "programName": "Technology Leadership Program",
     "source": null,
     "error": null
   },
@@ -1078,16 +1220,6 @@
     "error": null
   },
   {
-    "companyId": "target",
-    "name": "Target",
-    "industry": "Retail",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://jobs.target.com",
-    "programName": "Technology Rotational Development Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "walmart",
     "name": "Walmart",
     "industry": "Retail",
@@ -1188,16 +1320,6 @@
     "error": null
   },
   {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.caterpillar.com/en/careers.html",
-    "programName": "Engineering Development Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "john-deere",
     "name": "John Deere",
     "industry": "Industrial",
@@ -1254,26 +1376,6 @@
     "status": "manual_verification_needed",
     "careersUrl": "https://jobs.boeing.com",
     "programName": "Engineering Rotation Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.rtx.com/careers",
-    "programName": "Engineering Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.northropgrumman.com/careers",
-    "programName": "Engineering & Technology Rotation Program",
     "source": null,
     "error": null
   },
@@ -1424,16 +1526,6 @@
     "status": "manual_verification_needed",
     "careersUrl": "https://www.mckinsey.com/careers",
     "programName": "Technology Fellow Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.boozallen.com/careers.html",
-    "programName": "Technology Rotational Program",
     "source": null,
     "error": null
   },

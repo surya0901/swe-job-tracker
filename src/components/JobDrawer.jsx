@@ -1,7 +1,28 @@
 import { useEffect, useState } from 'react'
 import { STATUSES } from '../lib/constants'
 import { buildPrepLinks } from '../lib/prepLinks'
+import { formatExactDate } from '../lib/formatDate'
 import StatusBadge from './StatusBadge'
+
+const ELIGIBILITY_LABELS = {
+  rotational_tdp: 'Rotational/TDP',
+  explicit_new_grad: 'Explicit new grad',
+  entry_level: 'Entry level',
+  possibly_eligible: 'Possibly eligible — review requirements',
+}
+
+function provenanceLabel(provenance) {
+  switch (provenance) {
+    case 'platform_published':
+      return 'source platform publish time'
+    case 'platform_created':
+      return 'source platform creation time'
+    case 'relative_text_parsed':
+      return 'parsed from relative text'
+    default:
+      return 'approximate'
+  }
+}
 
 export default function JobDrawer({ job, onClose, onUpdate, onRemove }) {
   const [notes, setNotes] = useState(job?.notes ?? '')
@@ -93,12 +114,39 @@ export default function JobDrawer({ job, onClose, onUpdate, onRemove }) {
         )}
 
         {job.verified !== false && (
-          <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-zinc-500">
-            <DateField label="Posted" value={job.postedAt} />
-            <DateField label="First discovered" value={job.discoveredAt} />
-            <DateField label="Last seen" value={job.lastSeenAt} />
-            <DateField label="Last checked" value={job.lastCheckedAt} />
-          </div>
+          <>
+            <div className="mt-4">
+              <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">Posted</p>
+              <p className="mt-1 text-sm text-zinc-200">
+                {job.postedAt ? formatExactDate(job.postedAt) : 'Not provided'}
+                {job.postedAt && job.postedAtProvenance !== 'employer_structured' && (
+                  <span className="ml-1 text-xs text-zinc-500">
+                    (approximate — {provenanceLabel(job.postedAtProvenance)}
+                    {job.postedAtRawText ? `, source text: "${job.postedAtRawText}"` : ''})
+                  </span>
+                )}
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-zinc-500">
+              <DateField label="First found by us" value={job.firstSeenAt} />
+              <DateField label="Last seen" value={job.lastSeenAt} />
+              <DateField label="Last checked" value={job.lastCheckedAt} />
+              <DateField label="Deadline" value={job.closesAt} fallback="Not provided" />
+              {job.sourceUpdatedAt && <DateField label="Source last updated" value={job.sourceUpdatedAt} />}
+            </div>
+            {job.eligibility && (
+              <div className="mt-4 rounded-md border border-zinc-800 bg-zinc-900/40 p-3">
+                <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+                  Eligibility: {ELIGIBILITY_LABELS[job.eligibility] ?? job.eligibility}
+                </p>
+                <ul className="mt-1 flex flex-col gap-1 text-xs text-zinc-400">
+                  {(job.eligibilityEvidence ?? []).map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
         )}
 
         {job.description && (
@@ -157,11 +205,11 @@ export default function JobDrawer({ job, onClose, onUpdate, onRemove }) {
   )
 }
 
-function DateField({ label, value }) {
+function DateField({ label, value, fallback = 'Unknown' }) {
   return (
     <div className="rounded-md border border-zinc-800 bg-zinc-900/40 p-2">
       <p className="uppercase tracking-wide text-zinc-600">{label}</p>
-      <p className="mt-0.5 text-zinc-300">{value ? new Date(value).toLocaleDateString() : 'Unknown'}</p>
+      <p className="mt-0.5 text-zinc-300">{value ? formatExactDate(value) : fallback}</p>
     </div>
   )
 }

@@ -65,6 +65,8 @@ function migrateFromV1() {
         industry: co.industry || 'Unspecified',
         programType: co.programType || 'Standard',
         location: co.location || 'Not specified',
+        country: 'Unspecified',
+        workArrangement: 'Unspecified',
         applyUrl: co.url || '',
         sourceUrl: '',
         description: '',

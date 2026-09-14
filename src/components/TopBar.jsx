@@ -13,9 +13,11 @@ export default function TopBar({
   onRefresh,
   refreshing,
   refreshError,
+  refreshMessage,
   onExport,
   onAddCompany,
   meta,
+  stats,
 }) {
   const isStale =
     meta?.lastSuccessAt && Date.now() - new Date(meta.lastSuccessAt).getTime() > STALE_THRESHOLD_MS
@@ -27,10 +29,14 @@ export default function TopBar({
           <h1 className="text-lg font-semibold text-zinc-50">
             SWE New Grad &amp; Rotational Program Tracker
           </h1>
-          {meta && (
+          {meta && stats && (
             <p className="text-xs text-zinc-500">
-              {meta.counts.openJobs} verified open jobs across {meta.counts.connectedCompanies}{' '}
-              connected companies · {meta.counts.totalCompanies} companies researched
+              {stats.matchingJobs} verified open jobs at {stats.employersWithOpenings} employers
+              {' · '}
+              {meta.counts.connectedCompanies} connected / {meta.counts.totalCompanies} companies
+              researched
+              {' · '}
+              {stats.resultsAfterFilters} shown after current filters
             </p>
           )}
         </div>
@@ -41,7 +47,7 @@ export default function TopBar({
               <button
                 key={v.key}
                 onClick={() => onViewChange(v.key)}
-                className={`rounded px-3 py-1.5 text-xs font-medium transition ${
+                className={`rounded px-3 py-1.5 text-xs font-medium transition focus:outline focus:outline-2 focus:outline-indigo-400 ${
                   activeView === v.key
                     ? 'bg-indigo-500 text-white'
                     : 'text-zinc-400 hover:text-zinc-200'
@@ -84,6 +90,7 @@ export default function TopBar({
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-zinc-900 px-6 py-1.5 text-[11px] text-zinc-500">
           <span>Last collection run: {formatRelative(meta.lastRunAt)}</span>
           <span>Last successful publish: {formatRelative(meta.lastSuccessAt)}</span>
+          <span>{meta.counts.manualCompanies} need manual verification</span>
           <span>{meta.counts.failingCompanies} sources currently failing</span>
           <a
             href="https://github.com/surya0901/swe-job-tracker/actions/workflows/deploy.yml"
@@ -101,6 +108,17 @@ export default function TopBar({
           {refreshError && (
             <span className="rounded border border-red-500/30 bg-red-500/10 px-1.5 py-0.5 font-medium text-red-300">
               Refresh failed: {refreshError}
+            </span>
+          )}
+          {refreshMessage && !refreshError && (
+            <span
+              className={`rounded border px-1.5 py-0.5 font-medium ${
+                refreshMessage.type === 'success'
+                  ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300'
+                  : 'border-zinc-600/40 bg-zinc-700/30 text-zinc-400'
+              }`}
+            >
+              {refreshMessage.text}
             </span>
           )}
         </div>

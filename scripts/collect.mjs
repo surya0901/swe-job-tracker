@@ -15,12 +15,12 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { atsCandidateCompanies, manualCompanies } from './companies.mjs'
+import { atsCandidateCompanies, workdayCandidateCompanies, manualCompanies } from './companies.mjs'
 import { fetchGreenhouseJobs } from './lib/adapters/greenhouse.mjs'
 import { fetchLeverJobs } from './lib/adapters/lever.mjs'
 import { fetchAshbyJobs } from './lib/adapters/ashby.mjs'
+import { fetchWorkdayJobs } from './lib/adapters/workday.mjs'
 import { mapWithConcurrency } from './lib/fetchWithRetry.mjs'
-import { shouldInclude } from './lib/classifyJob.mjs'
 import { normalizeJob, reconcileJobs, shouldKeepPreviousDataset as computeShouldKeep } from './lib/reconcile.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -29,10 +29,19 @@ const DATA_DIR = path.join(ROOT, 'public', 'data')
 const CONCURRENCY = 6
 
 const ADAPTERS = {
-  greenhouse: fetchGreenhouseJobs,
-  lever: fetchLeverJobs,
-  ashby: fetchAshbyJobs,
+  greenhouse: (source) => fetchGreenhouseJobs(source.token),
+  lever: (source) => fetchLeverJobs(source.token),
+  ashby: (source) => fetchAshbyJobs(source.token),
+  workday: (source) => fetchWorkdayJobs(source),
 }
+
+// A source's stable identity component for job-id construction: the ATS
+// board token, or the Workday tenant.
+function sourceKey(source) {
+  return source.token ?? source.tenant
+}
+
+const allCandidateCompanies = [...atsCandidateCompanies, ...workdayCandidateCompanies]
 
 function slugify(name) {
   return name
@@ -58,7 +67,7 @@ async function collectFromCandidate(company) {
   for (const candidate of candidates) {
     const fetcher = ADAPTERS[candidate.adapter]
     try {
-      const rawJobs = await fetcher(candidate.token)
+      const rawJobs = await fetcher(candidate)
       attempts.push({ ...candidate, ok: true })
       return {
         companyId,
@@ -83,7 +92,7 @@ async function collectFromCandidate(company) {
     source: null,
     attempts,
     rawJobs: [],
-    error: attempts.map((a) => `${a.adapter}:${a.token} -> ${a.error}`).join('; '),
+    error: attempts.map((a) => `${a.adapter}:${sourceKey(a)} -> ${a.error}`).join('; '),
   }
 }
 
@@ -110,19 +119,22 @@ async function main() {
   })
   const previousById = new Map(previousJobs.map((j) => [j.id, j]))
 
-  const results = await mapWithConcurrency(atsCandidateCompanies, CONCURRENCY, collectFromCandidate)
+  const results = await mapWithConcurrency(allCandidateCompanies, CONCURRENCY, collectFromCandidate)
 
   const connected = results.filter((r) => r.status === 'connected')
   const failing = results.filter((r) => r.status === 'source_failing')
 
-  const freshJobsBySource = new Map() // companyId -> Set(jobId) seen this run, per source that succeeded
   const freshJobs = []
 
   for (const result of connected) {
-    const seenIds = new Set()
     for (const raw of result.rawJobs) {
       if (!raw.title) continue
-      if (!shouldInclude(raw.title)) continue
+      // Eligibility (title + description, required-vs-preferred years,
+      // program classification) decides inclusion — see
+      // scripts/lib/eligibility.mjs. Only a hard exclusion (non-software
+      // title, internship/co-op, seniority signal, 3+ required years)
+      // drops a posting; everything else is published with its category
+      // and evidence so the UI can show why.
       const job = normalizeJob({
         company: result,
         source: result.source,
@@ -130,10 +142,9 @@ async function main() {
         nowIso,
         previousById,
       })
+      if (job.eligibility === 'excluded') continue
       freshJobs.push(job)
-      seenIds.add(job.id)
     }
-    freshJobsBySource.set(result.companyId, seenIds)
   }
 
   // Reconcile: for companies whose source succeeded this run, any
@@ -150,10 +161,10 @@ async function main() {
   // Guardrail: if every single source failed, or open postings collapsed
   // to near-zero from a healthy previous run, don't publish — keep the
   // last good dataset and just record the failure in history.
-  const allSourcesFailed = connected.length === 0 && atsCandidateCompanies.length > 0
+  const allSourcesFailed = connected.length === 0 && allCandidateCompanies.length > 0
   const shouldKeepPreviousDataset = computeShouldKeep({
     connectedCount: connected.length,
-    attemptedCount: atsCandidateCompanies.length,
+    attemptedCount: allCandidateCompanies.length,
     previousOpenCount,
     freshOpenCount: openJobCount,
   })
@@ -193,7 +204,7 @@ async function main() {
         ? 'all_sources_failed'
         : 'catastrophic_drop_guardrail'
       : null,
-    companiesAttempted: atsCandidateCompanies.length,
+    companiesAttempted: allCandidateCompanies.length,
     companiesConnected: connected.length,
     companiesFailing: failing.length,
     manualCompanies: manualCompanies.length,
@@ -230,7 +241,7 @@ async function main() {
   await writeFile(path.join(DATA_DIR, 'collection-meta.json'), JSON.stringify(meta, null, 2))
 
   console.log(`Collection run finished at ${finishedAt}`)
-  console.log(`  Companies attempted (ATS): ${atsCandidateCompanies.length}`)
+  console.log(`  Companies attempted (ATS): ${allCandidateCompanies.length}`)
   console.log(`  Connected: ${connected.length}`)
   console.log(`  Failing: ${failing.length}`)
   console.log(`  Manual-directory companies: ${manualCompanies.length}`)

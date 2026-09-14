@@ -11,6 +11,10 @@ export async function fetchGreenhouseJobs(boardToken) {
   }
   const data = await res.json()
   const jobs = Array.isArray(data.jobs) ? data.jobs : []
+  // Greenhouse's public job-board API does not expose a genuine "posted"
+  // date — `updated_at` is a platform last-modified timestamp (bumped on
+  // any edit, not just initial publish), so it must NOT be treated as
+  // postedAt. We surface it only as sourceUpdatedAt.
   return jobs.map((job) => ({
     sourceJobId: String(job.id),
     title: job.title ?? '',
@@ -18,7 +22,9 @@ export async function fetchGreenhouseJobs(boardToken) {
     applyUrl: job.absolute_url ?? '',
     sourceUrl: job.absolute_url ?? '',
     description: stripHtml(job.content ?? ''),
-    postedAt: job.updated_at ?? null,
+    postedAt: null,
+    postedAtProvenance: 'unavailable',
+    sourceUpdatedAt: job.updated_at ?? null,
     department: job.departments?.[0]?.name ?? '',
   }))
 }

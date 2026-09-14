@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { analyzeResume } from '../lib/mockResumeAnalysis'
+import { analyzeResume } from '../lib/resumeAnalysis'
 
-const TABS = ['Missing Keywords', 'Bullet Suggestions', 'Reality Check']
+const TABS = ['Missing Keywords', 'Matched & Evidence', 'Reality Check']
 
 export default function ResumeAssistant() {
   const [jobDescription, setJobDescription] = useState('')
@@ -14,8 +14,6 @@ export default function ResumeAssistant() {
 
   const runAnalysis = async () => {
     setLoading(true)
-    // NOTE: this calls a mock/local function. In production, point this at
-    // a server route that calls an LLM (see src/lib/mockResumeAnalysis.js).
     const result = await analyzeResume(jobDescription, resume)
     setAnalysis(result)
     setLoading(false)
@@ -44,7 +42,7 @@ export default function ResumeAssistant() {
             value={resume}
             onChange={(e) => setResume(e.target.value)}
             rows={10}
-            placeholder="Paste your resume text here..."
+            placeholder="Paste your resume text here (one bullet per line works best)..."
             className="w-full resize-none rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-indigo-500 focus:outline-none"
           />
         </div>
@@ -62,7 +60,8 @@ export default function ResumeAssistant() {
           <div className="flex h-full min-h-[300px] flex-col items-center justify-center text-center text-sm text-zinc-600">
             <p>Paste a job description and resume, then click Analyze.</p>
             <p className="mt-1 text-xs text-zinc-700">
-              This demo uses mock analysis data — wire it up to an LLM API route to make it real.
+              This performs a real, local keyword comparison of your actual text — see the mode
+              banner after analyzing.
             </p>
           </div>
         )}
@@ -76,7 +75,9 @@ export default function ResumeAssistant() {
 
         {analysis && !loading && (
           <div>
-            <div className="flex gap-1 border-b border-zinc-800 pb-2">
+            <ModeBanner analysis={analysis} />
+
+            <div className="mt-3 flex gap-1 border-b border-zinc-800 pb-2">
               {TABS.map((tab) => (
                 <button
                   key={tab}
@@ -95,7 +96,7 @@ export default function ResumeAssistant() {
             <div className="mt-4">
               {activeTab === 'Missing Keywords' && (
                 <div className="flex flex-wrap gap-2">
-                  {analysis.missingKeywords.map((kw) => (
+                  {(analysis.missingKeywords ?? []).map((kw) => (
                     <span
                       key={kw}
                       className="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300"
@@ -103,31 +104,58 @@ export default function ResumeAssistant() {
                       {kw}
                     </span>
                   ))}
+                  {(analysis.missingKeywords ?? []).length === 0 && (
+                    <p className="text-sm text-zinc-500">
+                      No dictionary keywords from the job description were missing from your
+                      resume text.
+                    </p>
+                  )}
                 </div>
               )}
 
-              {activeTab === 'Bullet Suggestions' && (
-                <div className="flex flex-col gap-4">
-                  {analysis.bulletSuggestions.map((b, i) => (
+              {activeTab === 'Matched & Evidence' && (
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-wrap gap-2">
+                    {(analysis.matchedKeywords ?? []).map((kw) => (
+                      <span
+                        key={kw}
+                        className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300"
+                      >
+                        {kw}
+                      </span>
+                    ))}
+                  </div>
+                  {(analysis.bulletEvidence ?? []).map((b, i) => (
                     <div key={i} className="rounded-md border border-zinc-800 p-3">
                       <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
-                        Original
+                        From your resume
                       </p>
-                      <p className="mt-1 text-sm text-zinc-400 line-through decoration-zinc-600">
-                        {b.original}
+                      <p className="mt-1 text-sm text-zinc-100">{b.bullet}</p>
+                      <p className="mt-2 text-xs text-emerald-400">
+                        Matches: {b.matchedSkills.join(', ')}
                       </p>
-                      <p className="mt-2 text-xs font-medium uppercase tracking-wide text-emerald-500">
-                        Suggested Rewrite
-                      </p>
-                      <p className="mt-1 text-sm text-zinc-100">{b.suggested}</p>
                     </div>
                   ))}
+                  {analysis.suggestions?.length > 0 && (
+                    <div className="mt-2 border-t border-zinc-800 pt-3">
+                      <p className="mb-2 text-xs font-medium uppercase tracking-wide text-zinc-500">
+                        Consider adding (only if true)
+                      </p>
+                      <ul className="flex flex-col gap-2">
+                        {analysis.suggestions.map((s) => (
+                          <li key={s.keyword} className="text-sm text-zinc-300">
+                            {s.note}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               )}
 
               {activeTab === 'Reality Check' && (
                 <ul className="flex flex-col gap-3">
-                  {analysis.realityCheck.map((item, i) => (
+                  {(analysis.realityCheck ?? []).map((item, i) => (
                     <li
                       key={i}
                       className="rounded-md border border-red-500/20 bg-red-500/5 p-3 text-sm text-zinc-300"
@@ -141,6 +169,30 @@ export default function ResumeAssistant() {
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+function ModeBanner({ analysis }) {
+  if (analysis.mode === 'ai') {
+    return (
+      <div className="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-300">
+        AI-backed analysis (server-side model call).
+      </div>
+    )
+  }
+  if (analysis.aiConfigured && analysis.aiError) {
+    return (
+      <div className="rounded-md border border-red-500/30 bg-red-500/10 px-3 py-2 text-xs text-red-300">
+        AI backend call failed ({analysis.aiError}) — showing the local, non-AI keyword
+        comparison instead.
+      </div>
+    )
+  }
+  return (
+    <div className="rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-300">
+      AI setup required — no VITE_RESUME_API_URL configured. Showing a local, deterministic
+      keyword comparison (not AI-generated). See server/analyze-resume/ to wire up real AI.
     </div>
   )
 }

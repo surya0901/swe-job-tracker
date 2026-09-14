@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { STATUSES } from '../data/seedCompanies'
+import { STATUSES } from '../lib/constants'
 import { STATUS_STYLES } from '../lib/statusStyles'
-import CompanyCard from './CompanyCard'
+import JobCard from './JobCard'
 
-export default function KanbanBoard({ companies, onOpen, onStatusChange }) {
+export default function KanbanBoard({ jobs, onOpen, onStatusChange }) {
   const [dragOverStatus, setDragOverStatus] = useState(null)
 
   const handleDragStart = (e, id) => {
@@ -21,7 +21,7 @@ export default function KanbanBoard({ companies, onOpen, onStatusChange }) {
   return (
     <div className="grid grid-cols-1 gap-4 overflow-x-auto pb-2 sm:grid-cols-2 lg:grid-cols-none lg:grid-flow-col lg:auto-cols-[260px]">
       {STATUSES.map((status) => {
-        const items = companies.filter((c) => c.status === status)
+        const items = jobs.filter((j) => j.status === status)
         const style = STATUS_STYLES[status]
         return (
           <div
@@ -43,13 +43,8 @@ export default function KanbanBoard({ companies, onOpen, onStatusChange }) {
               </span>
             </div>
             <div className="flex flex-1 flex-col gap-2">
-              {items.map((company) => (
-                <CompanyCard
-                  key={company.id}
-                  company={company}
-                  onOpen={onOpen}
-                  onDragStart={handleDragStart}
-                />
+              {items.map((job) => (
+                <JobCard key={job.id} job={job} onOpen={onOpen} onDragStart={handleDragStart} />
               ))}
               {items.length === 0 && (
                 <p className="rounded-md border border-dashed border-zinc-800 p-3 text-center text-xs text-zinc-600">

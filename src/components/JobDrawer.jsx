@@ -1,23 +1,19 @@
 import { useEffect, useState } from 'react'
-import { STATUSES } from '../data/seedCompanies'
+import { STATUSES } from '../lib/constants'
 import { buildPrepLinks } from '../lib/prepLinks'
 import StatusBadge from './StatusBadge'
 
-export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) {
-  const [notes, setNotes] = useState(company?.notes ?? '')
-  const [url, setUrl] = useState(company?.url ?? '')
+export default function JobDrawer({ job, onClose, onUpdate, onRemove }) {
+  const [notes, setNotes] = useState(job?.notes ?? '')
 
   useEffect(() => {
-    setNotes(company?.notes ?? '')
-    setUrl(company?.url ?? '')
-  }, [company])
+    setNotes(job?.notes ?? '')
+  }, [job])
 
-  if (!company) return null
+  if (!job) return null
 
-  const links = buildPrepLinks(company.name)
-
-  const commitNotes = () => onUpdate(company.id, { notes })
-  const commitUrl = () => onUpdate(company.id, { url })
+  const links = buildPrepLinks(job.companyName)
+  const commitNotes = () => onUpdate(job.id, { notes })
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end">
@@ -29,8 +25,8 @@ export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) 
       <div className="relative flex h-full w-full max-w-md flex-col overflow-y-auto border-l border-zinc-800 bg-zinc-950 p-6 shadow-2xl">
         <div className="flex items-start justify-between">
           <div>
-            <h2 className="text-xl font-semibold text-zinc-50">{company.name}</h2>
-            <p className="text-sm text-zinc-400">{company.programName}</p>
+            <h2 className="text-xl font-semibold text-zinc-50">{job.companyName}</h2>
+            <p className="text-sm text-zinc-400">{job.title}</p>
           </div>
           <button
             onClick={onClose}
@@ -41,11 +37,23 @@ export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) 
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
-          <span>{company.industry}</span>
+          <span>{job.industry}</span>
           <span>·</span>
-          <span>{company.programType}</span>
+          <span>{job.programType}</span>
           <span>·</span>
-          <span>{company.location}</span>
+          <span>{job.location}</span>
+        </div>
+
+        <div className="mt-2 flex flex-wrap gap-2">
+          {job.verified === false ? (
+            <span className="rounded border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-300">
+              Unverified / custom entry
+            </span>
+          ) : (
+            <span className="rounded border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-300">
+              {job.status === 'closed' ? 'Was verified — now closed' : 'Verified open posting'}
+            </span>
+          )}
         </div>
 
         <div className="mt-4">
@@ -53,8 +61,8 @@ export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) 
             Status
           </label>
           <select
-            value={company.status}
-            onChange={(e) => onUpdate(company.id, { status: e.target.value })}
+            value={job.status}
+            onChange={(e) => onUpdate(job.id, { status: e.target.value })}
             className="w-full rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-indigo-500 focus:outline-none"
           >
             {STATUSES.map((s) => (
@@ -64,23 +72,45 @@ export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) 
             ))}
           </select>
           <div className="mt-2">
-            <StatusBadge status={company.status} />
+            <StatusBadge status={job.status} />
           </div>
         </div>
 
-        <div className="mt-4">
-          <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500">
-            Job posting URL
-          </label>
-          <input
-            type="text"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            onBlur={commitUrl}
-            placeholder="https://..."
-            className="w-full rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-indigo-500 focus:outline-none"
-          />
-        </div>
+        {job.applyUrl && (
+          <div className="mt-4">
+            <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500">
+              Application link
+            </label>
+            <a
+              href={job.applyUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="block truncate rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-indigo-300 hover:border-indigo-500/50"
+            >
+              {job.applyUrl}
+            </a>
+          </div>
+        )}
+
+        {job.verified !== false && (
+          <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-zinc-500">
+            <DateField label="Posted" value={job.postedAt} />
+            <DateField label="First discovered" value={job.discoveredAt} />
+            <DateField label="Last seen" value={job.lastSeenAt} />
+            <DateField label="Last checked" value={job.lastCheckedAt} />
+          </div>
+        )}
+
+        {job.description && (
+          <div className="mt-4">
+            <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500">
+              Description (from source)
+            </label>
+            <p className="max-h-40 overflow-y-auto rounded-md border border-zinc-800 bg-zinc-900/60 p-3 text-xs text-zinc-400">
+              {job.description}
+            </p>
+          </div>
+        )}
 
         <div className="mt-6 border-t border-zinc-800 pt-4">
           <h3 className="text-sm font-semibold text-zinc-200">Interview Prep</h3>
@@ -90,11 +120,7 @@ export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) 
               sublabel="perixtar/Tech-OA-Interview-Questions"
               href={links.githubOA}
             />
-            <PrepLink
-              label="Glassdoor interview reviews"
-              sublabel="glassdoor.com"
-              href={links.glassdoor}
-            />
+            <PrepLink label="Glassdoor interview reviews" sublabel="glassdoor.com" href={links.glassdoor} />
             <PrepLink
               label="LeetCode company-tagged questions"
               sublabel="leetcode.com/company"
@@ -119,14 +145,23 @@ export default function CompanyDrawer({ company, onClose, onUpdate, onDelete }) 
 
         <button
           onClick={() => {
-            onDelete(company.id)
+            onRemove(job.id)
             onClose()
           }}
           className="mt-6 self-start text-xs font-medium text-red-400 hover:text-red-300"
         >
-          Remove from tracker
+          {job.verified === false ? 'Delete custom entry' : 'Remove from tracker'}
         </button>
       </div>
+    </div>
+  )
+}
+
+function DateField({ label, value }) {
+  return (
+    <div className="rounded-md border border-zinc-800 bg-zinc-900/40 p-2">
+      <p className="uppercase tracking-wide text-zinc-600">{label}</p>
+      <p className="mt-0.5 text-zinc-300">{value ? new Date(value).toLocaleDateString() : 'Unknown'}</p>
     </div>
   )
 }

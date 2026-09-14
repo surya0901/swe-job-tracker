@@ -3,6 +3,16 @@ name: Collect jobs and deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    # Prevents the bot's own data commit (below) from re-triggering this
+    # workflow — NOT used to skip committing data on a push run. A prior
+    # version skipped the commit step on push triggers entirely, which
+    # meant a push-triggered run's freshly collected data was deployed
+    # live but never saved back to git — the next run would reconcile
+    # against a stale snapshot and could lose firstSeenAt/closure history.
+    # Every run now commits; only the commit's own push is prevented from
+    # looping, via this paths-ignore.
+    paths-ignore:
+      - 'public/data/**'
   schedule:
     # Targets roughly every 6 hours. GitHub Actions schedules are
     # best-effort, not an exact guarantee — the UI shows the real last-run
@@ -37,10 +47,9 @@ jobs:
 
       - run: npm ci
 
-      # Real collection against live Greenhouse/Lever/Ashby APIs. Writes
-      # public/data/*.json. On a plain push (no schedule), this still runs
-      # so a manual push doesn't ship stale data, but see the git-loop
-      # guard below.
+      # Real collection against live source APIs. Writes public/data/*.json,
+      # reconciling against whatever is currently checked out in git (see
+      # the commit step below for why that's now always kept current).
       - name: Collect job postings
         run: npm run collect
 
@@ -53,20 +62,17 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Commit the freshly-collected dataset back to main so it's visible
-      # in git history (collection history requirement) — but only on
-      # schedule/manual runs, and with [skip ci] so this commit doesn't
-      # re-trigger the push-based workflow run (avoiding an infinite
-      # loop). The build+deploy below always happens in THIS SAME run
-      # regardless, so deployment never depends on that commit triggering
-      # another workflow.
+      # Commit the freshly-collected dataset back to main on EVERY run
+      # (push, schedule, or manual) so the next run's reconciliation
+      # always starts from what's actually live, not a stale snapshot.
+      # The `paths-ignore` on the push trigger above (not a conditional
+      # here) is what prevents this commit from looping the workflow.
       - name: Commit updated dataset
-        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add public/data
-          git diff --staged --quiet || git commit -m "chore: update collected job data [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: update collected job data"
           git push
 
       - uses: actions/upload-pages-artifact@v3

@@ -28,6 +28,28 @@ describe('normalizeJob: multiple jobs at one company', () => {
   })
 })
 
+describe('normalizeJob: cross-requisition duplicate handling', () => {
+  it('does not merge two distinct requisitions that share the same title', () => {
+    const previousById = new Map()
+    const jobA = normalizeJob({
+      company,
+      source,
+      raw: makeRaw('R001', 'Lead Software Engineer, Full Stack'),
+      nowIso: '2026-02-01T00:00:00.000Z',
+      previousById,
+    })
+    const jobB = normalizeJob({
+      company,
+      source,
+      raw: makeRaw('R002', 'Lead Software Engineer, Full Stack'),
+      nowIso: '2026-02-01T00:00:00.000Z',
+      previousById,
+    })
+    expect(jobA.id).not.toBe(jobB.id)
+    expect(jobA.title).toBe(jobB.title)
+  })
+})
+
 describe('normalizeJob: unknown vs employer-provided dates', () => {
   it('keeps postedAt null (unknown) when the source never provided one, rather than inventing it', () => {
     const previousById = new Map()
@@ -38,12 +60,39 @@ describe('normalizeJob: unknown vs employer-provided dates', () => {
 
   it('preserves a previously-known postedAt if a later fetch omits it', () => {
     const previousById = new Map([
-      ['greenhouse:acme:333', { postedAt: '2026-01-05T00:00:00.000Z', discoveredAt: '2026-01-05T00:00:00.000Z' }],
+      ['greenhouse:acme:333', { postedAt: '2026-01-05T00:00:00.000Z', firstSeenAt: '2026-01-05T00:00:00.000Z' }],
     ])
     const raw = { ...makeRaw('333'), postedAt: null }
     const job = normalizeJob({ company, source, raw, nowIso: '2026-02-01T00:00:00.000Z', previousById })
     expect(job.postedAt).toBe('2026-01-05T00:00:00.000Z')
-    expect(job.discoveredAt).toBe('2026-01-05T00:00:00.000Z') // discovery date never moves
+    expect(job.firstSeenAt).toBe('2026-01-05T00:00:00.000Z') // discovery date never moves
+  })
+
+  it('never substitutes sourceUpdatedAt for postedAt', () => {
+    const previousById = new Map()
+    const raw = { ...makeRaw('444'), postedAt: null, sourceUpdatedAt: '2026-01-20T00:00:00.000Z' }
+    const job = normalizeJob({ company, source, raw, nowIso: '2026-02-01T00:00:00.000Z', previousById })
+    expect(job.postedAt).toBeNull()
+    expect(job.sourceUpdatedAt).toBe('2026-01-20T00:00:00.000Z')
+  })
+
+  it('firstSeenAt stays stable across repeated collections even as lastSeenAt advances', () => {
+    const previousById = new Map()
+    const raw = makeRaw('555')
+    const run1 = normalizeJob({ company, source, raw, nowIso: '2026-02-01T00:00:00.000Z', previousById })
+    const previousById2 = new Map([[run1.id, run1]])
+    const run2 = normalizeJob({ company, source, raw, nowIso: '2026-02-08T00:00:00.000Z', previousById: previousById2 })
+    expect(run2.firstSeenAt).toBe(run1.firstSeenAt)
+    expect(run2.lastSeenAt).toBe('2026-02-08T00:00:00.000Z')
+  })
+
+  it('migrates legacy discoveredAt field name into firstSeenAt for old committed data', () => {
+    const previousById = new Map([
+      ['greenhouse:acme:666', { postedAt: null, discoveredAt: '2026-01-01T00:00:00.000Z' }],
+    ])
+    const raw = { ...makeRaw('666'), postedAt: null }
+    const job = normalizeJob({ company, source, raw, nowIso: '2026-02-01T00:00:00.000Z', previousById })
+    expect(job.firstSeenAt).toBe('2026-01-01T00:00:00.000Z')
   })
 })
 

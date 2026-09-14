@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import TopBar from './components/TopBar'
 import FilterBar from './components/FilterBar'
 import KanbanBoard from './components/KanbanBoard'
@@ -15,7 +15,29 @@ import { downloadCsv } from './lib/csv'
 import { AUTO_REFRESH_INTERVAL_MS } from './lib/constants'
 
 const PAGE_SIZE = 25
-const EMPTY_FILTERS = { industry: 'All', programType: 'All', status: 'All', location: '', availability: 'All' }
+const EMPTY_FILTERS = {
+  industry: 'All',
+  programType: 'All',
+  status: 'All',
+  location: '',
+  availability: 'All',
+  // Defaults to US per spec — "clearly visible option for all countries"
+  // is the country selector itself, always present and switchable.
+  country: 'US',
+  postedWithin: 'All',
+  eligibility: 'All',
+}
+const FILTERS_STORAGE_KEY = 'swe-tracker:filters:v1'
+
+function loadSavedFilters() {
+  try {
+    const raw = localStorage.getItem(FILTERS_STORAGE_KEY)
+    if (!raw) return EMPTY_FILTERS
+    return { ...EMPTY_FILTERS, ...JSON.parse(raw) }
+  } catch {
+    return EMPTY_FILTERS
+  }
+}
 
 export default function App() {
   const [catalog, setCatalog] = useState(null)
@@ -32,9 +54,28 @@ export default function App() {
   const [showAddModal, setShowAddModal] = useState(false)
 
   const [search, setSearch] = useState('')
-  const [filters, setFilters] = useState(EMPTY_FILTERS)
-  const [sortKey, setSortKey] = useState('discovered')
+  const [filters, setFilters] = useState(loadSavedFilters)
+  const [sortKey, setSortKey] = useState('relevance')
   const [page, setPage] = useState(1)
+  const [refreshMessage, setRefreshMessage] = useState(null)
+
+  // "New since last visit" is based on firstSeenAt vs. when this browser
+  // last had the app open — captured once on mount, before we overwrite
+  // it, so this session can still show what's new since last time.
+  const previousVisitAtRef = useRef(userData.lastVisitAt ?? null)
+
+  useEffect(() => {
+    setUserData((prev) => ({ ...prev, lastVisitAt: new Date().toISOString() }))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(filters))
+    } catch {
+      /* filter preferences are a convenience, fine to skip if storage fails */
+    }
+  }, [filters])
 
   const fetchCatalog = useCallback(async () => {
     try {
@@ -84,8 +125,23 @@ export default function App() {
   const handleRefresh = async () => {
     setRefreshing(true)
     setRefreshError(null)
+    setRefreshMessage(null)
+    const previousLastRunAt = catalog?.meta?.lastRunAt ?? null
+    const previousJobIds = new Set((catalog?.jobs ?? []).map((j) => j.id))
     try {
-      await fetchCatalog()
+      const fresh = await fetchCatalog()
+      if (fresh.meta.lastRunAt === previousLastRunAt) {
+        setRefreshMessage({ type: 'none', text: 'No newer collection available yet.' })
+      } else {
+        const newCount = fresh.jobs.filter((j) => !previousJobIds.has(j.id)).length
+        setRefreshMessage({
+          type: 'success',
+          text:
+            newCount > 0
+              ? `Downloaded the latest collection (${new Date(fresh.meta.lastRunAt).toLocaleString()}) — ${newCount} new job${newCount === 1 ? '' : 's'} found.`
+              : `Downloaded the latest collection (${new Date(fresh.meta.lastRunAt).toLocaleString()}) — no new jobs since last check.`,
+        })
+      }
     } catch (err) {
       setRefreshError(err instanceof Error ? err.message : String(err))
     } finally {
@@ -113,12 +169,38 @@ export default function App() {
 
   const activeJobs = activeView === 'openings' ? openJobs : trackedJobs
 
+  // Country/posted-date filters are discovery filters for browsing the
+  // catalog — they only apply on Openings. The Tracker always shows every
+  // job the user actually chose to track, regardless of where it is or
+  // when it was posted.
+  const effectiveFilters = useMemo(() => {
+    if (activeView === 'openings') return filters
+    const { country: _country, postedWithin: _postedWithin, ...rest } = filters
+    return rest
+  }, [filters, activeView])
+
   const filtered = useMemo(
-    () => filterJobs(activeJobs, { search, ...filters }),
-    [activeJobs, search, filters],
+    () => filterJobs(activeJobs, { search, ...effectiveFilters }),
+    [activeJobs, search, effectiveFilters],
   )
   const sorted = useMemo(() => sortJobs(filtered, sortKey), [filtered, sortKey])
   const paged = useMemo(() => paginate(sorted, page, PAGE_SIZE), [sorted, page])
+
+  const newJobIds = useMemo(() => {
+    const since = previousVisitAtRef.current
+    if (!since) return new Set() // first-ever visit: nothing is "new" yet
+    const sinceMs = new Date(since).getTime()
+    return new Set(openJobs.filter((j) => new Date(j.firstSeenAt).getTime() > sinceMs).map((j) => j.id))
+  }, [openJobs])
+
+  const stats = useMemo(() => {
+    const employerIds = new Set(openJobs.map((j) => j.companyId))
+    return {
+      employersWithOpenings: employerIds.size,
+      matchingJobs: openJobs.length,
+      resultsAfterFilters: sorted.length,
+    }
+  }, [openJobs, sorted])
 
   useEffect(() => {
     setPage(1)
@@ -167,13 +249,15 @@ export default function App() {
           industry: form.industry || 'Unspecified',
           programType: form.programType,
           location: form.location || 'Not specified',
+          country: 'Unspecified',
+          workArrangement: 'Unspecified',
           applyUrl: form.applyUrl || '',
           sourceUrl: '',
           description: '',
           status: 'To Apply',
           notes: '',
           verified: false,
-          discoveredAt: nowIso,
+          firstSeenAt: nowIso,
         },
         ...prev.customJobs,
       ],
@@ -190,9 +274,11 @@ export default function App() {
         onRefresh={handleRefresh}
         refreshing={refreshing}
         refreshError={refreshError}
+        refreshMessage={refreshMessage}
         onExport={() => downloadCsv(trackedJobs)}
         onAddCompany={() => setShowAddModal(true)}
         meta={catalog?.meta ?? null}
+        stats={stats}
       />
 
       <main className="mx-auto max-w-7xl px-6 py-6">
@@ -211,6 +297,20 @@ export default function App() {
           <DirectoryView companies={catalog?.companies ?? []} jobs={catalog?.jobs ?? []} />
         ) : activeView === 'resume' ? (
           <ResumeAssistant />
+        ) : activeView === 'tracker' && !catalogLoading && trackedJobs.length === 0 ? (
+          <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-zinc-800 py-16 text-center">
+            <p className="text-zinc-300">Your tracker is empty.</p>
+            <p className="max-w-sm text-sm text-zinc-500">
+              Browse verified openings and add the ones you're applying to — your tracker only
+              shows jobs you've actually chosen to track.
+            </p>
+            <button
+              onClick={() => setActiveView('openings')}
+              className="mt-2 rounded-md bg-indigo-500 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-400"
+            >
+              Browse openings
+            </button>
+          </div>
         ) : (
           <div className="flex flex-col gap-4">
             <FilterBar
@@ -221,6 +321,7 @@ export default function App() {
               onSearchChange={setSearch}
               showStatus={activeView === 'tracker'}
               showAvailability={activeView === 'openings'}
+              showDateFilters={activeView === 'openings'}
               rightSlot={
                 activeView === 'tracker' ? (
                   <div className="flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-900 p-0.5">
@@ -245,6 +346,7 @@ export default function App() {
                 jobs={filtered}
                 onOpen={(job) => setSelectedJobId(job.id)}
                 onStatusChange={(id, status) => updateJob(id, { status })}
+                newJobIds={newJobIds}
               />
             ) : (
               <JobTable
@@ -259,6 +361,7 @@ export default function App() {
                 page={page}
                 pageSize={PAGE_SIZE}
                 onPageChange={setPage}
+                newJobIds={newJobIds}
               />
             )}
           </div>

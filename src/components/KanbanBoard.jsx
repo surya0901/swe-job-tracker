@@ -3,7 +3,7 @@ import { STATUSES } from '../lib/constants'
 import { STATUS_STYLES } from '../lib/statusStyles'
 import JobCard from './JobCard'
 
-export default function KanbanBoard({ jobs, onOpen, onStatusChange }) {
+export default function KanbanBoard({ jobs, onOpen, onStatusChange, newJobIds }) {
   const [dragOverStatus, setDragOverStatus] = useState(null)
 
   const handleDragStart = (e, id) => {
@@ -44,7 +44,13 @@ export default function KanbanBoard({ jobs, onOpen, onStatusChange }) {
             </div>
             <div className="flex flex-1 flex-col gap-2">
               {items.map((job) => (
-                <JobCard key={job.id} job={job} onOpen={onOpen} onDragStart={handleDragStart} />
+                <JobCard
+                  key={job.id}
+                  job={job}
+                  onOpen={onOpen}
+                  onDragStart={handleDragStart}
+                  isNew={newJobIds?.has(job.id)}
+                />
               ))}
               {items.length === 0 && (
                 <p className="rounded-md border border-dashed border-zinc-800 p-3 text-center text-xs text-zinc-600">

@@ -10,6 +10,9 @@ export async function fetchAshbyJobs(boardToken) {
   }
   const data = await res.json()
   const jobs = Array.isArray(data.jobs) ? data.jobs : []
+  // Ashby's `publishedAt` is documented as when the posting was published
+  // to the public job board — the closest thing to a genuine posted date
+  // among these three sources.
   return jobs.map((job) => ({
     sourceJobId: String(job.id),
     title: job.title ?? '',
@@ -18,6 +21,8 @@ export async function fetchAshbyJobs(boardToken) {
     sourceUrl: job.jobUrl ?? '',
     description: stripHtml(job.descriptionPlain ?? ''),
     postedAt: job.publishedAt ?? null,
+    postedAtProvenance: job.publishedAt ? 'platform_published' : 'unavailable',
+    sourceUpdatedAt: null,
     department: job.department ?? '',
   }))
 }

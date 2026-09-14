@@ -2,10 +2,17 @@
 // testable without hitting real network APIs.
 
 import { detectProgramType } from './classifyJob.mjs'
+import { classifyEligibility } from './eligibility.mjs'
+import { detectCountry, detectWorkArrangement } from './geography.mjs'
+
+function sourceKey(source) {
+  return source.token ?? source.tenant
+}
 
 export function normalizeJob({ company, source, raw, nowIso, previousById }) {
-  const id = `${source.adapter}:${source.token}:${raw.sourceJobId}`
+  const id = `${source.adapter}:${sourceKey(source)}:${raw.sourceJobId}`
   const previous = previousById.get(id)
+  const eligibility = classifyEligibility({ title: raw.title, description: raw.description })
   return {
     id,
     companyId: company.companyId,
@@ -14,21 +21,35 @@ export function normalizeJob({ company, source, raw, nowIso, previousById }) {
     title: raw.title,
     programType: detectProgramType(raw.title),
     location: raw.location || 'Not specified',
-    workArrangement: /remote/i.test(raw.location || '') ? 'Remote' : 'Unspecified',
+    country: detectCountry(raw.location),
+    workArrangement: detectWorkArrangement(raw.location),
     applyUrl: raw.applyUrl,
     sourceUrl: raw.sourceUrl,
     sourceAdapter: source.adapter,
     description: raw.description,
-    // Posted date only ever comes from the employer/source. If a fresh
-    // fetch doesn't carry one, keep whatever we previously recorded — we
-    // never invent a posted date, and "unknown" (null) is a valid value.
+    // Posted date only ever comes from a source-documented "posted" or
+    // "published" semantic (see each adapter's comments) — never a
+    // last-modified/updated timestamp. If a fresh fetch doesn't carry
+    // one, keep whatever we previously recorded; we never invent a
+    // posted date, and "unknown" (null) is a valid, displayed value.
     postedAt: raw.postedAt ?? previous?.postedAt ?? null,
-    discoveredAt: previous?.discoveredAt ?? nowIso,
+    postedAtProvenance: raw.postedAtProvenance ?? previous?.postedAtProvenance ?? 'unavailable',
+    postedAtRawText: raw.postedAtRawText ?? previous?.postedAtRawText ?? null,
+    // Platform "last updated" timestamp, when the source exposes one —
+    // distinct from postedAt, never used as a substitute for it.
+    sourceUpdatedAt: raw.sourceUpdatedAt ?? null,
+    // Application deadline, when the source provides one. None of the
+    // current adapters expose this — always null today, but the field
+    // exists so a future source that does isn't a schema migration.
+    closesAt: raw.closesAt ?? previous?.closesAt ?? null,
+    firstSeenAt: previous?.firstSeenAt ?? previous?.discoveredAt ?? nowIso,
     lastSeenAt: nowIso,
     lastCheckedAt: nowIso,
     missCount: 0,
     status: 'open',
     verified: true,
+    eligibility: eligibility.category,
+    eligibilityEvidence: eligibility.evidence,
   }
 }
 

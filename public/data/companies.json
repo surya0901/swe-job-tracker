@@ -1,0 +1,1740 @@
+[
+  {
+    "companyId": "stripe",
+    "name": "Stripe",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "stripe"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "airbnb",
+    "name": "Airbnb",
+    "industry": "Travel Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "airbnb"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "robinhood",
+    "name": "Robinhood",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "robinhood"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "affirm",
+    "name": "Affirm",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "affirm"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "asana",
+    "name": "Asana",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "asana"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "coinbase",
+    "name": "Coinbase",
+    "industry": "Fintech/Crypto",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "coinbase"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "databricks",
+    "name": "Databricks",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "databricks"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "discord",
+    "name": "Discord",
+    "industry": "Consumer Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "discord"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "dropbox",
+    "name": "Dropbox",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "dropbox"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "figma",
+    "name": "Figma",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "figma"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "instacart",
+    "name": "Instacart",
+    "industry": "Retail Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "instacart"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "lyft",
+    "name": "Lyft",
+    "industry": "Transportation Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "lyft"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "notion",
+    "name": "Notion",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "notion"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "okta",
+    "name": "Okta",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "okta"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "pinterest",
+    "name": "Pinterest",
+    "industry": "Consumer Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "pinterest"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "reddit",
+    "name": "Reddit",
+    "industry": "Consumer Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "reddit"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "squarespace",
+    "name": "Squarespace",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "squarespace"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "twilio",
+    "name": "Twilio",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "twilio"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "webflow",
+    "name": "Webflow",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "webflow"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "gusto",
+    "name": "Gusto",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "gusto"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "brex",
+    "name": "Brex",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "brex"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "ramp",
+    "name": "Ramp",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "ramp"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "scale-ai",
+    "name": "Scale AI",
+    "industry": "AI/ML",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "scaleai"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "anthropic",
+    "name": "Anthropic",
+    "industry": "AI/ML",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "anthropic"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "mongodb",
+    "name": "MongoDB",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "mongodb"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "elastic",
+    "name": "Elastic",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "elastic"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "gitlab",
+    "name": "GitLab",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "gitlab"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "datadog",
+    "name": "Datadog",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "datadog"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "pagerduty",
+    "name": "PagerDuty",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "pagerduty"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "amplitude",
+    "name": "Amplitude",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "amplitude"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "braze",
+    "name": "Braze",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "braze"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "duolingo",
+    "name": "Duolingo",
+    "industry": "EdTech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "duolingo"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "roblox",
+    "name": "Roblox",
+    "industry": "Gaming",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "roblox"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "cloudflare",
+    "name": "Cloudflare",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "cloudflare"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "samsara",
+    "name": "Samsara",
+    "industry": "IoT",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "samsara"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "toast",
+    "name": "Toast",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "toast"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "carta",
+    "name": "Carta",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "greenhouse",
+      "token": "carta"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "palantir-technologies",
+    "name": "Palantir Technologies",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "lever",
+      "token": "palantir"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "linear",
+    "name": "Linear",
+    "industry": "SaaS",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "linear"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "vanta",
+    "name": "Vanta",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "vanta"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "mercury",
+    "name": "Mercury",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "mercury"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "watershed",
+    "name": "Watershed",
+    "industry": "Climate Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "watershed"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "modern-treasury",
+    "name": "Modern Treasury",
+    "industry": "Fintech",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "moderntreasury"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "deel",
+    "name": "Deel",
+    "industry": "HR Tech",
+    "status": "connected",
+    "source": {
+      "adapter": "ashby",
+      "token": "deel"
+    },
+    "careersUrl": null,
+    "programName": null
+  },
+  {
+    "companyId": "doordash",
+    "name": "DoorDash",
+    "industry": "Logistics Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:doordash -> Greenhouse doordash: HTTP 404"
+  },
+  {
+    "companyId": "snowflake",
+    "name": "Snowflake",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:snowflake -> Greenhouse snowflake: HTTP 404"
+  },
+  {
+    "companyId": "wealthfront",
+    "name": "Wealthfront",
+    "industry": "Fintech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:wealthfront -> Greenhouse wealthfront: HTTP 404"
+  },
+  {
+    "companyId": "plaid",
+    "name": "Plaid",
+    "industry": "Fintech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:plaid -> Greenhouse plaid: HTTP 404"
+  },
+  {
+    "companyId": "rippling",
+    "name": "Rippling",
+    "industry": "SaaS",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:rippling -> Greenhouse rippling: HTTP 404"
+  },
+  {
+    "companyId": "openai",
+    "name": "OpenAI",
+    "industry": "AI/ML",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:openai -> Greenhouse openai: HTTP 404"
+  },
+  {
+    "companyId": "hashicorp",
+    "name": "HashiCorp",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:hashicorp -> Greenhouse hashicorp: HTTP 404"
+  },
+  {
+    "companyId": "confluent",
+    "name": "Confluent",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:confluent -> Greenhouse confluent: HTTP 404"
+  },
+  {
+    "companyId": "grammarly",
+    "name": "Grammarly",
+    "industry": "AI/ML",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:grammarly -> Greenhouse grammarly: HTTP 404"
+  },
+  {
+    "companyId": "unity",
+    "name": "Unity",
+    "industry": "Gaming",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:unity -> Greenhouse unity: HTTP 404"
+  },
+  {
+    "companyId": "benchling",
+    "name": "Benchling",
+    "industry": "Biotech Software",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:benchling -> Greenhouse benchling: HTTP 404"
+  },
+  {
+    "companyId": "attentive",
+    "name": "Attentive",
+    "industry": "MarTech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "lever:attentive -> Lever attentive: HTTP 404"
+  },
+  {
+    "companyId": "postman",
+    "name": "Postman",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "lever:postman -> Lever postman: HTTP 404"
+  },
+  {
+    "companyId": "betterment",
+    "name": "Betterment",
+    "industry": "Fintech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "lever:betterment -> Lever betterment: HTTP 404"
+  },
+  {
+    "companyId": "seatgeek",
+    "name": "SeatGeek",
+    "industry": "Consumer Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "lever:seatgeek -> Lever seatgeek: HTTP 404"
+  },
+  {
+    "companyId": "retool",
+    "name": "Retool",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "ashby:retool -> Ashby retool: HTTP 404"
+  },
+  {
+    "companyId": "capital-one",
+    "name": "Capital One",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.capitalonecareers.com",
+    "programName": "Technology Development Program (TDP)",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "jpmorgan-chase",
+    "name": "JPMorgan Chase",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.jpmorgan.com",
+    "programName": "Software Engineer Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "goldman-sachs",
+    "name": "Goldman Sachs",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.goldmansachs.com/careers",
+    "programName": "New Analyst Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "morgan-stanley",
+    "name": "Morgan Stanley",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.morganstanley.com/careers",
+    "programName": "Technology Analyst Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "bank-of-america",
+    "name": "Bank of America",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.bankofamerica.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.wellsfargojobs.com",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "citigroup",
+    "name": "Citigroup",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.citi.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "american-express",
+    "name": "American Express",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.americanexpress.com/en-us/careers",
+    "programName": "Technology Rotation Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "fidelity-investments",
+    "name": "Fidelity Investments",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.fidelity.com",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.statestreet.com/careers",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "bny-mellon",
+    "name": "BNY Mellon",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.bny.com/careers",
+    "programName": "Technology Early Talent Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.pnc.com/careers",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "u-s-bank",
+    "name": "U.S. Bank",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.usbank.com",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "charles-schwab",
+    "name": "Charles Schwab",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.schwabjobs.com",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "visa",
+    "name": "Visa",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://usa.visa.com/careers.html",
+    "programName": "Technology Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "mastercard",
+    "name": "Mastercard",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.mastercard.com",
+    "programName": "Software Engineer New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "paypal",
+    "name": "PayPal",
+    "industry": "Fintech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.pypl.com",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "synchrony",
+    "name": "Synchrony",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.synchronycareers.com",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "discover-financial-services",
+    "name": "Discover Financial Services",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.discover.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "ally-financial",
+    "name": "Ally Financial",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://ally.com/careers",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "northern-trust",
+    "name": "Northern Trust",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.northerntrust.com",
+    "programName": "Technology Graduate Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "truist-financial",
+    "name": "Truist Financial",
+    "industry": "Finance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.truist.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.usaajobs.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "progressive-insurance",
+    "name": "Progressive Insurance",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.progressive.com/careers",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "state-farm",
+    "name": "State Farm",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.statefarm.com/careers",
+    "programName": "Technology Associate Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "allstate",
+    "name": "Allstate",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.allstate.com/careers",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "liberty-mutual",
+    "name": "Liberty Mutual",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.libertymutualgroup.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "nationwide",
+    "name": "Nationwide",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.nationwide.com/careers",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "travelers",
+    "name": "Travelers",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.travelers.com",
+    "programName": "Technology Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "metlife",
+    "name": "MetLife",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.metlife.com/careers",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "prudential-financial",
+    "name": "Prudential Financial",
+    "industry": "Insurance",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.prudential.com",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "cigna",
+    "name": "Cigna",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.cigna.com",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "unitedhealth-group",
+    "name": "UnitedHealth Group",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.unitedhealthgroup.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "humana",
+    "name": "Humana",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.humana.com",
+    "programName": "Technology Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "elevance-health",
+    "name": "Elevance Health",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.elevancehealth.com",
+    "programName": "Technology Associate Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "johnson-johnson",
+    "name": "Johnson & Johnson",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.careers.jnj.com",
+    "programName": "Technology Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "medtronic",
+    "name": "Medtronic",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.medtronic.com/careers",
+    "programName": "Engineering Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "ge-healthcare",
+    "name": "GE HealthCare",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.gehealthcare.com/careers",
+    "programName": "Edison Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "stryker",
+    "name": "Stryker",
+    "industry": "Healthcare",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.stryker.com",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.target.com",
+    "programName": "Technology Rotational Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "walmart",
+    "name": "Walmart",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.walmart.com",
+    "programName": "Software Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://talent.lowes.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "the-home-depot",
+    "name": "The Home Depot",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.homedepot.com",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "best-buy",
+    "name": "Best Buy",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.bestbuy.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "kroger",
+    "name": "Kroger",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.kroger.com",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "costco-wholesale",
+    "name": "Costco Wholesale",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.costco.com/careers.html",
+    "programName": "IT Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "tjx-companies",
+    "name": "TJX Companies",
+    "industry": "Retail",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.tjx.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "general-electric",
+    "name": "General Electric",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.ge.com/careers",
+    "programName": "Edison Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "honeywell",
+    "name": "Honeywell",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.honeywell.com",
+    "programName": "Technology Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "3m",
+    "name": "3M",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.3m.com/3M/en_US/careers-us",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.caterpillar.com/en/careers.html",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "john-deere",
+    "name": "John Deere",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.deere.com/en/our-company/careers",
+    "programName": "Technology & Engineering Leadership Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "emerson-electric",
+    "name": "Emerson Electric",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.emerson.com/en-us/careers",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "parker-hannifin",
+    "name": "Parker Hannifin",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.parker.com/us/en/careers.html",
+    "programName": "Engineering Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "eaton-corporation",
+    "name": "Eaton Corporation",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.eaton.com/us/en-us/company/careers.html",
+    "programName": "Engineering Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "rockwell-automation",
+    "name": "Rockwell Automation",
+    "industry": "Industrial",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.rockwellautomation.com/en-us/company/careers.html",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "boeing",
+    "name": "Boeing",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.boeing.com",
+    "programName": "Engineering Rotation Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.rtx.com/careers",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.northropgrumman.com/careers",
+    "programName": "Engineering & Technology Rotation Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "lockheed-martin",
+    "name": "Lockheed Martin",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.lockheedmartinjobs.com",
+    "programName": "Engineering Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "general-dynamics",
+    "name": "General Dynamics",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.gd.com/careers",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "l3harris-technologies",
+    "name": "L3Harris Technologies",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.l3harris.com",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "textron",
+    "name": "Textron",
+    "industry": "Aerospace/Defense",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.textron.com/careers",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "verizon",
+    "name": "Verizon",
+    "industry": "Telecom",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.verizon.com/about/careers",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.att.jobs",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "t-mobile",
+    "name": "T-Mobile",
+    "industry": "Telecom",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.t-mobile.com/careers",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "comcast",
+    "name": "Comcast",
+    "industry": "Telecom",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.comcast.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "charter-communications",
+    "name": "Charter Communications",
+    "industry": "Telecom",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.spectrum.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "deloitte",
+    "name": "Deloitte",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www2.deloitte.com/us/en/careers.html",
+    "programName": "Technology Consulting Rotation",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "accenture",
+    "name": "Accenture",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.accenture.com/us-en/careers",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "pwc",
+    "name": "PwC",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.pwc.com/us/en/careers.html",
+    "programName": "Technology Associate Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "ey",
+    "name": "EY",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.ey.com/en_us/careers",
+    "programName": "Technology Consulting Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "kpmg",
+    "name": "KPMG",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.kpmguscareers.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "mckinsey-company",
+    "name": "McKinsey & Company",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.mckinsey.com/careers",
+    "programName": "Technology Fellow Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.boozallen.com/careers.html",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "capgemini",
+    "name": "Capgemini",
+    "industry": "Consulting",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.capgemini.com/careers",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "ups",
+    "name": "UPS",
+    "industry": "Logistics",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.jobs-ups.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "fedex",
+    "name": "FedEx",
+    "industry": "Logistics",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.fedex.com",
+    "programName": "Technology Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "xpo",
+    "name": "XPO",
+    "industry": "Logistics",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.xpo.com",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "j-b-hunt",
+    "name": "J.B. Hunt",
+    "industry": "Logistics",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.jbhunt.jobs",
+    "programName": "Technology Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "exxonmobil",
+    "name": "ExxonMobil",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://corporate.exxonmobil.com/careers",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "chevron",
+    "name": "Chevron",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.chevron.com/careers",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "conocophillips",
+    "name": "ConocoPhillips",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.conocophillips.com",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "slb-schlumberger",
+    "name": "SLB (Schlumberger)",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.slb.com",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "nextera-energy",
+    "name": "NextEra Energy",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.nexteraenergy.com/company/careers.html",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "duke-energy",
+    "name": "Duke Energy",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.duke-energy.com/our-company/careers",
+    "programName": "Engineering Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "southern-company",
+    "name": "Southern Company",
+    "industry": "Energy",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.southerncompany.com",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "google",
+    "name": "Google",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.google.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "meta",
+    "name": "Meta",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.metacareers.com",
+    "programName": "Software Engineer, University Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "amazon",
+    "name": "Amazon",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.amazon.jobs",
+    "programName": "Software Development Engineer I",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "microsoft",
+    "name": "Microsoft",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.microsoft.com",
+    "programName": "Software Engineer, New Grad (MACH)",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "apple",
+    "name": "Apple",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.apple.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "salesforce",
+    "name": "Salesforce",
+    "industry": "SaaS",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.salesforce.com/company/careers",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "oracle",
+    "name": "Oracle",
+    "industry": "Enterprise Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.oracle.com/careers",
+    "programName": "Software Developer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "ibm",
+    "name": "IBM",
+    "industry": "Enterprise Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.ibm.com/careers",
+    "programName": "Early Professional Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "cisco",
+    "name": "Cisco",
+    "industry": "Networking",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.cisco.com",
+    "programName": "Engineering Leadership Development Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "adobe",
+    "name": "Adobe",
+    "industry": "SaaS",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.adobe.com/careers.html",
+    "programName": "Software Development Engineer, New College Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "intel",
+    "name": "Intel",
+    "industry": "Semiconductors",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.intel.com",
+    "programName": "Technology Rotation Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "qualcomm",
+    "name": "Qualcomm",
+    "industry": "Semiconductors",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.qualcomm.com/company/careers",
+    "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "nvidia",
+    "name": "NVIDIA",
+    "industry": "Semiconductors",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.nvidia.com/en-us/about-nvidia/careers",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "sap",
+    "name": "SAP",
+    "industry": "Enterprise Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.sap.com",
+    "programName": "Technology Associate Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "servicenow",
+    "name": "ServiceNow",
+    "industry": "SaaS",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.servicenow.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "intuit",
+    "name": "Intuit",
+    "industry": "Fintech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://jobs.intuit.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "ebay",
+    "name": "eBay",
+    "industry": "E-commerce",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://careers.ebayinc.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "uber",
+    "name": "Uber",
+    "industry": "Transportation Tech",
+    "status": "manual_verification_needed",
+    "careersUrl": "https://www.uber.com/careers",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  }
+]

@@ -1,0 +1,14 @@
+name = "swe-tracker-resume-api"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://surya0901.github.io"
+
+# Created via: wrangler kv namespace create RESUME_RATE_LIMIT
+# [[kv_namespaces]]
+# binding = "RESUME_RATE_LIMIT"
+# id = "<paste id from that command>"
+
+# Set the actual secret via: wrangler secret put ANTHROPIC_API_KEY
+# (never commit a real key to this file or anywhere in git)

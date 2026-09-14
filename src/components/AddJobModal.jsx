@@ -1,23 +1,23 @@
 import { useState } from 'react'
-import { PROGRAM_TYPES } from '../data/seedCompanies'
+import { PROGRAM_TYPES } from '../lib/constants'
 
 const EMPTY = {
-  name: '',
-  programName: '',
+  companyName: '',
+  title: '',
   industry: '',
   programType: 'Rotational',
   location: '',
-  url: '',
+  applyUrl: '',
 }
 
-export default function AddCompanyModal({ onClose, onAdd }) {
+export default function AddJobModal({ onClose, onAdd }) {
   const [form, setForm] = useState(EMPTY)
 
   const update = (key, value) => setForm((f) => ({ ...f, [key]: value }))
 
   const submit = (e) => {
     e.preventDefault()
-    if (!form.name.trim()) return
+    if (!form.companyName.trim()) return
     onAdd(form)
     onClose()
   }
@@ -33,10 +33,14 @@ export default function AddCompanyModal({ onClose, onAdd }) {
         onSubmit={submit}
         className="relative w-full max-w-md rounded-lg border border-zinc-800 bg-zinc-950 p-6 shadow-2xl"
       >
-        <h2 className="text-lg font-semibold text-zinc-50">Add Company</h2>
+        <h2 className="text-lg font-semibold text-zinc-50">Add Company / Job</h2>
+        <p className="mt-1 text-xs text-zinc-500">
+          Manually added entries are marked "unverified" — they aren't part of the collected
+          dataset, just your own note.
+        </p>
         <div className="mt-4 flex flex-col gap-3">
-          <Field label="Company name" value={form.name} onChange={(v) => update('name', v)} required />
-          <Field label="Program name" value={form.programName} onChange={(v) => update('programName', v)} />
+          <Field label="Company name" value={form.companyName} onChange={(v) => update('companyName', v)} required />
+          <Field label="Job / program title" value={form.title} onChange={(v) => update('title', v)} />
           <Field label="Industry" value={form.industry} onChange={(v) => update('industry', v)} />
           <div>
             <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500">
@@ -55,7 +59,7 @@ export default function AddCompanyModal({ onClose, onAdd }) {
             </select>
           </div>
           <Field label="Location" value={form.location} onChange={(v) => update('location', v)} />
-          <Field label="Job posting URL" value={form.url} onChange={(v) => update('url', v)} />
+          <Field label="Job posting URL" value={form.applyUrl} onChange={(v) => update('applyUrl', v)} />
         </div>
         <div className="mt-6 flex justify-end gap-2">
           <button

@@ -1,12 +1,14 @@
 const COLUMNS = [
-  'name',
-  'programName',
+  'companyName',
+  'title',
   'industry',
   'programType',
   'location',
   'status',
-  'dateAdded',
-  'url',
+  'verified',
+  'applyUrl',
+  'postedAt',
+  'discoveredAt',
   'notes',
 ]
 
@@ -16,16 +18,14 @@ function escapeCell(value) {
   return str
 }
 
-export function companiesToCsv(companies) {
+export function jobsToCsv(jobs) {
   const header = COLUMNS.join(',')
-  const rows = companies.map((co) =>
-    COLUMNS.map((col) => escapeCell(co[col])).join(','),
-  )
+  const rows = jobs.map((job) => COLUMNS.map((col) => escapeCell(job[col])).join(','))
   return [header, ...rows].join('\n')
 }
 
-export function downloadCsv(companies, filename = 'swe-tracker-export.csv') {
-  const csv = companiesToCsv(companies)
+export function downloadCsv(jobs, filename = 'swe-tracker-export.csv') {
+  const csv = jobsToCsv(jobs)
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' })
   const url = URL.createObjectURL(blob)
   const link = document.createElement('a')

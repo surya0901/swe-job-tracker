@@ -1,16 +1,44 @@
-# React + Vite
+# SWE New Grad & Rotational Program Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A dashboard for tracking applications to software engineering new-grad and
+rotational programs (TDPs, LDPs) — Kanban + table views, per-company
+interview prep links, a resume-vs-job-description assistant, CSV export,
+and localStorage persistence. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Kanban / table tracker** — drag companies between To Apply, Applied,
+  OA, Interview, Offer, and Rejected, or manage the same data as a
+  filterable table (industry, program type, status, search).
+- **Company Prep Hub** — click a company to open a drawer with constructed
+  links to [perixtar/Tech-OA-Interview-Questions](https://github.com/perixtar/Tech-OA-Interview-Questions)
+  (GitHub code search scoped to that company), Glassdoor interview
+  reviews, and the company's LeetCode tag page, plus a notes field.
+- **Resume Assistant** — paste a job description and resume to see missing
+  keywords, suggested bullet rewrites, and a "reality check" of gaps.
+  Currently backed by mock data in [`src/lib/mockResumeAnalysis.js`](src/lib/mockResumeAnalysis.js)
+  — swap in a real LLM API route to make it live.
+- **Refresh Openings** — simulates fetching new postings with a loading
+  state. See [`src/lib/refreshOpenings.js`](src/lib/refreshOpenings.js) for
+  where to plug in a real backend or scraper.
+- **Persistence & export** — all data is saved to `localStorage`; use
+  Export CSV to download your tracker as a spreadsheet.
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+## Wiring up real data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Job openings**: replace the body of `fetchNewOpenings()` in
+  `src/lib/refreshOpenings.js` with a real `fetch()` call to your own API
+  or scraper backend (scraping can't run client-side due to CORS).
+- **Resume analysis**: replace `analyzeResume()` in
+  `src/lib/mockResumeAnalysis.js` with a call to a server route that hits
+  an LLM API (never call an LLM API directly from the browser with an
+  embedded key).
+- **Seed companies**: edit `src/data/seedCompanies.js` with your own
+  target list.

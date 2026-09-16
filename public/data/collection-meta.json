@@ -1,31 +1,31 @@
 {
-  "lastRunAt": "2026-09-14T21:54:38.657Z",
-  "lastSuccessAt": "2026-09-14T21:54:38.657Z",
+  "lastRunAt": "2026-09-16T00:48:13.919Z",
+  "lastSuccessAt": "2026-09-16T00:48:13.919Z",
   "lastRunPublished": true,
   "counts": {
     "totalCompanies": 170,
-    "connectedCompanies": 61,
-    "fullyCheckedCompanies": 56,
-    "partiallyCheckedCompanies": 5,
+    "connectedCompanies": 58,
+    "fullyCheckedCompanies": 54,
+    "partiallyCheckedCompanies": 4,
     "manualCompanies": 90,
-    "failingCompanies": 19,
-    "openJobs": 622,
+    "failingCompanies": 22,
+    "openJobs": 594,
     "closedJobs": 0,
-    "supportedEarlyCareerJobs": 101,
-    "uncertainJobs": 521,
-    "softwareRotationalJobs": 22
+    "supportedEarlyCareerJobs": 103,
+    "uncertainJobs": 491,
+    "softwareRotationalJobs": 19
   },
   "history": [
     {
-      "startedAt": "2026-09-14T21:53:31.685Z",
-      "finishedAt": "2026-09-14T21:54:38.657Z",
+      "startedAt": "2026-09-16T00:47:14.713Z",
+      "finishedAt": "2026-09-16T00:48:13.919Z",
       "published": true,
       "skippedReason": null,
       "companiesAttempted": 80,
-      "companiesConnected": 61,
-      "companiesFailing": 19,
+      "companiesConnected": 58,
+      "companiesFailing": 22,
       "manualCompanies": 90,
-      "openJobsThisRun": 622,
+      "openJobsThisRun": 594,
       "sources": [
         {
           "companyId": "stripe",
@@ -988,33 +988,33 @@
         {
           "companyId": "rtx-raytheon",
           "name": "RTX (Raytheon)",
-          "status": "source_failing",
+          "status": "connected",
           "attempts": [
             {
               "adapter": "workday",
               "tenant": "globalhr",
               "wd": "wd5",
               "site": "REC_RTX_Ext_Gateway",
-              "ok": false,
-              "error": "HTTP 429"
+              "ok": true
             }
           ],
-          "error": "workday:globalhr -> HTTP 429"
+          "error": null
         },
         {
           "companyId": "northrop-grumman",
           "name": "Northrop Grumman",
-          "status": "connected",
+          "status": "source_failing",
           "attempts": [
             {
               "adapter": "workday",
               "tenant": "ngc",
               "wd": "wd1",
               "site": "Northrop_Grumman_External_Site",
-              "ok": true
+              "ok": false,
+              "error": "HTTP 429"
             }
           ],
-          "error": null
+          "error": "workday:ngc -> HTTP 429"
         },
         {
           "companyId": "booz-allen-hamilton",
@@ -1064,47 +1064,50 @@
         {
           "companyId": "the-cigna-group",
           "name": "The Cigna Group",
-          "status": "connected",
+          "status": "source_failing",
           "attempts": [
             {
               "adapter": "workday",
               "tenant": "cigna",
               "wd": "wd5",
               "site": "cignacareers",
-              "ok": true
+              "ok": false,
+              "error": "HTTP 429"
             }
           ],
-          "error": null
+          "error": "workday:cigna -> HTTP 429"
         },
         {
           "companyId": "at-t",
           "name": "AT&T",
-          "status": "connected",
+          "status": "source_failing",
           "attempts": [
             {
               "adapter": "workday",
               "tenant": "att",
               "wd": "wd1",
               "site": "ATTCollege",
-              "ok": true
+              "ok": false,
+              "error": "HTTP 429"
             }
           ],
-          "error": null
+          "error": "workday:att -> HTTP 429"
         },
         {
           "companyId": "lowe-s",
           "name": "Lowe's",
-          "status": "connected",
+          "status": "source_failing",
           "attempts": [
             {
               "adapter": "workday",
               "tenant": "lowes",
               "wd": "wd5",
               "site": "LWS_External_CS",
-              "ok": true
+              "ok": false,
+              "error": "HTTP 429"
             }
           ],
-          "error": null
+          "error": "workday:lowes -> HTTP 429"
         },
         {
           "companyId": "state-street",

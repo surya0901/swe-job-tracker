@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { detectCountry, detectWorkArrangement } from '../scripts/lib/geography.mjs'
+import { detectCountry, detectLocationScope, detectWorkArrangement } from '../scripts/lib/geography.mjs'
 
 describe('detectCountry', () => {
   it('detects US from a state abbreviation', () => {
@@ -16,13 +16,44 @@ describe('detectCountry', () => {
     expect(detectCountry('Toronto, Canada')).toBe('CA')
   })
 
-  it('does not label a restricted/unrecognized location as US', () => {
-    expect(detectCountry('Doha, Qatar')).toBe('QA')
+  it('prefers a structured country hint over text guessing when given', () => {
+    expect(detectCountry('Some Office', 'United States of America')).toBe('US')
+    expect(detectCountry('Some Office', 'India')).toBe('IN')
   })
 
-  it('returns Unspecified for empty or unparseable text', () => {
-    expect(detectCountry('')).toBe('Unspecified')
+  it('returns Unspecified for a bare location count with no real place names', () => {
+    expect(detectCountry('3 Locations')).toBe('Unspecified')
     expect(detectCountry('Multiple Locations')).toBe('Unspecified')
+  })
+
+  it('returns Unspecified for empty text', () => {
+    expect(detectCountry('')).toBe('Unspecified')
+  })
+})
+
+describe('detectLocationScope: distinct US / International / Mixed / Unknown states', () => {
+  it('US-only locations scope to US', () => {
+    expect(detectLocationScope('McLean, VA')).toBe('US')
+    expect(detectLocationScope('McLean, VA; Richmond, VA')).toBe('US')
+  })
+
+  it('non-US locations scope to International', () => {
+    expect(detectLocationScope('Bangalore, India')).toBe('International')
+  })
+
+  it('a posting spanning both US and international offices scopes to Mixed', () => {
+    expect(detectLocationScope('McLean, VA; Bangalore, India')).toBe('Mixed')
+  })
+
+  it('an unparseable location scopes to Unknown, never silently to US', () => {
+    expect(detectLocationScope('3 Locations')).toBe('Unknown')
+    expect(detectLocationScope('')).toBe('Unknown')
+  })
+
+  it('never labels an unknown location as International either', () => {
+    const scope = detectLocationScope('Somewhere Unrecognizable Xyz')
+    expect(scope).not.toBe('International')
+    expect(scope).toBe('Unknown')
   })
 })
 

@@ -136,14 +136,33 @@ export default function JobDrawer({ job, onClose, onUpdate, onRemove }) {
             </div>
             {job.eligibility && (
               <div className="mt-4 rounded-md border border-zinc-800 bg-zinc-900/40 p-3">
-                <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
-                  Eligibility: {ELIGIBILITY_LABELS[job.eligibility] ?? job.eligibility}
-                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+                    Eligibility: {ELIGIBILITY_LABELS[job.eligibility] ?? job.eligibility}
+                  </p>
+                  {job.reviewState === 'needs_review' && (
+                    <span className="rounded border border-amber-500/30 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-medium text-amber-300">
+                      Needs review
+                    </span>
+                  )}
+                </div>
                 <ul className="mt-1 flex flex-col gap-1 text-xs text-zinc-400">
                   {(job.eligibilityEvidence ?? []).map((line, i) => (
                     <li key={i}>{line}</li>
                   ))}
                 </ul>
+                {(job.eligibilityExcerpts ?? []).length > 0 && (
+                  <div className="mt-2 border-t border-zinc-800 pt-2">
+                    <p className="text-[10px] font-medium uppercase tracking-wide text-zinc-600">
+                      From the posting
+                    </p>
+                    {job.eligibilityExcerpts.map((excerpt, i) => (
+                      <blockquote key={i} className="mt-1 border-l-2 border-zinc-700 pl-2 text-xs italic text-zinc-500">
+                        "{excerpt}"
+                      </blockquote>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </>

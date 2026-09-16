@@ -1,4 +1,5 @@
 import { fetchWithRetry } from '../fetchWithRetry.mjs'
+import { htmlToText } from '../htmlText.mjs'
 
 // Lever's public postings API — documented, CORS-open, designed for
 // embeddable job boards. https://github.com/lever/postings-api
@@ -15,25 +16,17 @@ export async function fetchLeverJobs(boardToken) {
   // closest thing to a real posted date this source exposes. It's a
   // platform timestamp, not employer-authored structured data, so it's
   // labeled accordingly rather than presented as an employer-provided date.
-  return jobs.map((job) => ({
+  return { jobs: jobs.map((job) => ({
     sourceJobId: String(job.id),
     title: job.text ?? '',
     location: job.categories?.location ?? '',
     applyUrl: job.applyUrl ?? job.hostedUrl ?? '',
     sourceUrl: job.hostedUrl ?? '',
-    description: stripHtml((job.descriptionPlain ?? job.description ?? '')),
+    description: htmlToText(job.descriptionPlain ?? job.description),
     postedAt: job.createdAt ? new Date(job.createdAt).toISOString() : null,
     postedAtProvenance: job.createdAt ? 'platform_created' : 'unavailable',
     sourceUpdatedAt: null,
     department: job.categories?.team ?? '',
-  }))
+  })), coverageComplete: true }
 }
 
-function stripHtml(html) {
-  return html
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 2000)
-}

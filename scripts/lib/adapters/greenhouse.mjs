@@ -1,4 +1,5 @@
 import { fetchWithRetry } from '../fetchWithRetry.mjs'
+import { htmlToText } from '../htmlText.mjs'
 
 // Greenhouse's public job-board API. Documented for embedding job boards on
 // a company's own site — CORS-open, no auth required.
@@ -15,25 +16,17 @@ export async function fetchGreenhouseJobs(boardToken) {
   // date — `updated_at` is a platform last-modified timestamp (bumped on
   // any edit, not just initial publish), so it must NOT be treated as
   // postedAt. We surface it only as sourceUpdatedAt.
-  return jobs.map((job) => ({
+  return { jobs: jobs.map((job) => ({
     sourceJobId: String(job.id),
     title: job.title ?? '',
     location: job.location?.name ?? '',
     applyUrl: job.absolute_url ?? '',
     sourceUrl: job.absolute_url ?? '',
-    description: stripHtml(job.content ?? ''),
+    description: htmlToText(job.content),
     postedAt: null,
     postedAtProvenance: 'unavailable',
     sourceUpdatedAt: job.updated_at ?? null,
     department: job.departments?.[0]?.name ?? '',
-  }))
+  })), coverageComplete: true }
 }
 
-function stripHtml(html) {
-  return html
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 2000)
-}

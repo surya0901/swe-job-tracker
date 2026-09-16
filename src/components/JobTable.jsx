@@ -97,6 +97,14 @@ export default function JobTable({
                     <span className="whitespace-nowrap rounded border border-zinc-700 bg-zinc-800/60 px-1.5 py-0.5 text-[10px] font-medium text-zinc-300">
                       {ELIGIBILITY_LABELS[job.eligibility] ?? '—'}
                     </span>
+                    {job.reviewState === 'needs_review' && (
+                      <span
+                        title="Our assessment is uncertain here — worth a closer look"
+                        className="ml-1 whitespace-nowrap rounded border border-amber-500/30 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-medium text-amber-300"
+                      >
+                        Review
+                      </span>
+                    )}
                   </td>
                   <td className="px-4 py-3 text-zinc-400">{job.location}</td>
                   <td className="px-4 py-3 text-zinc-400">

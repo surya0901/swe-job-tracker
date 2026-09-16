@@ -67,7 +67,7 @@ async function collectFromCandidate(company) {
   for (const candidate of candidates) {
     const fetcher = ADAPTERS[candidate.adapter]
     try {
-      const rawJobs = await fetcher(candidate)
+      const { jobs: rawJobs, coverageComplete, ...coverageStats } = await fetcher(candidate)
       attempts.push({ ...candidate, ok: true })
       return {
         companyId,
@@ -77,6 +77,8 @@ async function collectFromCandidate(company) {
         source: candidate,
         attempts,
         rawJobs,
+        coverageComplete,
+        coverageStats,
         error: null,
       }
     } catch (err) {
@@ -94,6 +96,21 @@ async function collectFromCandidate(company) {
     rawJobs: [],
     error: attempts.map((a) => `${a.adapter}:${sourceKey(a)} -> ${a.error}`).join('; '),
   }
+}
+
+// Distinguishes *why* a source failed so the Directory can show something
+// more useful than a generic "failing" badge — a 404 (wrong guessed
+// token) is a very different fix from a 429 (we're being rate limited
+// and should just back off) or a 5xx (their service is down).
+function categorizeFailure(errorText) {
+  if (!errorText) return 'unknown'
+  if (/ERR_TENANT_MIGRATED/.test(errorText)) return 'platform_migrated'
+  if (/HTTP 404/.test(errorText)) return 'not_found'
+  if (/HTTP 410/.test(errorText)) return 'platform_migrated'
+  if (/HTTP 429/.test(errorText)) return 'rate_limited'
+  if (/HTTP 5\d\d/.test(errorText)) return 'temporarily_unavailable'
+  if (/abort|timeout/i.test(errorText)) return 'timeout'
+  return 'unknown'
 }
 
 function buildManualCompanyRecord([name, industry, careersUrl, programName]) {
@@ -152,8 +169,13 @@ async function main() {
   // being deleted outright — only closed after 3 consecutive clean misses.
   // Companies whose source failed this run are left entirely untouched
   // (we never close a job because a *request* failed).
-  const succeededCompanyIds = new Set(connected.map((r) => r.companyId))
-  const reconciled = reconcileJobs({ freshJobs, previousJobs, succeededCompanyIds, nowIso })
+  // Only companies whose source coverage was COMPLETE this run are
+  // eligible to close a previously-seen posting that didn't reappear — a
+  // company we only partially checked (hit a pagination/detail cap, or a
+  // later page failed) must not have its unseen-but-real postings marked
+  // closed just because we didn't look far enough this run.
+  const fullyCoveredCompanyIds = new Set(connected.filter((r) => r.coverageComplete !== false).map((r) => r.companyId))
+  const reconciled = reconcileJobs({ freshJobs, previousJobs, succeededCompanyIds: fullyCoveredCompanyIds, nowIso })
 
   const openJobCount = reconciled.filter((j) => j.status === 'open').length
   const previousOpenCount = previousJobs.filter((j) => j.status === 'open').length
@@ -180,6 +202,8 @@ async function main() {
     source: r.source,
     careersUrl: null,
     programName: null,
+    coverageComplete: r.coverageComplete !== false,
+    coverageStats: r.coverageStats ?? null,
   }))
   const failingRecords = failing.map((r) => ({
     companyId: r.companyId,
@@ -190,6 +214,7 @@ async function main() {
     careersUrl: null,
     programName: null,
     error: r.error,
+    failureCategory: categorizeFailure(r.error),
   }))
 
   const companies = [...connectedRecords, ...failingRecords, ...manualRecords]
@@ -227,10 +252,22 @@ async function main() {
     counts: {
       totalCompanies: companies.length,
       connectedCompanies: connected.length,
+      fullyCheckedCompanies: connectedRecords.filter((c) => c.coverageComplete).length,
+      partiallyCheckedCompanies: connectedRecords.filter((c) => !c.coverageComplete).length,
       manualCompanies: manualCompanies.length,
       failingCompanies: failing.length,
+      // "Open" = the posting itself is live per its source. Eligibility
+      // (below) is a separate axis — an open posting can still be an
+      // uncertain or excluded match.
       openJobs: finalJobs.filter((j) => j.status === 'open').length,
       closedJobs: finalJobs.filter((j) => j.status === 'closed').length,
+      supportedEarlyCareerJobs: finalJobs.filter(
+        (j) => j.status === 'open' && ['rotational_tdp', 'explicit_new_grad', 'entry_level'].includes(j.eligibility),
+      ).length,
+      uncertainJobs: finalJobs.filter((j) => j.status === 'open' && j.eligibility === 'possibly_eligible').length,
+      softwareRotationalJobs: finalJobs.filter(
+        (j) => j.status === 'open' && j.eligibility === 'rotational_tdp' && j.softwareRelevance === 'confirmed',
+      ).length,
     },
     history,
   }

@@ -2,7 +2,19 @@ const DAY_MS = 24 * 60 * 60 * 1000
 
 export function filterJobs(
   jobs,
-  { search, industry, programType, status, location, availability, country, postedWithin, eligibility },
+  {
+    search,
+    industry,
+    programType,
+    status,
+    location,
+    availability,
+    locationScope,
+    includeUnknownLocations,
+    postedWithin,
+    eligibility,
+    includeNeedsReview,
+  },
 ) {
   const now = Date.now()
   return jobs.filter((job) => {
@@ -10,17 +22,26 @@ export function filterJobs(
     if (programType && programType !== 'All' && job.programType !== programType) return false
     if (status && status !== 'All' && job.status !== status) return false
     if (eligibility && eligibility !== 'All' && job.eligibility !== eligibility) return false
+    // "Posting is open" (status) and "candidate is eligible" are kept as
+    // separate axes throughout — this toggle hides the uncertain bucket
+    // by default without ever touching job.status.
+    if (!includeNeedsReview && job.reviewState === 'needs_review' && (!eligibility || eligibility === 'All')) {
+      return false
+    }
     if (location && location.trim()) {
       const loc = (job.location || '').toLowerCase()
       if (!loc.includes(location.trim().toLowerCase())) return false
     }
-    if (country && country !== 'All') {
-      // "US" default includes jobs we couldn't confidently locate
-      // (Unspecified) rather than hiding them — an unparsed location
-      // isn't evidence a job is international, and the spec is explicit
-      // about not hiding unknowns behind a default filter.
-      if (country === 'US' && job.country !== 'US' && job.country !== 'Unspecified') return false
-      if (country === 'International' && job.country === 'US') return false
+    if (job.locationScope === 'Unknown') {
+      // Unknown is its own state, never silently folded into US,
+      // International, or Mixed. The toggle only unions it into the
+      // broad default/All views — picking a *specific* scope like
+      // "International only" stays exclusive, since Unknown is not
+      // evidence of that scope either.
+      const broadView = !locationScope || locationScope === 'All' || locationScope === 'US'
+      if (!includeUnknownLocations || !broadView) return false
+    } else if (locationScope && locationScope !== 'All' && job.locationScope !== locationScope) {
+      return false
     }
     if (availability && availability !== 'All') {
       const jobAvailability = job.verified === false ? 'unverified' : job.status === 'closed' ? 'closed' : 'open'

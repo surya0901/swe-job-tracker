@@ -695,8 +695,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 74
+      "candidatesFound": 72,
+      "detailsFetched": 72
     }
   },
   {
@@ -737,7 +737,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 410,
+      "candidatesFound": 409,
       "detailsFetched": 120
     }
   },
@@ -759,7 +759,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 89
+      "detailsFetched": 91
     }
   },
   {
@@ -779,7 +779,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 168,
+      "candidatesFound": 165,
       "detailsFetched": 120
     }
   },
@@ -801,7 +801,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 68
+      "detailsFetched": 78
     }
   },
   {
@@ -821,8 +821,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 38
+      "candidatesFound": 109,
+      "detailsFetched": 74
     }
   },
   {
@@ -842,8 +842,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 363,
-      "detailsFetched": 4
+      "candidatesFound": 361,
+      "detailsFetched": 74
     }
   },
   {
@@ -864,7 +864,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 444,
-      "detailsFetched": 17
+      "detailsFetched": 81
     }
   },
   {
@@ -885,7 +885,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 109,
-      "detailsFetched": 42
+      "detailsFetched": 70
     }
   },
   {
@@ -906,7 +906,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 77,
-      "detailsFetched": 25
+      "detailsFetched": 44
     }
   },
   {
@@ -926,29 +926,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 58,
-      "detailsFetched": 55
+      "candidatesFound": 59,
+      "detailsFetched": 49
     }
   },
   {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
+      "tenant": "lowes",
+      "wd": "wd5",
+      "site": "LWS_External_CS"
     },
     "careersUrl": null,
     "programName": null,
-    "coverageComplete": true,
+    "coverageComplete": false,
     "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 2,
-      "detailsFetched": 2
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 236,
+      "detailsFetched": 86
     }
   },
   {
@@ -1139,14 +1139,14 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:lowes -> HTTP 429",
+    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

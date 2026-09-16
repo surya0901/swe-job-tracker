@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import TopBar from './components/TopBar'
 import FilterBar from './components/FilterBar'
 import KanbanBoard from './components/KanbanBoard'
@@ -6,7 +6,6 @@ import JobTable from './components/JobTable'
 import DirectoryView from './components/DirectoryView'
 import JobDrawer from './components/JobDrawer'
 import AddJobModal from './components/AddJobModal'
-import ResumeAssistant from './components/ResumeAssistant'
 import { loadCatalog } from './lib/catalog'
 import { loadUserData, saveUserData } from './lib/userData'
 import { mergeJobs } from './lib/mergeJobs'
@@ -45,6 +44,12 @@ function loadSavedFilters() {
     return EMPTY_FILTERS
   }
 }
+
+// Lazy-loaded: the resume workspace pulls in pdf-lib/docx/mammoth (~370KB
+// gzipped) that the job tracker itself never needs — this keeps that cost
+// out of the default landing bundle, only fetched when the Resume tab is
+// actually opened.
+const ResumeWorkspace = lazy(() => import('./components/resume/ResumeWorkspace'))
 
 export default function App() {
   const [catalog, setCatalog] = useState(null)
@@ -309,7 +314,9 @@ export default function App() {
         {activeView === 'directory' ? (
           <DirectoryView companies={catalog?.companies ?? []} jobs={catalog?.jobs ?? []} />
         ) : activeView === 'resume' ? (
-          <ResumeAssistant />
+          <Suspense fallback={<p className="text-sm text-zinc-500">Loading resume workspace...</p>}>
+            <ResumeWorkspace trackedJobs={trackedJobs} />
+          </Suspense>
         ) : activeView === 'tracker' && !catalogLoading && trackedJobs.length === 0 ? (
           <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-zinc-800 py-16 text-center">
             <p className="text-zinc-300">Your tracker is empty.</p>

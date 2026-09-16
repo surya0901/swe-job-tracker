@@ -1,9 +1,12 @@
-// Cloudflare Worker: server-side resume-vs-job-description analysis.
+// Cloudflare Worker: server-side, job-specific resume bullet-rewrite
+// tailoring (POST /tailor).
 //
 // This is real, deployable code — it is NOT deployed anywhere right now.
-// The frontend (src/lib/resumeAnalysis.js) only calls it if you build the
-// site with VITE_RESUME_API_URL set to this worker's URL. Until then the
-// app uses the local, non-AI keyword comparison and says so honestly.
+// src/lib/resume/tailoring.js calls it only if the site is built with
+// VITE_RESUME_TAILOR_API_URL set. Until then, the app uses local,
+// deterministic (non-AI) gap analysis and says so honestly in the UI —
+// see src/lib/resume/tailoring.js's compareResumeToJob, which needs no
+// backend and always runs.
 //
 // Setup (you do this — it needs your own Cloudflare account and API key,
 // neither of which an assistant can create on your behalf):
@@ -17,7 +20,11 @@
 //   5. wrangler deploy
 //   6. Set ALLOWED_ORIGIN below (or as a var in wrangler.toml) to your
 //      GitHub Pages origin, e.g. https://surya0901.github.io
-//   7. Rebuild the frontend with VITE_RESUME_API_URL=<your worker URL>
+//   7. Rebuild the frontend with VITE_RESUME_TAILOR_API_URL=<worker URL>/tailor
+//
+// This worker never logs full resume/job-description content — only
+// request metadata (status, timing) reaches Cloudflare's own platform
+// logs, and nothing is persisted by this code itself.
 
 const MAX_INPUT_LENGTH = 20000
 const RATE_LIMIT_PER_HOUR = 20
@@ -34,27 +41,8 @@ export default {
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders })
     }
-
     if (request.method !== 'POST') {
       return json({ error: 'Method not allowed' }, 405, corsHeaders)
-    }
-
-    let body
-    try {
-      body = await request.json()
-    } catch {
-      return json({ error: 'Invalid JSON body' }, 400, corsHeaders)
-    }
-
-    const { jobDescription, resume } = body ?? {}
-    if (typeof jobDescription !== 'string' || typeof resume !== 'string') {
-      return json({ error: 'jobDescription and resume must be strings' }, 400, corsHeaders)
-    }
-    if (!jobDescription.trim() || !resume.trim()) {
-      return json({ error: 'jobDescription and resume must not be empty' }, 400, corsHeaders)
-    }
-    if (jobDescription.length > MAX_INPUT_LENGTH || resume.length > MAX_INPUT_LENGTH) {
-      return json({ error: `Inputs must be under ${MAX_INPUT_LENGTH} characters` }, 413, corsHeaders)
     }
 
     if (env.RESUME_RATE_LIMIT) {
@@ -64,18 +52,41 @@ export default {
         return json({ error: 'Rate limit exceeded. Try again later.' }, 429, corsHeaders)
       }
     }
-
     if (!env.ANTHROPIC_API_KEY) {
       return json({ error: 'AI backend not configured (missing ANTHROPIC_API_KEY)' }, 503, corsHeaders)
     }
 
-    try {
-      const analysis = await callAnthropic(env.ANTHROPIC_API_KEY, jobDescription, resume)
-      return json(analysis, 200, corsHeaders)
-    } catch (err) {
-      return json({ error: 'AI analysis failed', detail: String(err) }, 502, corsHeaders)
+    const url = new URL(request.url)
+    if (url.pathname !== '/tailor') {
+      return json({ error: 'Not found. POST to /tailor.' }, 404, corsHeaders)
     }
+    return handleTailor(request, env, corsHeaders)
   },
+}
+
+async function handleTailor(request, env, corsHeaders) {
+  let body
+  try {
+    body = await request.json()
+  } catch {
+    return json({ error: 'Invalid JSON body' }, 400, corsHeaders)
+  }
+
+  const { resume, jobDescription, scope } = body ?? {}
+  if (!resume || typeof jobDescription !== 'string' || !jobDescription.trim()) {
+    return json({ error: 'resume (structured object) and jobDescription (string) are required' }, 400, corsHeaders)
+  }
+  const resumeJson = JSON.stringify(resume)
+  if (resumeJson.length > MAX_INPUT_LENGTH || jobDescription.length > MAX_INPUT_LENGTH) {
+    return json({ error: `Inputs must be under ${MAX_INPUT_LENGTH} characters` }, 413, corsHeaders)
+  }
+
+  try {
+    const suggestions = await callAnthropicTailor(env.ANTHROPIC_API_KEY, resume, jobDescription, scope)
+    return json({ suggestions }, 200, corsHeaders)
+  } catch (err) {
+    return json({ error: 'AI tailoring failed', detail: String(err) }, 502, corsHeaders)
+  }
 }
 
 async function isRateLimited(kv, clientIp) {
@@ -86,13 +97,26 @@ async function isRateLimited(kv, clientIp) {
   return false
 }
 
-async function callAnthropic(apiKey, jobDescription, resume) {
-  const systemPrompt = `You compare a resume against a job description for a truthful, honest analysis. Rules:
-- Only use skills/keywords that literally appear in the job description text.
-- Only cite resume evidence that literally appears in the resume text — quote it, don't paraphrase into something stronger.
-- Never invent metrics, accomplishments, or years of experience not present in the resume.
-- Bullet rewrite suggestions must only rearrange/clarify facts already stated in the resume — do not add numbers or outcomes that aren't there.
-- Respond ONLY with JSON matching this shape: {"matchedKeywords": string[], "missingKeywords": string[], "bulletSuggestions": [{"original": string, "suggested": string}], "realityCheck": string[]}`
+const SCOPE_GUIDANCE = {
+  light: 'Only adjust wording and swap in JD terminology the resume already supports. Do not reorder or restructure.',
+  balanced: 'Rewrite and reorder bullets for relevance, within the truthfulness rules below.',
+  focused: "Prioritize the candidate's most relevant verified experience for this specific role.",
+}
+
+async function callAnthropicTailor(apiKey, resume, jobDescription, scope) {
+  const systemPrompt = `You suggest truthful, job-specific resume bullet rewrites. The candidate's resume is given as structured JSON (experience[].bullets, projects[].bullets, skills, education). You will propose edits to EXISTING bullets only — never invent new bullets, new employers, new dates, or new degrees.
+
+Absolute rules (violating any of these makes a suggestion invalid):
+- Never invent metrics, percentages, user counts, or performance numbers not already present in the bullet.
+- Never change a technology name to a different one (e.g. never Java -> JavaScript, never turn "familiar with" into "expert in").
+- Never claim a deployment/infra/scale detail not stated (e.g. never say "deployed on AWS" if the resume doesn't say that).
+- Never turn coursework or a class project into professional employment, and never add years of experience, certifications, or clearance that aren't in the resume.
+- Every proposed rewrite must be traceable to the ORIGINAL bullet's own facts — only wording/emphasis/ordering may change.
+- If a bullet could be stronger with a metric that isn't in the resume, do NOT invent one — omit that suggestion instead.
+
+Scope for this request: ${SCOPE_GUIDANCE[scope] ?? SCOPE_GUIDANCE.balanced}
+
+Respond ONLY with JSON: {"suggestions": [{"id": string, "entryIndex": number, "bulletIndex": number, "originalText": string, "proposedText": string, "explanation": string}]}. entryIndex/bulletIndex refer to positions in resume.experience[entryIndex].bullets[bulletIndex]. originalText must exactly match the existing bullet text.`
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -103,12 +127,12 @@ async function callAnthropic(apiKey, jobDescription, resume) {
     },
     body: JSON.stringify({
       model: 'claude-sonnet-5',
-      max_tokens: 1500,
+      max_tokens: 2000,
       system: systemPrompt,
       messages: [
         {
           role: 'user',
-          content: `JOB DESCRIPTION:\n${jobDescription}\n\nRESUME:\n${resume}`,
+          content: `JOB DESCRIPTION:\n${jobDescription}\n\nRESUME (JSON):\n${JSON.stringify(resume)}`,
         },
       ],
     }),
@@ -118,8 +142,9 @@ async function callAnthropic(apiKey, jobDescription, resume) {
     throw new Error(`Anthropic API HTTP ${res.status}`)
   }
   const data = await res.json()
-  const text = data.content?.[0]?.text ?? '{}'
-  return JSON.parse(text)
+  const text = data.content?.[0]?.text ?? '{"suggestions":[]}'
+  const parsed = JSON.parse(text)
+  return Array.isArray(parsed.suggestions) ? parsed.suggestions : []
 }
 
 function json(data, status, extraHeaders) {

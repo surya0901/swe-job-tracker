@@ -4,7 +4,7 @@ const VIEWS = [
   { key: 'tracker', label: 'Tracker' },
   { key: 'openings', label: 'Openings' },
   { key: 'directory', label: 'Directory' },
-  { key: 'resume', label: 'Resume Assistant' },
+  { key: 'resume', label: 'Resume' },
 ]
 
 export default function TopBar({

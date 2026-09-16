@@ -632,7 +632,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 453,
+      "candidatesFound": 455,
       "detailsFetched": 120
     }
   },
@@ -653,8 +653,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 83
+      "candidatesFound": 88,
+      "detailsFetched": 88
     }
   },
   {
@@ -674,8 +674,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 88,
-      "detailsFetched": 88
+      "candidatesFound": 87,
+      "detailsFetched": 87
     }
   },
   {
@@ -695,8 +695,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 70,
-      "detailsFetched": 70
+      "candidatesFound": 71,
+      "detailsFetched": 71
     }
   },
   {
@@ -716,8 +716,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 96
+      "candidatesFound": 95,
+      "detailsFetched": 95
     }
   },
   {
@@ -759,7 +759,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 87,
-      "detailsFetched": 86
+      "detailsFetched": 82
     }
   },
   {
@@ -779,7 +779,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 167,
+      "candidatesFound": 178,
       "detailsFetched": 120
     }
   },
@@ -801,7 +801,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 78
+      "detailsFetched": 66
     }
   },
   {
@@ -821,20 +821,20 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 69
+      "candidatesFound": 111,
+      "detailsFetched": 32
     }
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
     "industry": "Aerospace/Defense",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
     },
     "careersUrl": null,
     "programName": null,
@@ -842,8 +842,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 435,
-      "detailsFetched": 78
+      "candidatesFound": 347,
+      "detailsFetched": 5
     }
   },
   {
@@ -863,8 +863,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 108,
-      "detailsFetched": 32
+      "candidatesFound": 109,
+      "detailsFetched": 22
     }
   },
   {
@@ -884,8 +884,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 15
+      "candidatesFound": 78,
+      "detailsFetched": 5
     }
   },
   {
@@ -905,29 +905,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 57,
-      "detailsFetched": 27
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 43
+      "candidatesFound": 58,
+      "detailsFetched": 58
     }
   },
   {
@@ -1107,14 +1086,25 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

@@ -716,8 +716,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 96
+      "candidatesFound": 95,
+      "detailsFetched": 95
     }
   },
   {
@@ -759,7 +759,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 91
+      "detailsFetched": 89
     }
   },
   {
@@ -801,7 +801,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 56
+      "detailsFetched": 68
     }
   },
   {
@@ -822,7 +822,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 110,
-      "detailsFetched": 57
+      "detailsFetched": 38
     }
   },
   {
@@ -842,8 +842,29 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 358,
-      "detailsFetched": 71
+      "candidatesFound": 363,
+      "detailsFetched": 4
+    }
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 444,
+      "detailsFetched": 17
     }
   },
   {
@@ -864,7 +885,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 109,
-      "detailsFetched": 73
+      "detailsFetched": 42
     }
   },
   {
@@ -884,8 +905,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 78,
-      "detailsFetched": 42
+      "candidatesFound": 77,
+      "detailsFetched": 25
     }
   },
   {
@@ -906,19 +927,19 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 58,
-      "detailsFetched": 48
+      "detailsFetched": 55
     }
   },
   {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "raymondjames",
+      "tenant": "att",
       "wd": "wd1",
-      "site": "RaymondJamesCareers"
+      "site": "ATTCollege"
     },
     "careersUrl": null,
     "programName": null,
@@ -926,8 +947,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 50
+      "candidatesFound": 2,
+      "detailsFetched": 2
     }
   },
   {
@@ -1107,17 +1128,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:ngc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "the-cigna-group",
     "name": "The Cigna Group",
     "industry": "Healthcare",
@@ -1126,17 +1136,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
@@ -1159,6 +1158,17 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

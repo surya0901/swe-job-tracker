@@ -632,7 +632,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 455,
+      "candidatesFound": 453,
       "detailsFetched": 120
     }
   },
@@ -674,8 +674,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 87,
-      "detailsFetched": 87
+      "candidatesFound": 86,
+      "detailsFetched": 86
     }
   },
   {
@@ -695,8 +695,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 71,
-      "detailsFetched": 71
+      "candidatesFound": 69,
+      "detailsFetched": 69
     }
   },
   {
@@ -759,7 +759,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 87,
-      "detailsFetched": 82
+      "detailsFetched": 87
     }
   },
   {
@@ -801,7 +801,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 66
+      "detailsFetched": 68
     }
   },
   {
@@ -822,19 +822,19 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 111,
-      "detailsFetched": 32
+      "detailsFetched": 59
     }
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
     },
     "careersUrl": null,
     "programName": null,
@@ -842,8 +842,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 347,
-      "detailsFetched": 5
+      "candidatesFound": 427,
+      "detailsFetched": 34
     }
   },
   {
@@ -863,8 +863,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 109,
-      "detailsFetched": 22
+      "candidatesFound": 108,
+      "detailsFetched": 54
     }
   },
   {
@@ -884,8 +884,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 78,
-      "detailsFetched": 5
+      "candidatesFound": 79,
+      "detailsFetched": 40
     }
   },
   {
@@ -905,8 +905,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 58,
-      "detailsFetched": 58
+      "candidatesFound": 57,
+      "detailsFetched": 6
+    }
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "raymondjames",
+      "wd": "wd1",
+      "site": "RaymondJamesCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 68,
+      "detailsFetched": 38
     }
   },
   {
@@ -1086,14 +1107,14 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
     "industry": "Aerospace/Defense",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:ngc -> HTTP 429",
+    "error": "workday:globalhr -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
@@ -1138,17 +1159,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:statestreet -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

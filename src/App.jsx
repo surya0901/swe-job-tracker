@@ -89,17 +89,33 @@ export default function App() {
     }
   }, [filters])
 
+  // Guards against overlapping fetches: if a fetch is already in flight,
+  // later callers just await that same promise instead of firing a
+  // redundant concurrent request (which could otherwise race and let an
+  // earlier, now-stale response overwrite a later one depending on which
+  // resolves first).
+  const inFlightFetchRef = useRef(null)
+  const lastFetchAtRef = useRef(0)
+
   const fetchCatalog = useCallback(async () => {
-    try {
-      const data = await loadCatalog()
-      setCatalog(data)
-      setCatalogError(null)
-      return data
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err)
-      setCatalogError(message)
-      throw err
-    }
+    if (inFlightFetchRef.current) return inFlightFetchRef.current
+    const promise = (async () => {
+      try {
+        const data = await loadCatalog()
+        setCatalog(data)
+        setCatalogError(null)
+        lastFetchAtRef.current = Date.now()
+        return data
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        setCatalogError(message)
+        throw err
+      } finally {
+        inFlightFetchRef.current = null
+      }
+    })()
+    inFlightFetchRef.current = promise
+    return promise
   }, [])
 
   // Initial load.
@@ -108,7 +124,10 @@ export default function App() {
     fetchCatalog().finally(() => setCatalogLoading(false))
   }, [fetchCatalog])
 
-  // Auto-refresh while the tab is visible, without ever touching userData.
+  // Auto-refresh while the tab is visible. On a timer, and when returning
+  // to the tab — but only "if the data is old" (skip if we fetched
+  // recently), so switching tabs back and forth doesn't refetch on every
+  // single focus event.
   useEffect(() => {
     const interval = setInterval(() => {
       if (document.visibilityState === 'visible') {
@@ -119,9 +138,10 @@ export default function App() {
     }, AUTO_REFRESH_INTERVAL_MS)
 
     const onVisible = () => {
-      if (document.visibilityState === 'visible') {
-        fetchCatalog().catch(() => {})
-      }
+      if (document.visibilityState !== 'visible') return
+      const staleForMs = Date.now() - lastFetchAtRef.current
+      if (staleForMs < AUTO_REFRESH_INTERVAL_MS) return
+      fetchCatalog().catch(() => {})
     }
     document.addEventListener('visibilitychange', onVisible)
     return () => {

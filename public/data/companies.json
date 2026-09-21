@@ -695,8 +695,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 68
+      "candidatesFound": 66,
+      "detailsFetched": 66
     }
   },
   {
@@ -737,7 +737,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 383,
+      "candidatesFound": 380,
       "detailsFetched": 120
     }
   },
@@ -758,8 +758,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 92,
+      "detailsFetched": 89
     }
   },
   {
@@ -779,7 +779,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 168,
+      "candidatesFound": 164,
       "detailsFetched": 120
     }
   },
@@ -800,8 +800,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 68
+      "candidatesFound": 84,
+      "detailsFetched": 82
     }
   },
   {
@@ -822,7 +822,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 109,
-      "detailsFetched": 56
+      "detailsFetched": 106
     }
   },
   {
@@ -843,7 +843,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 377,
-      "detailsFetched": 40
+      "detailsFetched": 120
     }
   },
   {
@@ -864,7 +864,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 444,
-      "detailsFetched": 31
+      "detailsFetched": 118
     }
   },
   {
@@ -885,7 +885,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 107,
-      "detailsFetched": 62
+      "detailsFetched": 107
     }
   },
   {
@@ -905,8 +905,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 80,
-      "detailsFetched": 23
+      "candidatesFound": 79,
+      "detailsFetched": 79
     }
   },
   {
@@ -927,7 +927,49 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 50,
-      "detailsFetched": 46
+      "detailsFetched": 50
+    }
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 89,
+      "detailsFetched": 89
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 3,
+      "detailsFetched": 3
     }
   },
   {
@@ -948,7 +990,49 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 234,
-      "detailsFetched": 78
+      "detailsFetched": 74
+    }
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "statestreet",
+      "wd": "wd1",
+      "site": "Global"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 93,
+      "detailsFetched": 60
+    }
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "raymondjames",
+      "wd": "wd1",
+      "site": "RaymondJamesCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 70,
+      "detailsFetched": 44
     }
   },
   {
@@ -1126,50 +1210,6 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:statestreet -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:raymondjames -> HTTP 429",
-    "failureCategory": "rate_limited"
   },
   {
     "companyId": "jpmorgan-chase",

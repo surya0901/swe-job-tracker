@@ -632,7 +632,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 320,
+      "candidatesFound": 313,
       "detailsFetched": 120
     }
   },
@@ -653,8 +653,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 82
+      "candidatesFound": 89,
+      "detailsFetched": 89
     }
   },
   {
@@ -674,8 +674,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 82
+      "candidatesFound": 83,
+      "detailsFetched": 83
     }
   },
   {
@@ -716,8 +716,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 100,
-      "detailsFetched": 100
+      "candidatesFound": 98,
+      "detailsFetched": 98
     }
   },
   {
@@ -737,7 +737,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 364,
+      "candidatesFound": 362,
       "detailsFetched": 120
     }
   },
@@ -758,8 +758,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 92,
-      "detailsFetched": 92
+      "candidatesFound": 94,
+      "detailsFetched": 77
     }
   },
   {
@@ -779,8 +779,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 179,
-      "detailsFetched": 120
+      "candidatesFound": 188,
+      "detailsFetched": 119
     }
   },
   {
@@ -800,8 +800,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 89
+      "candidatesFound": 91,
+      "detailsFetched": 91
     }
   },
   {
@@ -821,20 +821,20 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 107,
-      "detailsFetched": 104
+      "candidatesFound": 108,
+      "detailsFetched": 73
     }
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
     },
     "careersUrl": null,
     "programName": null,
@@ -842,29 +842,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 377,
-      "detailsFetched": 109
-    }
-  },
-  {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "bah",
-      "wd": "wd1",
-      "site": "BAH_Jobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 112,
-      "detailsFetched": 99
+      "candidatesFound": 412,
+      "detailsFetched": 22
     }
   },
   {
@@ -885,7 +864,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 84,
-      "detailsFetched": 70
+      "detailsFetched": 40
     }
   },
   {
@@ -905,20 +884,20 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 58,
-      "detailsFetched": 58
+      "candidatesFound": 59,
+      "detailsFetched": 59
     }
   },
   {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
     },
     "careersUrl": null,
     "programName": null,
@@ -926,8 +905,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 88,
-      "detailsFetched": 86
+      "candidatesFound": 6,
+      "detailsFetched": 6
     }
   },
   {
@@ -948,49 +927,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 242,
-      "detailsFetched": 114
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 98,
-      "detailsFetched": 86
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 67,
-      "detailsFetched": 56
+      "detailsFetched": 94
     }
   },
   {
@@ -1170,25 +1107,58 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
     "industry": "Aerospace/Defense",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:ngc -> HTTP 429",
+    "error": "workday:globalhr -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:att -> HTTP 429",
+    "error": "workday:bah -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

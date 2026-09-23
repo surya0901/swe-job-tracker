@@ -632,7 +632,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 332,
+      "candidatesFound": 320,
       "detailsFetched": 120
     }
   },
@@ -653,8 +653,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 81,
-      "detailsFetched": 81
+      "candidatesFound": 82,
+      "detailsFetched": 82
     }
   },
   {
@@ -674,8 +674,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
+      "candidatesFound": 82,
+      "detailsFetched": 82
     }
   },
   {
@@ -695,8 +695,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 65,
-      "detailsFetched": 65
+      "candidatesFound": 68,
+      "detailsFetched": 68
     }
   },
   {
@@ -716,8 +716,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 98,
-      "detailsFetched": 98
+      "candidatesFound": 100,
+      "detailsFetched": 100
     }
   },
   {
@@ -779,7 +779,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 175,
+      "candidatesFound": 179,
       "detailsFetched": 120
     }
   },
@@ -800,8 +800,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 89,
+      "detailsFetched": 89
     }
   },
   {
@@ -821,8 +821,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 108,
-      "detailsFetched": 108
+      "candidatesFound": 107,
+      "detailsFetched": 104
     }
   },
   {
@@ -842,29 +842,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 372,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 419,
-      "detailsFetched": 120
+      "candidatesFound": 377,
+      "detailsFetched": 109
     }
   },
   {
@@ -884,8 +863,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 111,
-      "detailsFetched": 111
+      "candidatesFound": 112,
+      "detailsFetched": 99
     }
   },
   {
@@ -905,8 +884,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 82
+      "candidatesFound": 84,
+      "detailsFetched": 70
     }
   },
   {
@@ -926,8 +905,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 57,
-      "detailsFetched": 57
+      "candidatesFound": 58,
+      "detailsFetched": 58
     }
   },
   {
@@ -947,29 +926,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 90
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 6,
-      "detailsFetched": 6
+      "candidatesFound": 88,
+      "detailsFetched": 86
     }
   },
   {
@@ -989,8 +947,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 241,
-      "detailsFetched": 120
+      "candidatesFound": 242,
+      "detailsFetched": 114
     }
   },
   {
@@ -1011,7 +969,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 98,
-      "detailsFetched": 96
+      "detailsFetched": 86
     }
   },
   {
@@ -1032,7 +990,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 67,
-      "detailsFetched": 67
+      "detailsFetched": 56
     }
   },
   {
@@ -1210,6 +1168,28 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "jpmorgan-chase",

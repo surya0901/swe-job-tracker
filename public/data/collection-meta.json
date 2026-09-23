@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-22T21:19:16.108Z",
-  "lastSuccessAt": "2026-09-22T21:19:16.108Z",
+  "lastRunAt": "2026-09-23T04:45:28.356Z",
+  "lastSuccessAt": "2026-09-23T04:45:28.356Z",
   "lastRunPublished": true,
   "counts": {
     "totalCompanies": 170,
@@ -9,13 +9,1134 @@
     "partiallyCheckedCompanies": 6,
     "manualCompanies": 90,
     "failingCompanies": 16,
-    "openJobs": 813,
-    "closedJobs": 71,
+    "openJobs": 811,
+    "closedJobs": 73,
     "supportedEarlyCareerJobs": 153,
-    "uncertainJobs": 660,
+    "uncertainJobs": 658,
     "softwareRotationalJobs": 26
   },
   "history": [
+    {
+      "startedAt": "2026-09-23T04:44:26.650Z",
+      "finishedAt": "2026-09-23T04:45:28.356Z",
+      "published": true,
+      "skippedReason": null,
+      "companiesAttempted": 80,
+      "companiesConnected": 64,
+      "companiesFailing": 16,
+      "manualCompanies": 90,
+      "openJobsThisRun": 811,
+      "sources": [
+        {
+          "companyId": "stripe",
+          "name": "Stripe",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "stripe",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "airbnb",
+          "name": "Airbnb",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "airbnb",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "robinhood",
+          "name": "Robinhood",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "robinhood",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "doordash",
+          "name": "DoorDash",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "doordash",
+              "ok": false,
+              "error": "Greenhouse doordash: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:doordash -> Greenhouse doordash: HTTP 404"
+        },
+        {
+          "companyId": "affirm",
+          "name": "Affirm",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "affirm",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "asana",
+          "name": "Asana",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "asana",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "coinbase",
+          "name": "Coinbase",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "coinbase",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "databricks",
+          "name": "Databricks",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "databricks",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "discord",
+          "name": "Discord",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "discord",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "dropbox",
+          "name": "Dropbox",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "dropbox",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "figma",
+          "name": "Figma",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "figma",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "instacart",
+          "name": "Instacart",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "instacart",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "lyft",
+          "name": "Lyft",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "lyft",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "notion",
+          "name": "Notion",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "notion",
+              "ok": false,
+              "error": "Greenhouse notion: HTTP 404"
+            },
+            {
+              "adapter": "ashby",
+              "token": "notion",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "okta",
+          "name": "Okta",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "okta",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "pinterest",
+          "name": "Pinterest",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "pinterest",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "reddit",
+          "name": "Reddit",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "reddit",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "snowflake",
+          "name": "Snowflake",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "snowflake",
+              "ok": false,
+              "error": "Greenhouse snowflake: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:snowflake -> Greenhouse snowflake: HTTP 404"
+        },
+        {
+          "companyId": "squarespace",
+          "name": "Squarespace",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "squarespace",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "twilio",
+          "name": "Twilio",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "twilio",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "webflow",
+          "name": "Webflow",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "webflow",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "wealthfront",
+          "name": "Wealthfront",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "wealthfront",
+              "ok": false,
+              "error": "Greenhouse wealthfront: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:wealthfront -> Greenhouse wealthfront: HTTP 404"
+        },
+        {
+          "companyId": "gusto",
+          "name": "Gusto",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "gusto",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "brex",
+          "name": "Brex",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "brex",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "plaid",
+          "name": "Plaid",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "plaid",
+              "ok": false,
+              "error": "Greenhouse plaid: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:plaid -> Greenhouse plaid: HTTP 404"
+        },
+        {
+          "companyId": "ramp",
+          "name": "Ramp",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "ramp",
+              "ok": false,
+              "error": "Greenhouse ramp: HTTP 404"
+            },
+            {
+              "adapter": "ashby",
+              "token": "ramp",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "rippling",
+          "name": "Rippling",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "rippling",
+              "ok": false,
+              "error": "Greenhouse rippling: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:rippling -> Greenhouse rippling: HTTP 404"
+        },
+        {
+          "companyId": "scale-ai",
+          "name": "Scale AI",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "scaleai",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "anthropic",
+          "name": "Anthropic",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "anthropic",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "openai",
+          "name": "OpenAI",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "openai",
+              "ok": false,
+              "error": "Greenhouse openai: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:openai -> Greenhouse openai: HTTP 404"
+        },
+        {
+          "companyId": "hashicorp",
+          "name": "HashiCorp",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "hashicorp",
+              "ok": false,
+              "error": "Greenhouse hashicorp: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:hashicorp -> Greenhouse hashicorp: HTTP 404"
+        },
+        {
+          "companyId": "confluent",
+          "name": "Confluent",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "confluent",
+              "ok": false,
+              "error": "Greenhouse confluent: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:confluent -> Greenhouse confluent: HTTP 404"
+        },
+        {
+          "companyId": "mongodb",
+          "name": "MongoDB",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "mongodb",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "elastic",
+          "name": "Elastic",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "elastic",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "gitlab",
+          "name": "GitLab",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "gitlab",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "datadog",
+          "name": "Datadog",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "datadog",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "pagerduty",
+          "name": "PagerDuty",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "pagerduty",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "amplitude",
+          "name": "Amplitude",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "amplitude",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "braze",
+          "name": "Braze",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "braze",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "grammarly",
+          "name": "Grammarly",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "grammarly",
+              "ok": false,
+              "error": "Greenhouse grammarly: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:grammarly -> Greenhouse grammarly: HTTP 404"
+        },
+        {
+          "companyId": "duolingo",
+          "name": "Duolingo",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "duolingo",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "roblox",
+          "name": "Roblox",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "roblox",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "unity",
+          "name": "Unity",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "unity",
+              "ok": false,
+              "error": "Greenhouse unity: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:unity -> Greenhouse unity: HTTP 404"
+        },
+        {
+          "companyId": "cloudflare",
+          "name": "Cloudflare",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "cloudflare",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "samsara",
+          "name": "Samsara",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "samsara",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "toast",
+          "name": "Toast",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "toast",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "benchling",
+          "name": "Benchling",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "benchling",
+              "ok": false,
+              "error": "Greenhouse benchling: HTTP 404"
+            }
+          ],
+          "error": "greenhouse:benchling -> Greenhouse benchling: HTTP 404"
+        },
+        {
+          "companyId": "carta",
+          "name": "Carta",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "greenhouse",
+              "token": "carta",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "palantir-technologies",
+          "name": "Palantir Technologies",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "lever",
+              "token": "palantir",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "attentive",
+          "name": "Attentive",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "lever",
+              "token": "attentive",
+              "ok": false,
+              "error": "Lever attentive: HTTP 404"
+            }
+          ],
+          "error": "lever:attentive -> Lever attentive: HTTP 404"
+        },
+        {
+          "companyId": "postman",
+          "name": "Postman",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "lever",
+              "token": "postman",
+              "ok": false,
+              "error": "Lever postman: HTTP 404"
+            }
+          ],
+          "error": "lever:postman -> Lever postman: HTTP 404"
+        },
+        {
+          "companyId": "betterment",
+          "name": "Betterment",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "lever",
+              "token": "betterment",
+              "ok": false,
+              "error": "Lever betterment: HTTP 404"
+            }
+          ],
+          "error": "lever:betterment -> Lever betterment: HTTP 404"
+        },
+        {
+          "companyId": "seatgeek",
+          "name": "SeatGeek",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "lever",
+              "token": "seatgeek",
+              "ok": false,
+              "error": "Lever seatgeek: HTTP 404"
+            }
+          ],
+          "error": "lever:seatgeek -> Lever seatgeek: HTTP 404"
+        },
+        {
+          "companyId": "linear",
+          "name": "Linear",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "linear",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "vanta",
+          "name": "Vanta",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "vanta",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "mercury",
+          "name": "Mercury",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "mercury",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "retool",
+          "name": "Retool",
+          "status": "source_failing",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "retool",
+              "ok": false,
+              "error": "Ashby retool: HTTP 404"
+            }
+          ],
+          "error": "ashby:retool -> Ashby retool: HTTP 404"
+        },
+        {
+          "companyId": "watershed",
+          "name": "Watershed",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "watershed",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "modern-treasury",
+          "name": "Modern Treasury",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "moderntreasury",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "deel",
+          "name": "Deel",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "ashby",
+              "token": "deel",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "capital-one",
+          "name": "Capital One",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "capitalone",
+              "wd": "wd12",
+              "site": "Capital_One",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "fidelity-investments",
+          "name": "Fidelity Investments",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "fmr",
+              "wd": "wd1",
+              "site": "FidelityCareers",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "pnc-financial-services",
+          "name": "PNC Financial Services",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "pnc",
+              "wd": "wd5",
+              "site": "External",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "u-s-bank",
+          "name": "U.S. Bank",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "usbank",
+              "wd": "wd1",
+              "site": "US_Bank_Careers",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "vanguard",
+          "name": "Vanguard",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "vanguard",
+              "wd": "wd5",
+              "site": "vanguard_external",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "barclays",
+          "name": "Barclays",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "barclays",
+              "wd": "wd3",
+              "site": "External_Career_Site_Barclays",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "target",
+          "name": "Target",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "target",
+              "wd": "wd5",
+              "site": "targetcareers",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "cvs-health",
+          "name": "CVS Health",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "cvshealth",
+              "wd": "wd1",
+              "site": "CVS_Health_Careers",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "caterpillar",
+          "name": "Caterpillar",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "cat",
+              "wd": "wd5",
+              "site": "CaterpillarCareers",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "general-motors",
+          "name": "General Motors",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "generalmotors",
+              "wd": "wd5",
+              "site": "Careers_GM",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "rtx-raytheon",
+          "name": "RTX (Raytheon)",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "globalhr",
+              "wd": "wd5",
+              "site": "REC_RTX_Ext_Gateway",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "northrop-grumman",
+          "name": "Northrop Grumman",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "ngc",
+              "wd": "wd1",
+              "site": "Northrop_Grumman_External_Site",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "booz-allen-hamilton",
+          "name": "Booz Allen Hamilton",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "bah",
+              "wd": "wd1",
+              "site": "BAH_Jobs",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "wells-fargo",
+          "name": "Wells Fargo",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "wf",
+              "wd": "wd1",
+              "site": "WellsFargoJobs",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "usaa",
+          "name": "USAA",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "usaa",
+              "wd": "wd1",
+              "site": "USAAJOBSWD",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "the-cigna-group",
+          "name": "The Cigna Group",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "cigna",
+              "wd": "wd5",
+              "site": "cignacareers",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "at-t",
+          "name": "AT&T",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "att",
+              "wd": "wd1",
+              "site": "ATTCollege",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "lowe-s",
+          "name": "Lowe's",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "lowes",
+              "wd": "wd5",
+              "site": "LWS_External_CS",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "state-street",
+          "name": "State Street",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "statestreet",
+              "wd": "wd1",
+              "site": "Global",
+              "ok": true
+            }
+          ],
+          "error": null
+        },
+        {
+          "companyId": "raymond-james",
+          "name": "Raymond James",
+          "status": "connected",
+          "attempts": [
+            {
+              "adapter": "workday",
+              "tenant": "raymondjames",
+              "wd": "wd1",
+              "site": "RaymondJamesCareers",
+              "ok": true
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
     {
       "startedAt": "2026-09-22T21:18:08.722Z",
       "finishedAt": "2026-09-22T21:19:16.108Z",

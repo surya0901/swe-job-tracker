@@ -653,8 +653,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 83
+      "candidatesFound": 84,
+      "detailsFetched": 84
     }
   },
   {
@@ -674,8 +674,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 83
+      "candidatesFound": 81,
+      "detailsFetched": 81
     }
   },
   {
@@ -695,8 +695,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 66,
-      "detailsFetched": 66
+      "candidatesFound": 65,
+      "detailsFetched": 65
     }
   },
   {
@@ -716,8 +716,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 99,
-      "detailsFetched": 99
+      "candidatesFound": 98,
+      "detailsFetched": 98
     }
   },
   {
@@ -758,8 +758,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 94,
+      "detailsFetched": 64
     }
   },
   {
@@ -800,8 +800,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 49
+      "candidatesFound": 92,
+      "detailsFetched": 81
     }
   },
   {
@@ -822,28 +822,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 106,
-      "detailsFetched": 38
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 422,
-      "detailsFetched": 44
+      "detailsFetched": 65
     }
   },
   {
@@ -864,7 +843,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 111,
-      "detailsFetched": 38
+      "detailsFetched": 46
     }
   },
   {
@@ -884,8 +863,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 13
+      "candidatesFound": 81,
+      "detailsFetched": 22
     }
   },
   {
@@ -905,8 +884,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 60,
-      "detailsFetched": 0
+      "candidatesFound": 63,
+      "detailsFetched": 57
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 6,
+      "detailsFetched": 6
     }
   },
   {
@@ -1097,6 +1097,17 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "the-cigna-group",
     "name": "The Cigna Group",
     "industry": "Healthcare",
@@ -1105,17 +1116,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

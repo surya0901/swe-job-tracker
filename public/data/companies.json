@@ -737,7 +737,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 347,
+      "candidatesFound": 348,
       "detailsFetched": 120
     }
   },
@@ -759,7 +759,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 95,
-      "detailsFetched": 89
+      "detailsFetched": 74
     }
   },
   {
@@ -779,7 +779,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 179,
+      "candidatesFound": 180,
       "detailsFetched": 120
     }
   },
@@ -801,7 +801,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 65
+      "detailsFetched": 71
     }
   },
   {
@@ -822,7 +822,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 105,
-      "detailsFetched": 26
+      "detailsFetched": 39
     }
   },
   {
@@ -843,7 +843,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 385,
-      "detailsFetched": 5
+      "detailsFetched": 15
     }
   },
   {
@@ -864,7 +864,28 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 114,
-      "detailsFetched": 37
+      "detailsFetched": 50
+    }
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "wf",
+      "wd": "wd1",
+      "site": "WellsFargoJobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 85,
+      "detailsFetched": 23
     }
   },
   {
@@ -885,7 +906,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 60,
-      "detailsFetched": 39
+      "detailsFetched": 41
     }
   },
   {
@@ -1073,17 +1094,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:ngc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:wf -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

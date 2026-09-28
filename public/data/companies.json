@@ -406,20 +406,6 @@
     "coverageStats": {}
   },
   {
-    "companyId": "amplitude",
-    "name": "Amplitude",
-    "industry": "SaaS",
-    "status": "connected",
-    "source": {
-      "adapter": "greenhouse",
-      "token": "amplitude"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {}
-  },
-  {
     "companyId": "braze",
     "name": "Braze",
     "industry": "SaaS",
@@ -632,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 291,
+      "candidatesFound": 281,
       "detailsFetched": 120
     }
   },
@@ -653,8 +639,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
+      "candidatesFound": 87,
+      "detailsFetched": 87
     }
   },
   {
@@ -674,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 81,
-      "detailsFetched": 81
+      "candidatesFound": 80,
+      "detailsFetched": 80
     }
   },
   {
@@ -695,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 60,
-      "detailsFetched": 60
+      "candidatesFound": 59,
+      "detailsFetched": 59
     }
   },
   {
@@ -716,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 95,
-      "detailsFetched": 95
+      "candidatesFound": 94,
+      "detailsFetched": 94
     }
   },
   {
@@ -737,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 346,
+      "candidatesFound": 339,
       "detailsFetched": 120
     }
   },
@@ -758,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 94,
+      "detailsFetched": 94
     }
   },
   {
@@ -779,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 172,
+      "candidatesFound": 186,
       "detailsFetched": 120
     }
   },
@@ -800,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 89
+      "candidatesFound": 90,
+      "detailsFetched": 90
     }
   },
   {
@@ -821,8 +807,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 107,
-      "detailsFetched": 107
+      "candidatesFound": 110,
+      "detailsFetched": 110
     }
   },
   {
@@ -842,7 +828,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 391,
+      "candidatesFound": 385,
       "detailsFetched": 120
     }
   },
@@ -863,7 +849,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 425,
+      "candidatesFound": 442,
       "detailsFetched": 120
     }
   },
@@ -884,7 +870,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 113,
+      "candidatesFound": 114,
       "detailsFetched": 113
     }
   },
@@ -905,8 +891,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 81,
-      "detailsFetched": 81
+      "candidatesFound": 82,
+      "detailsFetched": 82
     }
   },
   {
@@ -926,8 +912,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 56,
-      "detailsFetched": 56
+      "candidatesFound": 60,
+      "detailsFetched": 60
     }
   },
   {
@@ -947,8 +933,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 88,
-      "detailsFetched": 88
+      "candidatesFound": 87,
+      "detailsFetched": 87
     }
   },
   {
@@ -989,8 +975,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 249,
-      "detailsFetched": 119
+      "candidatesFound": 248,
+      "detailsFetched": 91
     }
   },
   {
@@ -1011,7 +997,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 96,
-      "detailsFetched": 96
+      "detailsFetched": 93
     }
   },
   {
@@ -1032,7 +1018,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 67,
-      "detailsFetched": 67
+      "detailsFetched": 53
     }
   },
   {
@@ -1121,6 +1107,17 @@
     "careersUrl": null,
     "programName": null,
     "error": "greenhouse:confluent -> Greenhouse confluent: HTTP 404",
+    "failureCategory": "not_found"
+  },
+  {
+    "companyId": "amplitude",
+    "name": "Amplitude",
+    "industry": "SaaS",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:amplitude -> Greenhouse amplitude: HTTP 404",
     "failureCategory": "not_found"
   },
   {

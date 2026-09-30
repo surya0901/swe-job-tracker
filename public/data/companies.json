@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 278,
+      "candidatesFound": 297,
       "detailsFetched": 120
     }
   },
@@ -660,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 80,
-      "detailsFetched": 80
+      "candidatesFound": 81,
+      "detailsFetched": 81
     }
   },
   {
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 67,
-      "detailsFetched": 67
+      "candidatesFound": 68,
+      "detailsFetched": 68
     }
   },
   {
@@ -702,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 92,
-      "detailsFetched": 92
+      "candidatesFound": 91,
+      "detailsFetched": 91
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 338,
+      "candidatesFound": 335,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 92,
-      "detailsFetched": 92
+      "candidatesFound": 93,
+      "detailsFetched": 80
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 159,
+      "candidatesFound": 164,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 89
+      "candidatesFound": 87,
+      "detailsFetched": 72
     }
   },
   {
@@ -808,49 +808,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 110,
-      "detailsFetched": 110
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 391,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 427,
-      "detailsFetched": 120
+      "detailsFetched": 92
     }
   },
   {
@@ -871,7 +829,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 112,
-      "detailsFetched": 112
+      "detailsFetched": 69
     }
   },
   {
@@ -891,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 82
+      "candidatesFound": 79,
+      "detailsFetched": 52
     }
   },
   {
@@ -912,8 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 58,
-      "detailsFetched": 58
+      "candidatesFound": 62,
+      "detailsFetched": 30
     }
   },
   {
@@ -934,7 +892,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 89
+      "detailsFetched": 69
     }
   },
   {
@@ -975,50 +933,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 246,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 88
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 70,
-      "detailsFetched": 67
+      "candidatesFound": 245,
+      "detailsFetched": 105
     }
   },
   {
@@ -1207,6 +1123,50 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "jpmorgan-chase",

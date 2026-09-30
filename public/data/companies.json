@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 282,
+      "candidatesFound": 279,
       "detailsFetched": 120
     }
   },
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 59,
-      "detailsFetched": 59
+      "candidatesFound": 66,
+      "detailsFetched": 66
     }
   },
   {
@@ -702,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 90
+      "candidatesFound": 89,
+      "detailsFetched": 89
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 342,
+      "candidatesFound": 337,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 94
+      "candidatesFound": 92,
+      "detailsFetched": 92
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 182,
+      "candidatesFound": 162,
       "detailsFetched": 120
     }
   },
@@ -787,7 +787,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 89
+      "detailsFetched": 64
     }
   },
   {
@@ -807,50 +807,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 111,
-      "detailsFetched": 111
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 390,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 430,
-      "detailsFetched": 116
+      "candidatesFound": 110,
+      "detailsFetched": 78
     }
   },
   {
@@ -870,8 +828,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 113,
-      "detailsFetched": 113
+      "candidatesFound": 112,
+      "detailsFetched": 37
     }
   },
   {
@@ -891,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 82
+      "candidatesFound": 82,
+      "detailsFetched": 39
     }
   },
   {
@@ -912,29 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 65,
-      "detailsFetched": 65
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 87,
-      "detailsFetched": 85
+      "candidatesFound": 58,
+      "detailsFetched": 58
     }
   },
   {
@@ -976,49 +913,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 246,
-      "detailsFetched": 118
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 97,
-      "detailsFetched": 94
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 69
+      "detailsFetched": 62
     }
   },
   {
@@ -1207,6 +1102,61 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "jpmorgan-chase",

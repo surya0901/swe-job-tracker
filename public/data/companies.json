@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 314,
+      "candidatesFound": 316,
       "detailsFetched": 120
     }
   },
@@ -660,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 74
+      "candidatesFound": 73,
+      "detailsFetched": 73
     }
   },
   {
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 64,
-      "detailsFetched": 64
+      "candidatesFound": 63,
+      "detailsFetched": 63
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 171,
+      "candidatesFound": 163,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
+      "candidatesFound": 84,
+      "detailsFetched": 82
     }
   },
   {
@@ -808,7 +808,28 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 108,
-      "detailsFetched": 79
+      "detailsFetched": 102
+    }
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 379,
+      "detailsFetched": 104
     }
   },
   {
@@ -828,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 423,
-      "detailsFetched": 49
+      "candidatesFound": 424,
+      "detailsFetched": 106
     }
   },
   {
@@ -850,7 +871,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 114,
-      "detailsFetched": 51
+      "detailsFetched": 94
     }
   },
   {
@@ -871,7 +892,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 67,
-      "detailsFetched": 42
+      "detailsFetched": 45
     }
   },
   {
@@ -891,8 +912,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 55,
-      "detailsFetched": 55
+      "candidatesFound": 54,
+      "detailsFetched": 54
     }
   },
   {
@@ -913,7 +934,28 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 6,
-      "detailsFetched": 6
+      "detailsFetched": 4
+    }
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "lowes",
+      "wd": "wd5",
+      "site": "LWS_External_CS"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 249,
+      "detailsFetched": 107
     }
   },
   {
@@ -1104,17 +1146,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "the-cigna-group",
     "name": "The Cigna Group",
     "industry": "Healthcare",
@@ -1123,17 +1154,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:lowes -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

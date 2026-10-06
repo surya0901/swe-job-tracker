@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 320,
+      "candidatesFound": 318,
       "detailsFetched": 120
     }
   },
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 331,
+      "candidatesFound": 329,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 89
+      "candidatesFound": 82,
+      "detailsFetched": 82
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 163,
+      "candidatesFound": 158,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 86,
-      "detailsFetched": 86
+      "candidatesFound": 88,
+      "detailsFetched": 80
     }
   },
   {
@@ -807,8 +807,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 106,
-      "detailsFetched": 98
+      "candidatesFound": 104,
+      "detailsFetched": 75
     }
   },
   {
@@ -829,7 +829,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 113,
-      "detailsFetched": 99
+      "detailsFetched": 65
     }
   },
   {
@@ -850,7 +850,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 73,
-      "detailsFetched": 70
+      "detailsFetched": 30
     }
   },
   {
@@ -870,8 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 59,
-      "detailsFetched": 59
+      "candidatesFound": 61,
+      "detailsFetched": 61
     }
   },
   {
@@ -891,8 +891,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 88,
-      "detailsFetched": 80
+      "candidatesFound": 86,
+      "detailsFetched": 61
     }
   },
   {
@@ -914,27 +914,6 @@
       "detailCoverageComplete": true,
       "candidatesFound": 5,
       "detailsFetched": 5
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 71,
-      "detailsFetched": 63
     }
   },
   {
@@ -1166,6 +1145,17 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

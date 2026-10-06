@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 319,
+      "candidatesFound": 320,
       "detailsFetched": 120
     }
   },
@@ -639,8 +639,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 83
+      "candidatesFound": 86,
+      "detailsFetched": 86
     }
   },
   {
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 62,
-      "detailsFetched": 62
+      "candidatesFound": 63,
+      "detailsFetched": 63
     }
   },
   {
@@ -702,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 95,
-      "detailsFetched": 95
+      "candidatesFound": 93,
+      "detailsFetched": 93
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 333,
+      "candidatesFound": 331,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 88
+      "candidatesFound": 89,
+      "detailsFetched": 89
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 160,
+      "candidatesFound": 163,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 77
+      "candidatesFound": 86,
+      "detailsFetched": 86
     }
   },
   {
@@ -807,8 +807,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 107,
-      "detailsFetched": 85
+      "candidatesFound": 106,
+      "detailsFetched": 98
     }
   },
   {
@@ -828,8 +828,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 114,
-      "detailsFetched": 57
+      "candidatesFound": 113,
+      "detailsFetched": 99
     }
   },
   {
@@ -849,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 71,
-      "detailsFetched": 42
+      "candidatesFound": 73,
+      "detailsFetched": 70
     }
   },
   {
@@ -870,8 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 54,
-      "detailsFetched": 54
+      "candidatesFound": 59,
+      "detailsFetched": 59
     }
   },
   {
@@ -892,7 +892,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 88,
-      "detailsFetched": 55
+      "detailsFetched": 80
     }
   },
   {
@@ -912,29 +912,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 6,
-      "detailsFetched": 6
+      "candidatesFound": 5,
+      "detailsFetched": 5
     }
   },
   {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
+      "tenant": "raymondjames",
+      "wd": "wd1",
+      "site": "RaymondJamesCareers"
     },
     "careersUrl": null,
     "programName": null,
-    "coverageComplete": false,
+    "coverageComplete": true,
     "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 248,
-      "detailsFetched": 90
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 71,
+      "detailsFetched": 63
     }
   },
   {
@@ -1147,6 +1147,17 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "state-street",
     "name": "State Street",
     "industry": "Finance",
@@ -1155,17 +1166,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:statestreet -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

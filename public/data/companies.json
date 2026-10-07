@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 336,
+      "candidatesFound": 341,
       "detailsFetched": 120
     }
   },
@@ -639,8 +639,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 82
+      "candidatesFound": 83,
+      "detailsFetched": 83
     }
   },
   {
@@ -660,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 75,
-      "detailsFetched": 75
+      "candidatesFound": 76,
+      "detailsFetched": 76
     }
   },
   {
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 62,
-      "detailsFetched": 62
+      "candidatesFound": 60,
+      "detailsFetched": 60
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 334,
+      "candidatesFound": 336,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
+      "candidatesFound": 94,
+      "detailsFetched": 94
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 156,
+      "candidatesFound": 155,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 90
+      "candidatesFound": 91,
+      "detailsFetched": 91
     }
   },
   {
@@ -807,8 +807,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 106,
-      "detailsFetched": 17
+      "candidatesFound": 107,
+      "detailsFetched": 107
+    }
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 392,
+      "detailsFetched": 120
     }
   },
   {
@@ -828,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 434,
-      "detailsFetched": 0
+      "candidatesFound": 428,
+      "detailsFetched": 112
     }
   },
   {
@@ -849,8 +870,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 108,
-      "detailsFetched": 22
+      "candidatesFound": 110,
+      "detailsFetched": 108
+    }
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "wf",
+      "wd": "wd1",
+      "site": "WellsFargoJobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 74,
+      "detailsFetched": 74
     }
   },
   {
@@ -870,8 +912,92 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 58
+      "candidatesFound": 74,
+      "detailsFetched": 74
+    }
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 91,
+      "detailsFetched": 91
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 5,
+      "detailsFetched": 5
+    }
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "lowes",
+      "wd": "wd5",
+      "site": "LWS_External_CS"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 257,
+      "detailsFetched": 115
+    }
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "raymondjames",
+      "wd": "wd1",
+      "site": "RaymondJamesCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 71,
+      "detailsFetched": 69
     }
   },
   {
@@ -1062,61 +1188,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:wf -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:lowes -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "state-street",
     "name": "State Street",
     "industry": "Finance",
@@ -1125,17 +1196,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:statestreet -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

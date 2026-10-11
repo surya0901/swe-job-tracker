@@ -702,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 90,
+      "detailsFetched": 90
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 329,
+      "candidatesFound": 330,
       "detailsFetched": 120
     }
   },
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 144,
+      "candidatesFound": 139,
       "detailsFetched": 120
     }
   },
@@ -787,7 +787,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 90,
-      "detailsFetched": 60
+      "detailsFetched": 77
     }
   },
   {
@@ -808,7 +808,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 104,
-      "detailsFetched": 40
+      "detailsFetched": 74
     }
   },
   {
@@ -829,7 +829,28 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 111,
-      "detailsFetched": 42
+      "detailsFetched": 69
+    }
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "wf",
+      "wd": "wd1",
+      "site": "WellsFargoJobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 69,
+      "detailsFetched": 41
     }
   },
   {
@@ -849,8 +870,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 63,
-      "detailsFetched": 51
+      "candidatesFound": 62,
+      "detailsFetched": 62
+    }
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 94,
+      "detailsFetched": 72
     }
   },
   {
@@ -871,7 +913,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 5,
-      "detailsFetched": 5
+      "detailsFetched": 0
     }
   },
   {
@@ -1081,28 +1123,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:ngc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:wf -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cigna -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

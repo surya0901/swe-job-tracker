@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 333,
+      "candidatesFound": 332,
       "detailsFetched": 120
     }
   },
@@ -639,8 +639,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 99,
-      "detailsFetched": 99
+      "candidatesFound": 98,
+      "detailsFetched": 98
     }
   },
   {
@@ -660,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 74
+      "candidatesFound": 72,
+      "detailsFetched": 72
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 136,
+      "candidatesFound": 135,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 90,
+      "detailsFetched": 86
     }
   },
   {
@@ -807,8 +807,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 105
+      "candidatesFound": 102,
+      "detailsFetched": 74
     }
   },
   {
@@ -828,8 +828,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 390,
-      "detailsFetched": 119
+      "candidatesFound": 387,
+      "detailsFetched": 34
     }
   },
   {
@@ -849,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 415,
-      "detailsFetched": 120
+      "candidatesFound": 413,
+      "detailsFetched": 14
     }
   },
   {
@@ -871,7 +871,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 108,
-      "detailsFetched": 108
+      "detailsFetched": 61
     }
   },
   {
@@ -892,7 +892,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 65,
-      "detailsFetched": 65
+      "detailsFetched": 25
     }
   },
   {
@@ -912,29 +912,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 63,
-      "detailsFetched": 63
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 86,
-      "detailsFetched": 86
+      "candidatesFound": 59,
+      "detailsFetched": 59
     }
   },
   {
@@ -959,48 +938,6 @@
     }
   },
   {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 252,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 95,
-      "detailsFetched": 95
-    }
-  },
-  {
     "companyId": "raymond-james",
     "name": "Raymond James",
     "industry": "Finance",
@@ -1018,7 +955,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 67,
-      "detailsFetched": 67
+      "detailsFetched": 14
     }
   },
   {
@@ -1207,6 +1144,39 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "jpmorgan-chase",

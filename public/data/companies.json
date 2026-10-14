@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 336,
+      "candidatesFound": 338,
       "detailsFetched": 120
     }
   },
@@ -639,8 +639,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 96
+      "candidatesFound": 91,
+      "detailsFetched": 91
     }
   },
   {
@@ -660,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 72,
-      "detailsFetched": 72
+      "candidatesFound": 74,
+      "detailsFetched": 74
     }
   },
   {
@@ -702,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 90
+      "candidatesFound": 91,
+      "detailsFetched": 91
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 323,
+      "candidatesFound": 322,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 94
+      "candidatesFound": 93,
+      "detailsFetched": 93
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 144,
+      "candidatesFound": 146,
       "detailsFetched": 120
     }
   },
@@ -787,7 +787,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 92,
-      "detailsFetched": 92
+      "detailsFetched": 38
     }
   },
   {
@@ -808,7 +808,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 104,
-      "detailsFetched": 101
+      "detailsFetched": 58
     }
   },
   {
@@ -828,8 +828,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 385,
-      "detailsFetched": 112
+      "candidatesFound": 381,
+      "detailsFetched": 30
     }
   },
   {
@@ -849,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 410,
-      "detailsFetched": 115
+      "candidatesFound": 401,
+      "detailsFetched": 60
     }
   },
   {
@@ -870,8 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 107,
-      "detailsFetched": 102
+      "candidatesFound": 108,
+      "detailsFetched": 32
     }
   },
   {
@@ -891,8 +891,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 67,
-      "detailsFetched": 54
+      "candidatesFound": 68,
+      "detailsFetched": 10
     }
   },
   {
@@ -912,29 +912,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 60,
-      "detailsFetched": 60
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 5,
-      "detailsFetched": 5
+      "candidatesFound": 62,
+      "detailsFetched": 22
     }
   },
   {
@@ -954,29 +933,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 252,
-      "detailsFetched": 105
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 88
+      "candidatesFound": 251,
+      "detailsFetched": 66
     }
   },
   {
@@ -1175,6 +1133,28 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

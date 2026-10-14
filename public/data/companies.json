@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 338,
+      "candidatesFound": 345,
       "detailsFetched": 120
     }
   },
@@ -639,8 +639,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 92,
+      "detailsFetched": 92
     }
   },
   {
@@ -660,8 +660,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 74
+      "candidatesFound": 73,
+      "detailsFetched": 73
     }
   },
   {
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 64,
-      "detailsFetched": 64
+      "candidatesFound": 63,
+      "detailsFetched": 63
     }
   },
   {
@@ -702,8 +702,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 90,
+      "detailsFetched": 90
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 322,
+      "candidatesFound": 321,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 93,
-      "detailsFetched": 93
+      "candidatesFound": 94,
+      "detailsFetched": 94
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 146,
+      "candidatesFound": 154,
       "detailsFetched": 120
     }
   },
@@ -786,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 92,
-      "detailsFetched": 38
+      "candidatesFound": 93,
+      "detailsFetched": 80
     }
   },
   {
@@ -808,28 +808,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 104,
-      "detailsFetched": 58
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 381,
-      "detailsFetched": 30
+      "detailsFetched": 71
     }
   },
   {
@@ -849,8 +828,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 401,
-      "detailsFetched": 60
+      "candidatesFound": 405,
+      "detailsFetched": 56
     }
   },
   {
@@ -870,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 108,
-      "detailsFetched": 32
+      "candidatesFound": 107,
+      "detailsFetched": 34
     }
   },
   {
@@ -891,8 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 10
+      "candidatesFound": 74,
+      "detailsFetched": 30
     }
   },
   {
@@ -912,8 +891,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 62,
-      "detailsFetched": 22
+      "candidatesFound": 63,
+      "detailsFetched": 63
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 5,
+      "detailsFetched": 5
     }
   },
   {
@@ -933,8 +933,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 251,
-      "detailsFetched": 66
+      "candidatesFound": 253,
+      "detailsFetched": 77
     }
   },
   {
@@ -1125,6 +1125,17 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "the-cigna-group",
     "name": "The Cigna Group",
     "industry": "Healthcare",
@@ -1133,17 +1144,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

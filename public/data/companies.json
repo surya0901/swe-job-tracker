@@ -618,7 +618,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 338,
+      "candidatesFound": 337,
       "detailsFetched": 120
     }
   },
@@ -681,8 +681,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 64,
-      "detailsFetched": 64
+      "candidatesFound": 65,
+      "detailsFetched": 65
     }
   },
   {
@@ -723,7 +723,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 322,
+      "candidatesFound": 321,
       "detailsFetched": 120
     }
   },
@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 93,
-      "detailsFetched": 69
+      "candidatesFound": 95,
+      "detailsFetched": 95
     }
   },
   {
@@ -765,7 +765,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 150,
+      "candidatesFound": 146,
       "detailsFetched": 120
     }
   },
@@ -787,7 +787,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 92,
-      "detailsFetched": 64
+      "detailsFetched": 82
     }
   },
   {
@@ -808,28 +808,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 104,
-      "detailsFetched": 61
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 392,
-      "detailsFetched": 17
+      "detailsFetched": 66
     }
   },
   {
@@ -850,7 +829,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 108,
-      "detailsFetched": 25
+      "detailsFetched": 60
     }
   },
   {
@@ -871,7 +850,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 67,
-      "detailsFetched": 10
+      "detailsFetched": 15
     }
   },
   {
@@ -891,20 +870,20 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 62,
-      "detailsFetched": 47
+      "candidatesFound": 64,
+      "detailsFetched": 64
     }
   },
   {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
     },
     "careersUrl": null,
     "programName": null,
@@ -912,8 +891,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 5,
-      "detailsFetched": 0
+      "candidatesFound": 85,
+      "detailsFetched": 31
     }
   },
   {
@@ -1104,6 +1083,17 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "northrop-grumman",
     "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
@@ -1115,14 +1105,14 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:cigna -> HTTP 429",
+    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

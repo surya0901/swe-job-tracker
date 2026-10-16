@@ -252,20 +252,6 @@
     "coverageStats": {}
   },
   {
-    "companyId": "webflow",
-    "name": "Webflow",
-    "industry": "SaaS",
-    "status": "connected",
-    "source": {
-      "adapter": "greenhouse",
-      "token": "webflow"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {}
-  },
-  {
     "companyId": "gusto",
     "name": "Gusto",
     "industry": "Fintech",
@@ -618,7 +604,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 350,
+      "candidatesFound": 351,
       "detailsFetched": 120
     }
   },
@@ -639,8 +625,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 101,
-      "detailsFetched": 101
+      "candidatesFound": 104,
+      "detailsFetched": 104
     }
   },
   {
@@ -660,8 +646,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 79,
-      "detailsFetched": 79
+      "candidatesFound": 75,
+      "detailsFetched": 75
     }
   },
   {
@@ -702,8 +688,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 90,
+      "detailsFetched": 90
     }
   },
   {
@@ -723,7 +709,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 315,
+      "candidatesFound": 313,
       "detailsFetched": 120
     }
   },
@@ -744,8 +730,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 93,
-      "detailsFetched": 93
+      "candidatesFound": 95,
+      "detailsFetched": 87
     }
   },
   {
@@ -765,7 +751,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 154,
+      "candidatesFound": 162,
       "detailsFetched": 120
     }
   },
@@ -787,7 +773,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 78
+      "detailsFetched": 88
     }
   },
   {
@@ -808,28 +794,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 104,
-      "detailsFetched": 84
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 423,
-      "detailsFetched": 82
+      "detailsFetched": 48
     }
   },
   {
@@ -849,8 +814,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 106,
-      "detailsFetched": 57
+      "candidatesFound": 107,
+      "detailsFetched": 48
     }
   },
   {
@@ -870,8 +835,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 70,
-      "detailsFetched": 34
+      "candidatesFound": 73,
+      "detailsFetched": 35
     }
   },
   {
@@ -891,29 +856,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 60,
-      "detailsFetched": 60
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 5,
-      "detailsFetched": 5
+      "candidatesFound": 63,
+      "detailsFetched": 49
     }
   },
   {
@@ -936,6 +880,17 @@
     "careersUrl": null,
     "programName": null,
     "error": "greenhouse:snowflake -> Greenhouse snowflake: HTTP 404",
+    "failureCategory": "not_found"
+  },
+  {
+    "companyId": "webflow",
+    "name": "Webflow",
+    "industry": "SaaS",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:webflow -> Greenhouse webflow: HTTP 404",
     "failureCategory": "not_found"
   },
   {
@@ -1115,6 +1070,17 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "the-cigna-group",
     "name": "The Cigna Group",
     "industry": "Healthcare",
@@ -1123,6 +1089,17 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

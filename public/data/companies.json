@@ -602,6 +602,27 @@
     "coverageStats": {}
   },
   {
+    "companyId": "capital-one",
+    "name": "Capital One",
+    "industry": "Finance",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "capitalone",
+      "wd": "wd12",
+      "site": "Capital_One"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 351,
+      "detailsFetched": 120
+    }
+  },
+  {
     "companyId": "fidelity-investments",
     "name": "Fidelity Investments",
     "industry": "Finance",
@@ -723,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 95,
-      "detailsFetched": 95
+      "candidatesFound": 94,
+      "detailsFetched": 93
     }
   },
   {
@@ -744,8 +765,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 158,
-      "detailsFetched": 119
+      "candidatesFound": 157,
+      "detailsFetched": 120
     }
   },
   {
@@ -765,8 +786,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 66
+      "candidatesFound": 85,
+      "detailsFetched": 80
     }
   },
   {
@@ -786,8 +807,29 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 104,
-      "detailsFetched": 40
+      "candidatesFound": 103,
+      "detailsFetched": 38
+    }
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "source": {
+      "adapter": "workday",
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 406,
+      "detailsFetched": 0
     }
   },
   {
@@ -807,8 +849,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 106,
-      "detailsFetched": 46
+      "candidatesFound": 111,
+      "detailsFetched": 31
     }
   },
   {
@@ -828,8 +870,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 71,
-      "detailsFetched": 24
+      "candidatesFound": 70,
+      "detailsFetched": 16
     }
   },
   {
@@ -849,29 +891,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 64,
-      "detailsFetched": 45
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 83,
-      "detailsFetched": 47
+      "candidatesFound": 57,
+      "detailsFetched": 57
     }
   },
   {
@@ -893,27 +914,6 @@
       "detailCoverageComplete": true,
       "candidatesFound": 4,
       "detailsFetched": 0
-    }
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 253,
-      "detailsFetched": 82
     }
   },
   {
@@ -1104,28 +1104,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "capital-one",
-    "name": "Capital One",
-    "industry": "Finance",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:capitalone -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "northrop-grumman",
     "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
@@ -1134,6 +1112,28 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

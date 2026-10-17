@@ -744,8 +744,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 93
+      "candidatesFound": 95,
+      "detailsFetched": 95
     }
   },
   {
@@ -787,7 +787,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 85,
-      "detailsFetched": 80
+      "detailsFetched": 66
     }
   },
   {
@@ -807,8 +807,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 103,
-      "detailsFetched": 38
+      "candidatesFound": 104,
+      "detailsFetched": 58
     }
   },
   {
@@ -829,7 +829,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 406,
-      "detailsFetched": 0
+      "detailsFetched": 60
     }
   },
   {
@@ -850,7 +850,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 111,
-      "detailsFetched": 31
+      "detailsFetched": 73
     }
   },
   {
@@ -871,7 +871,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 70,
-      "detailsFetched": 16
+      "detailsFetched": 36
     }
   },
   {
@@ -892,28 +892,28 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 57,
-      "detailsFetched": 57
+      "detailsFetched": 47
     }
   },
   {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
     "status": "connected",
     "source": {
       "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
+      "tenant": "lowes",
+      "wd": "wd5",
+      "site": "LWS_External_CS"
     },
     "careersUrl": null,
     "programName": null,
-    "coverageComplete": true,
+    "coverageComplete": false,
     "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 4,
-      "detailsFetched": 0
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 252,
+      "detailsFetched": 119
     }
   },
   {
@@ -1126,14 +1126,14 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
     "status": "source_failing",
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:lowes -> HTTP 429",
+    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

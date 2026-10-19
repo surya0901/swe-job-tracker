@@ -901,8 +901,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 105
+      "candidatesFound": 104,
+      "detailsFetched": 104
     }
   },
   {
@@ -946,7 +946,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 360,
-      "detailsFetched": 120
+      "detailsFetched": 74
     }
   },
   {
@@ -1034,7 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 74,
-      "detailsFetched": 51
+      "detailsFetched": 16
     }
   },
   {
@@ -1055,30 +1055,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 66,
-      "detailsFetched": 66
-    }
-  },
-  {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "vanguard",
-      "wd": "wd5",
-      "site": "vanguard_external"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 51
+      "candidatesFound": 63,
+      "detailsFetched": 63
     }
   },
   {
@@ -1099,65 +1077,21 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 313,
+      "candidatesFound": 314,
       "detailsFetched": 120
     }
   },
   {
-    "companyId": "cvs-health",
-    "name": "CVS Health",
-    "industry": "Healthcare",
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "cvshealth",
-      "wd": "wd1",
-      "site": "CVS_Health_Careers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": false,
-      "candidatesFound": 152,
-      "detailsFetched": 94
-    }
-  },
-  {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "usaa",
-      "wd": "wd1",
-      "site": "USAAJOBSWD"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 56,
-      "detailsFetched": 21
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
+      "tenant": "generalmotors",
       "wd": "wd5",
-      "site": "cignacareers"
+      "site": "Careers_GM"
     },
     "careersUrl": null,
     "programName": null,
@@ -1165,52 +1099,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 58
-    }
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 252,
-      "detailsFetched": 94
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 70,
-      "detailsFetched": 59
+      "candidatesFound": 102,
+      "detailsFetched": 70
     }
   },
   {
@@ -1394,6 +1284,18 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:vanguard -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "target",
     "name": "Target",
     "industry": "Retail",
@@ -1406,6 +1308,18 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "cvs-health",
+    "name": "CVS Health",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cvshealth -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "caterpillar",
     "name": "Caterpillar",
     "industry": "Industrial",
@@ -1415,18 +1329,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cat -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:generalmotors -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
@@ -1478,6 +1380,30 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:usaa -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "at-t",
     "name": "AT&T",
     "industry": "Telecom",
@@ -1490,6 +1416,18 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "state-street",
     "name": "State Street",
     "industry": "Finance",
@@ -1499,6 +1437,18 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

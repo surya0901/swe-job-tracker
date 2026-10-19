@@ -17,6 +17,16 @@ const ELIGIBILITY_LABELS = {
   possibly_eligible: 'Review requirements',
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000
+// "Just in" means genuinely fresh: first seen by the collector in the last
+// day AND, when the employer publishes a posted date, posted in the last
+// three days — a role we merely started tracking today may be weeks old.
+function isRecent(job) {
+  const now = Date.now()
+  if (!job.firstSeenAt || now - new Date(job.firstSeenAt).getTime() > DAY_MS) return false
+  return !job.postedAt || now - new Date(job.postedAt).getTime() < 3 * DAY_MS
+}
+
 export default function JobTable({
   jobs,
   totalCount,
@@ -56,9 +66,9 @@ export default function JobTable({
         </label>
       </div>
 
-      <div className="overflow-x-auto rounded-lg border border-zinc-800">
+      <div className="overflow-x-auto rounded-xl border border-zinc-800 bg-zinc-900">
         <table className="w-full min-w-[1080px] text-left text-sm">
-          <thead className="bg-zinc-900 text-xs uppercase text-zinc-500">
+          <thead className="bg-zinc-900 text-[11px] uppercase tracking-wider text-zinc-500">
             <tr>
               <th scope="col" className="px-4 py-3 font-medium">Company</th>
               <th scope="col" className="px-4 py-3 font-medium">Title</th>
@@ -84,6 +94,14 @@ export default function JobTable({
                       onClick={() => onOpen(job)}
                       className="text-left focus:underline focus:outline-none"
                     >
+                      {isRecent(job) && !newJobIds?.has(job.id) && (
+                        <span
+                          title="First seen by the collector in the last 24 hours"
+                          className="mr-1.5 rounded-full border border-indigo-500/40 px-1.5 py-0.5 text-[10px] font-medium text-indigo-300"
+                        >
+                          Just in
+                        </span>
+                      )}
                       {newJobIds?.has(job.id) && (
                         <span className="mr-1.5 rounded border border-emerald-500/30 bg-emerald-500/15 px-1 py-0.5 text-[10px] font-medium text-emerald-300">
                           New
@@ -97,6 +115,11 @@ export default function JobTable({
                     <span className="whitespace-nowrap rounded border border-zinc-700 bg-zinc-800/60 px-1.5 py-0.5 text-[10px] font-medium text-zinc-300">
                       {ELIGIBILITY_LABELS[job.eligibility] ?? '—'}
                     </span>
+                    {job.roleFamily === 'tech_ops' && (
+                      <span className="ml-1 whitespace-nowrap rounded border border-zinc-700 px-1.5 py-0.5 text-[10px] font-medium text-zinc-400">
+                        Tech ops
+                      </span>
+                    )}
                     {job.reviewState === 'needs_review' && (
                       <span
                         title="Our assessment is uncertain here — worth a closer look"

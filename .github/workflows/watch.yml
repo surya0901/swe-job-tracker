@@ -1,0 +1,57 @@
+name: Watch top companies for new roles
+
+# Fast alert path. Polls only the top-tier companies' newest postings and
+# emails / pushes any NEW qualifying role. GitHub's scheduler has a 5-minute
+# floor and is best-effort (runs are often delayed under load), so this is
+# "within minutes", not "within a minute" — for ~1 minute see
+# server/job-alerts/ (Cloudflare Worker).
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Seen-postings state lives in the Actions cache (not git, so no
+      # commit noise). The newest entry for the prefix is restored; if it
+      # was evicted the watcher re-seeds silently from the committed dataset.
+      - name: Restore watcher state
+        uses: actions/cache/restore@v4
+        with:
+          path: .watch
+          key: watch-state-restore-miss
+          restore-keys: watch-state-
+
+      - name: Poll and alert
+        run: node scripts/watch.mjs
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+
+      - name: Save watcher state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .watch
+          key: watch-state-${{ github.run_id }}-${{ github.run_attempt }}

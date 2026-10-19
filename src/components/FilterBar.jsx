@@ -29,7 +29,40 @@ export default function FilterBar({
   const update = (key, value) => onChange({ ...filters, [key]: value })
 
   return (
-    <div className="flex flex-wrap items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
+    <div className="flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900 p-3">
+      {showDateFilters && (
+        <div className="flex items-center rounded-full border border-zinc-700 p-0.5 text-xs font-medium" role="group" aria-label="Company tier">
+          {[
+            { v: true, label: 'Top companies' },
+            { v: false, label: 'Everyone' },
+          ].map((o) => (
+            <button
+              key={String(o.v)}
+              onClick={() => update('topOnly', o.v)}
+              aria-pressed={filters.topOnly === o.v}
+              className={`rounded-full px-3 py-1 transition ${
+                filters.topOnly === o.v ? 'bg-zinc-50 text-zinc-950' : 'text-zinc-500 hover:text-zinc-200'
+              }`}
+            >
+              {o.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {showDateFilters && (
+        <select
+          aria-label="Filter by role family"
+          value={filters.roleFamily}
+          onChange={(e) => update('roleFamily', e.target.value)}
+          className="rounded-md border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm text-zinc-200 focus:border-indigo-500 focus:outline-none"
+        >
+          <option value="All">Software + tech ops</option>
+          <option value="swe">Software engineering</option>
+          <option value="tech_ops">Tech ops</option>
+        </select>
+      )}
+
       <input
         type="text"
         value={search}

@@ -14,10 +14,11 @@ on:
     paths-ignore:
       - 'public/data/**'
   schedule:
-    # Targets roughly every 6 hours. GitHub Actions schedules are
+    # Full re-collection roughly every 30 minutes (instant alerts are the
+    # separate watch.yml workflow). GitHub Actions schedules are
     # best-effort, not an exact guarantee — the UI shows the real last-run
     # time, which is also published in collection-meta.json for the site.
-    - cron: '17 */6 * * *'
+    - cron: '7,37 * * * *'
   workflow_dispatch:
 
 permissions:

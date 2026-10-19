@@ -12,6 +12,21 @@
 
 export const atsCandidateCompanies = [
   // name, industry, [{adapter, token}, ...] — order = try priority
+  // Amazon: amazon.jobs' own search JSON (verified live), newest-first.
+  ['Amazon', 'Big Tech', [{ adapter: 'amazon', token: 'amazon-jobs' }]],
+  // Apple / JPMorgan: each company's own careers-site JSON, verified live.
+  ['Apple', 'Big Tech', [{ adapter: 'apple', token: 'apple-jobs' }]],
+  ['JPMorgan Chase', 'Finance', [{ adapter: 'jpmorgan', token: 'jpmc-cx-1001' }]],
+  // Quant / trading firms — public Greenhouse boards, each returned HTTP
+  // 200 with live postings when probed.
+  ['Jane Street', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'janestreet' }]],
+  ['Jump Trading', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'jumptrading' }]],
+  ['IMC Trading', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'imc' }]],
+  ['DRW', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'drweng' }]],
+  ['Point72', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'point72' }]],
+  ['Virtu Financial', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'virtu' }]],
+  ['Akuna Capital', 'Quant/Trading', [{ adapter: 'greenhouse', token: 'akunacapital' }]],
+  ['Waymo', 'Autonomous Vehicles', [{ adapter: 'greenhouse', token: 'waymo' }]],
   ['Stripe', 'Fintech', [{ adapter: 'greenhouse', token: 'stripe' }]],
   ['Airbnb', 'Travel Tech', [{ adapter: 'greenhouse', token: 'airbnb' }]],
   ['Robinhood', 'Fintech', [{ adapter: 'greenhouse', token: 'robinhood' }]],
@@ -29,7 +44,7 @@ export const atsCandidateCompanies = [
   ['Okta', 'Enterprise Tech', [{ adapter: 'greenhouse', token: 'okta' }]],
   ['Pinterest', 'Consumer Tech', [{ adapter: 'greenhouse', token: 'pinterest' }]],
   ['Reddit', 'Consumer Tech', [{ adapter: 'greenhouse', token: 'reddit' }]],
-  ['Snowflake', 'Enterprise Tech', [{ adapter: 'greenhouse', token: 'snowflake' }]],
+  ['Snowflake', 'Enterprise Tech', [{ adapter: 'ashby', token: 'snowflake' }, { adapter: 'greenhouse', token: 'snowflake' }]],
   ['Squarespace', 'SaaS', [{ adapter: 'greenhouse', token: 'squarespace' }]],
   ['Twilio', 'Enterprise Tech', [{ adapter: 'greenhouse', token: 'twilio' }]],
   ['Webflow', 'SaaS', [{ adapter: 'greenhouse', token: 'webflow' }]],
@@ -41,7 +56,7 @@ export const atsCandidateCompanies = [
   ['Rippling', 'SaaS', [{ adapter: 'greenhouse', token: 'rippling' }]],
   ['Scale AI', 'AI/ML', [{ adapter: 'greenhouse', token: 'scaleai' }]],
   ['Anthropic', 'AI/ML', [{ adapter: 'greenhouse', token: 'anthropic' }]],
-  ['OpenAI', 'AI/ML', [{ adapter: 'greenhouse', token: 'openai' }]],
+  ['OpenAI', 'AI/ML', [{ adapter: 'ashby', token: 'openai' }, { adapter: 'greenhouse', token: 'openai' }]],
   ['HashiCorp', 'Enterprise Tech', [{ adapter: 'greenhouse', token: 'hashicorp' }]],
   ['Confluent', 'Enterprise Tech', [{ adapter: 'greenhouse', token: 'confluent' }]],
   ['MongoDB', 'Enterprise Tech', [{ adapter: 'greenhouse', token: 'mongodb' }]],
@@ -82,7 +97,6 @@ export const atsCandidateCompanies = [
 // confirmed live feed. Status is always "manual_verification_needed".
 export const manualCompanies = [
   // Finance
-  ['JPMorgan Chase', 'Finance', 'https://careers.jpmorgan.com', 'Software Engineer Program'],
   ['Goldman Sachs', 'Finance', 'https://www.goldmansachs.com/careers', 'New Analyst Program'],
   ['Morgan Stanley', 'Finance', 'https://www.morganstanley.com/careers', 'Technology Analyst Program'],
   ['Bank of America', 'Finance', 'https://careers.bankofamerica.com', 'Technology Development Program'],
@@ -91,7 +105,6 @@ export const manualCompanies = [
   ['BNY Mellon', 'Finance', 'https://www.bny.com/careers', 'Technology Early Talent Program'],
   ['Charles Schwab', 'Finance', 'https://www.schwabjobs.com', 'Technology Rotational Program'],
   ['Visa', 'Finance', 'https://usa.visa.com/careers.html', 'Technology Engineering Rotational Program'],
-  ['Mastercard', 'Finance', 'https://careers.mastercard.com', 'Software Engineer New Grad'],
   ['PayPal', 'Fintech', 'https://careers.pypl.com', 'Technology Rotational Program'],
   ['Synchrony', 'Finance', 'https://www.synchronycareers.com', 'Technology Leadership Program'],
   ['Discover Financial Services', 'Finance', 'https://jobs.discover.com', 'Technology Development Program'],
@@ -163,23 +176,25 @@ export const manualCompanies = [
   ['Duke Energy', 'Energy', 'https://www.duke-energy.com/our-company/careers', 'Engineering Development Program'],
   ['Southern Company', 'Energy', 'https://careers.southerncompany.com', 'Engineering Rotational Program'],
   // Big tech / enterprise software (custom ATS)
+  // Elite trading / quant firms with no public job feed we could verify
+  // (Citadel's careers API returns 403 to automated requests).
+  ['Citadel', 'Quant/Trading', 'https://www.citadel.com/careers/', 'Software Engineer, New Grad'],
+  ['Citadel Securities', 'Quant/Trading', 'https://www.citadelsecurities.com/careers/', 'Software Engineer, New Grad'],
+  ['Two Sigma', 'Quant/Trading', 'https://careers.twosigma.com', 'Software Engineer, New Grad'],
+  ['Hudson River Trading', 'Quant/Trading', 'https://www.hudsonrivertrading.com/careers/', 'Algo Developer, New Grad'],
+  ['D. E. Shaw', 'Quant/Trading', 'https://www.deshaw.com/careers', 'Software Developer, New Grad'],
+  ['Netflix', 'Big Tech', 'https://jobs.netflix.com', 'Software Engineer, New Grad'],
+  ['Tesla', 'Big Tech', 'https://www.tesla.com/careers', 'Software Engineer, New Grad'],
   ['Google', 'Big Tech', 'https://careers.google.com', 'Software Engineer, New Grad'],
   ['Meta', 'Big Tech', 'https://www.metacareers.com', 'Software Engineer, University Grad'],
-  ['Amazon', 'Big Tech', 'https://www.amazon.jobs', 'Software Development Engineer I'],
   ['Microsoft', 'Big Tech', 'https://careers.microsoft.com', 'Software Engineer, New Grad (MACH)'],
-  ['Apple', 'Big Tech', 'https://jobs.apple.com', 'Software Engineer, New Grad'],
   ['Salesforce', 'SaaS', 'https://www.salesforce.com/company/careers', 'Software Engineer, New Grad'],
   ['Oracle', 'Enterprise Tech', 'https://www.oracle.com/careers', 'Software Developer, New Grad'],
   ['IBM', 'Enterprise Tech', 'https://www.ibm.com/careers', 'Early Professional Rotational Program'],
-  ['Cisco', 'Networking', 'https://jobs.cisco.com', 'Engineering Leadership Development Program'],
-  ['Adobe', 'SaaS', 'https://www.adobe.com/careers.html', 'Software Development Engineer, New College Grad'],
-  ['Intel', 'Semiconductors', 'https://jobs.intel.com', 'Technology Rotation Program'],
   ['Qualcomm', 'Semiconductors', 'https://www.qualcomm.com/company/careers', 'Engineering Rotational Program'],
-  ['NVIDIA', 'Semiconductors', 'https://www.nvidia.com/en-us/about-nvidia/careers', 'Software Engineer, New Grad'],
   ['SAP', 'Enterprise Tech', 'https://jobs.sap.com', 'Technology Associate Program'],
   ['ServiceNow', 'SaaS', 'https://careers.servicenow.com', 'Software Engineer, New Grad'],
   ['Intuit', 'Fintech', 'https://jobs.intuit.com', 'Software Engineer, New Grad'],
-  ['eBay', 'E-commerce', 'https://careers.ebayinc.com', 'Software Engineer, New Grad'],
   ['Uber', 'Transportation Tech', 'https://www.uber.com/careers', 'Software Engineer, New Grad'],
 ]
 
@@ -194,6 +209,15 @@ export const manualCompanies = [
 const wd = (tenant, wdNum, site) => [{ adapter: 'workday', tenant, wd: wdNum, site }]
 
 export const workdayCandidateCompanies = [
+  // Big-company tenants below were each confirmed with a live POST that
+  // returned HTTP 200 and a real `total` (NVIDIA 648, Adobe 87, Intel 137,
+  // Mastercard 211, Cisco 47, eBay 8 at verification time).
+  ['NVIDIA', 'Semiconductors', wd('nvidia', 'wd5', 'NVIDIAExternalCareerSite')],
+  ['Adobe', 'SaaS', wd('adobe', 'wd5', 'external_experienced')],
+  ['Intel', 'Semiconductors', wd('intel', 'wd1', 'External')],
+  ['Mastercard', 'Finance', wd('mastercard', 'wd1', 'CorporateCareers')],
+  ['Cisco', 'Networking', wd('cisco', 'wd5', 'Cisco_Careers')],
+  ['eBay', 'E-commerce', wd('ebay', 'wd5', 'apply')],
   ['Capital One', 'Finance', wd('capitalone', 'wd12', 'Capital_One')],
   ['Fidelity Investments', 'Finance', wd('fmr', 'wd1', 'FidelityCareers')],
   ['PNC Financial Services', 'Finance', wd('pnc', 'wd5', 'External')],

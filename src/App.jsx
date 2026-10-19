@@ -4,6 +4,7 @@ import FilterBar from './components/FilterBar'
 import KanbanBoard from './components/KanbanBoard'
 import JobTable from './components/JobTable'
 import DirectoryView from './components/DirectoryView'
+import AlertsView from './components/AlertsView'
 import JobDrawer from './components/JobDrawer'
 import AddJobModal from './components/AddJobModal'
 import { loadCatalog } from './lib/catalog'
@@ -32,6 +33,10 @@ const EMPTY_FILTERS = {
   // by default — this keeps "posting is open" separate from "we're
   // confident this fits a new grad."
   includeNeedsReview: false,
+  // The Openings view defaults to the top-tier companies only; switch off
+  // to see everything collected.
+  topOnly: true,
+  roleFamily: 'All',
 }
 const FILTERS_STORAGE_KEY = 'swe-tracker:filters:v1'
 
@@ -60,7 +65,7 @@ export default function App() {
 
   const [userData, setUserData] = useState(() => loadUserData())
 
-  const [activeView, setActiveView] = useState('tracker')
+  const [activeView, setActiveView] = useState('openings')
   const [boardView, setBoardView] = useState('kanban')
   const [selectedJobId, setSelectedJobId] = useState(null)
   const [showAddModal, setShowAddModal] = useState(false)
@@ -212,6 +217,8 @@ export default function App() {
       includeUnknownLocations: _includeUnknownLocations,
       postedWithin: _postedWithin,
       includeNeedsReview: _includeNeedsReview,
+      topOnly: _topOnly,
+      roleFamily: _roleFamily,
       ...rest
     } = filters
     return { ...rest, includeNeedsReview: true } // Tracker always shows everything the user tracked
@@ -319,7 +326,7 @@ export default function App() {
         stats={stats}
       />
 
-      <main className="mx-auto max-w-7xl px-6 py-6">
+      <main className="mx-auto max-w-7xl px-6 py-8">
         {catalogLoading && (
           <p className="mb-4 text-sm text-zinc-500">Loading published job dataset...</p>
         )}
@@ -331,7 +338,9 @@ export default function App() {
           </div>
         )}
 
-        {activeView === 'directory' ? (
+        {activeView === 'alerts' ? (
+          <AlertsView companies={catalog?.companies ?? []} jobs={catalog?.jobs ?? []} />
+        ) : activeView === 'directory' ? (
           <DirectoryView companies={catalog?.companies ?? []} jobs={catalog?.jobs ?? []} />
         ) : activeView === 'resume' ? (
           <Suspense fallback={<p className="text-sm text-zinc-500">Loading resume workspace...</p>}>

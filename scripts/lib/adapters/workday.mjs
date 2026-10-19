@@ -12,22 +12,25 @@ const MAX_PAGES_PER_QUERY = 10 // operational cap — see listCoverageComplete
 const MAX_DETAIL_FETCHES = 120 // operational cap — see detailCoverageComplete
 const DETAIL_CONCURRENCY = 5
 
-export async function fetchWorkdayJobs({ tenant, wd, site }) {
+export async function fetchWorkdayJobs(
+  { tenant, wd, site },
+  { queries = QUERIES, maxPages = MAX_PAGES_PER_QUERY, maxDetails = MAX_DETAIL_FETCHES, skipSourceIds = null } = {},
+) {
   const base = `https://${tenant}.${wd}.myworkdayjobs.com/wday/cxs/${tenant}/${site}`
   const candidatesByPath = new Map()
   let listCoverageComplete = true
 
-  for (const searchText of QUERIES) {
+  for (const searchText of queries) {
     let page = 0
     let total = null
-    while (page < MAX_PAGES_PER_QUERY) {
+    while (page < maxPages) {
       const res = await fetchWithRetry(`${base}/jobs`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ appliedFacets: {}, limit: PAGE_SIZE, offset: page * PAGE_SIZE, searchText }),
       })
       if (!res.ok) {
-        if (page === 0 && searchText === QUERIES[0]) {
+        if (page === 0 && searchText === queries[0]) {
           let detail = ''
           try {
             detail = (await res.text()).slice(0, 200)
@@ -52,15 +55,17 @@ export async function fetchWorkdayJobs({ tenant, wd, site }) {
       page += 1
       const seenSoFar = page * PAGE_SIZE
       if (postings.length < PAGE_SIZE || (total !== null && seenSoFar >= total)) break // reached the end for this query
-      if (page >= MAX_PAGES_PER_QUERY) {
+      if (page >= maxPages) {
         listCoverageComplete = false // hit the operational cap before `total`
       }
     }
   }
 
-  const candidates = [...candidatesByPath.values()]
-  const toFetchDetails = candidates.slice(0, MAX_DETAIL_FETCHES)
-  const detailCoverageComplete = candidates.length <= MAX_DETAIL_FETCHES
+  // `skipSourceIds` lets the alert watcher skip postings it has already
+  // processed, so a 1-minute poll only spends detail requests on new ones.
+  const candidates = [...candidatesByPath.values()].filter((j) => !skipSourceIds?.has(j.externalPath))
+  const toFetchDetails = candidates.slice(0, maxDetails)
+  const detailCoverageComplete = candidates.length <= maxDetails
 
   const details = await mapWithConcurrency(toFetchDetails, DETAIL_CONCURRENCY, async (job) => {
     try {

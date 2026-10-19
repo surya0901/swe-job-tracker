@@ -3,6 +3,7 @@
 
 import { detectProgramType } from './classifyJob.mjs'
 import { classifyEligibility } from './eligibility.mjs'
+import { isTopCompany } from '../bigCompanies.mjs'
 import { detectCountry, detectLocationScope, detectWorkArrangement } from './geography.mjs'
 
 function sourceKey(source) {
@@ -54,6 +55,8 @@ export function normalizeJob({ company, source, raw, nowIso, previousById }) {
     eligibilityExcerpts: eligibility.excerpts,
     softwareRelevance: eligibility.softwareRelevance,
     reviewState: eligibility.reviewState,
+    roleFamily: eligibility.roleFamily ?? null,
+    isTopCompany: isTopCompany(company.name),
   }
 }
 

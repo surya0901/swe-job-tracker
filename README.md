@@ -110,6 +110,45 @@ What runs where, so it's explicit:
   Workers (free tier is generous) and Anthropic API usage (pay-per-token)
   you actually incur. Nothing here provisions or spends on your behalf.
 
+## Instant alerts for top-company roles
+
+The site lists everything; **alerts** are deliberately narrow. A role triggers one only if it is at a
+company in `scripts/bigCompanies.mjs`, is open and full-time, is a software or tech-ops role we are confident
+about, and has a real early-career signal (new-grad / rotational posting, or an entry-level *title*). Edit
+that file to change the company list.
+
+**Live-watched today (26):** Amazon, Apple, JPMorgan Chase, NVIDIA, Adobe, Intel, Cisco, Mastercard, Capital One,
+Barclays, Stripe, Airbnb, Coinbase, Databricks, Snowflake, OpenAI, Anthropic, Palantir, Jane Street, Jump Trading,
+IMC, DRW, Point72, Virtu, Akuna, Waymo.
+
+**Cannot be watched (no public feed we could verify):** Google, Meta, Microsoft, Citadel, Citadel Securities,
+Goldman Sachs, Morgan Stanley, Bank of America, Citigroup, Two Sigma, Hudson River Trading, D. E. Shaw, Netflix,
+Tesla, Salesforce, and others in the Directory. They are listed with a link so you can check manually; no alert can
+fire for them. (Salesforce and Microsoft returned rate-limit errors during verification, so they are unconfirmed
+rather than impossible.)
+
+### Setup (one time)
+
+1. **Email:** create a free [Resend](https://resend.com) API key. Add repo secrets `RESEND_API_KEY` and
+   `ALERT_EMAIL_TO`. (Without a verified domain Resend only delivers to the account owner's address, which is fine
+   for personal use.)
+2. **Phone push (optional, no account):** install the ntfy app, subscribe to a long random topic, add it as the
+   `NTFY_TOPIC` secret. Tapping the notification opens the apply page.
+3. Repo → Settings → Secrets and variables → Actions → New repository secret.
+
+### How fast is "instant"?
+
+| Path | Cadence | Needs |
+| --- | --- | --- |
+| `.github/workflows/watch.yml` | scheduled every 5 min, best-effort (GitHub often delays schedules) | the secrets above |
+| `server/job-alerts/` (Cloudflare Worker) | every 1 min | your Cloudflare account, a KV namespace, the same secrets; likely the Workers paid plan (CPU limit) |
+
+Neither can beat the employer: a role is only visible once the company's own feed lists it. The first poll of a
+company records its current postings silently, so you are not flooded when a company is added. If every configured
+channel fails to deliver, the role is **not** marked seen and is retried on the next poll, and the run turns red.
+
+Dry-run locally with no secrets: `node scripts/watch.mjs --dry`.
+
 ## Getting started
 
 ```bash

@@ -1320,7 +1320,40 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
+    "error": "workday:bah -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

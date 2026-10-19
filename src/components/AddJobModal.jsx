@@ -27,7 +27,7 @@ export default function AddJobModal({ onClose, onAdd }) {
       <button
         aria-label="Close"
         onClick={onClose}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-zinc-100/40 backdrop-blur-[2px]"
       />
       <form
         onSubmit={submit}

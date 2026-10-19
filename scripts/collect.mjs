@@ -16,11 +16,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { atsCandidateCompanies, workdayCandidateCompanies, manualCompanies } from './companies.mjs'
-import { fetchGreenhouseJobs } from './lib/adapters/greenhouse.mjs'
-import { fetchLeverJobs } from './lib/adapters/lever.mjs'
-import { fetchAshbyJobs } from './lib/adapters/ashby.mjs'
-import { fetchWorkdayJobs } from './lib/adapters/workday.mjs'
+import { collectFromCandidate, slugify } from './lib/sources.mjs'
 import { mapWithConcurrency } from './lib/fetchWithRetry.mjs'
+import { isTopCompany } from './bigCompanies.mjs'
 import { normalizeJob, reconcileJobs, shouldKeepPreviousDataset as computeShouldKeep } from './lib/reconcile.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -28,27 +26,7 @@ const ROOT = path.resolve(__dirname, '..')
 const DATA_DIR = path.join(ROOT, 'public', 'data')
 const CONCURRENCY = 6
 
-const ADAPTERS = {
-  greenhouse: (source) => fetchGreenhouseJobs(source.token),
-  lever: (source) => fetchLeverJobs(source.token),
-  ashby: (source) => fetchAshbyJobs(source.token),
-  workday: (source) => fetchWorkdayJobs(source),
-}
-
-// A source's stable identity component for job-id construction: the ATS
-// board token, or the Workday tenant.
-function sourceKey(source) {
-  return source.token ?? source.tenant
-}
-
 const allCandidateCompanies = [...atsCandidateCompanies, ...workdayCandidateCompanies]
-
-function slugify(name) {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-}
 
 async function readJsonIfExists(filePath, fallback) {
   try {
@@ -56,45 +34,6 @@ async function readJsonIfExists(filePath, fallback) {
     return JSON.parse(raw)
   } catch {
     return fallback
-  }
-}
-
-async function collectFromCandidate(company) {
-  const [name, industry, candidates] = company
-  const companyId = slugify(name)
-  const attempts = []
-
-  for (const candidate of candidates) {
-    const fetcher = ADAPTERS[candidate.adapter]
-    try {
-      const { jobs: rawJobs, coverageComplete, ...coverageStats } = await fetcher(candidate)
-      attempts.push({ ...candidate, ok: true })
-      return {
-        companyId,
-        name,
-        industry,
-        status: 'connected',
-        source: candidate,
-        attempts,
-        rawJobs,
-        coverageComplete,
-        coverageStats,
-        error: null,
-      }
-    } catch (err) {
-      attempts.push({ ...candidate, ok: false, error: String(err.message ?? err) })
-    }
-  }
-
-  return {
-    companyId,
-    name,
-    industry,
-    status: 'source_failing',
-    source: null,
-    attempts,
-    rawJobs: [],
-    error: attempts.map((a) => `${a.adapter}:${sourceKey(a)} -> ${a.error}`).join('; '),
   }
 }
 
@@ -119,6 +58,7 @@ function buildManualCompanyRecord([name, industry, careersUrl, programName]) {
     name,
     industry,
     status: 'manual_verification_needed',
+    isTopCompany: isTopCompany(name),
     careersUrl,
     programName,
     source: null,
@@ -199,6 +139,7 @@ async function main() {
     name: r.name,
     industry: r.industry,
     status: r.status,
+    isTopCompany: isTopCompany(r.name),
     source: r.source,
     careersUrl: null,
     programName: null,
@@ -210,6 +151,7 @@ async function main() {
     name: r.name,
     industry: r.industry,
     status: r.status,
+    isTopCompany: isTopCompany(r.name),
     source: null,
     careersUrl: null,
     programName: null,

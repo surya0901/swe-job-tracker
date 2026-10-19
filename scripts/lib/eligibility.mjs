@@ -27,6 +27,26 @@ const SOFTWARE_CORE_TITLE = [
   /application developer/i,
 ]
 
+// Technology-operations style roles: running and supporting production
+// systems rather than writing product code. Deliberately limited to
+// explicit IT/ops wording — a bare "Systems Engineer" is as likely to be
+// aerospace as IT, so it is not matched here.
+const TECH_OPS_TITLE = [
+  /technology operations/i,
+  /technical operations/i,
+  /\btech ops\b/i,
+  /\bit operations\b/i,
+  /production (support|engineer)/i,
+  /application support/i,
+  /\bdevops\b/i,
+  /(cloud|platform|infrastructure) operations/i,
+  /(technical|technology) support engineer/i,
+  /\brelease engineer/i,
+  /systems administrator/i,
+  /(technology|it) analyst/i,
+  /\bnoc (engineer|analyst)\b/i,
+]
+
 const PROGRAM_TITLE = [
   /rotational/i,
   /\btdp\b/i,
@@ -90,21 +110,26 @@ function matchesAny(patterns, text) {
 
 export function classifySoftwareRelevance({ title, description = '' }) {
   if (matchesAny(SOFTWARE_CORE_TITLE, title)) {
-    return { relevance: 'confirmed', reason: 'Title names a specific software engineering discipline.' }
+    return { relevance: 'confirmed', roleFamily: 'swe', reason: 'Title names a specific software engineering discipline.' }
+  }
+
+  if (matchesAny(TECH_OPS_TITLE, title)) {
+    return { relevance: 'confirmed', roleFamily: 'tech_ops', reason: 'Title names a technology-operations / production-support discipline.' }
   }
 
   if (matchesAny(PROGRAM_TITLE, title)) {
     if (matchesAny(NON_SOFTWARE_DISCIPLINE, title)) {
-      return { relevance: 'not_software', reason: 'Title names a non-software discipline (e.g. welding, materials, mechanical).' }
+      return { relevance: 'not_software', roleFamily: null, reason: 'Title names a non-software discipline (e.g. welding, materials, mechanical).' }
     }
     if (matchesAny(SOFTWARE_TRACK_EVIDENCE, title) || matchesAny(SOFTWARE_TRACK_EVIDENCE, description)) {
-      return { relevance: 'confirmed', reason: 'Rotational/development program with an explicit software track.' }
+      return { relevance: 'confirmed', roleFamily: 'swe', reason: 'Rotational/development program with an explicit software track.' }
     }
     if (matchesAny(NON_SOFTWARE_DISCIPLINE, description)) {
-      return { relevance: 'not_software', reason: 'Description names a non-software discipline.' }
+      return { relevance: 'not_software', roleFamily: null, reason: 'Description names a non-software discipline.' }
     }
     return {
       relevance: 'uncertain',
+      roleFamily: 'swe',
       reason: 'Generic "development/rotational program" title with no explicit software-track evidence in the available text — program structure alone is not proof of software relevance.',
     }
   }
@@ -116,7 +141,7 @@ export function classifySoftwareRelevance({ title, description = '' }) {
   // function (this was a real bug: sales and investigator titles at
   // software companies were passing as "confirmed" this way). A generic
   // title needs its OWN software-core wording to be included at all.
-  return { relevance: 'not_software', reason: 'Title does not indicate a software/technical engineering role.' }
+  return { relevance: 'not_software', roleFamily: null, reason: 'Title does not indicate a software/technical engineering role.' }
 }
 
 // ---- new-grad negation / redirect detection ----------------------------
@@ -171,6 +196,7 @@ function findRequiredYearsClause(description) {
 }
 
 const HARD_EXCLUDE_TITLE = [
+  { re: /\b(part[\s-]?time|temporary|temp|contract(or)?|fixed[\s-]term|seasonal)\b/i, reason: 'Title indicates a part-time, temporary or contract role, not full-time.' },
   { re: /\bintern(ship)?\b/i, reason: 'Title indicates an internship, not a full-time role.' },
   { re: /\bco-?op\b/i, reason: 'Title indicates a co-op, not a full-time role.' },
   {
@@ -180,8 +206,8 @@ const HARD_EXCLUDE_TITLE = [
   { re: /\b(director|vp|vice president|head of)\b/i, reason: 'Title indicates a leadership/management role, not an IC engineering role.' },
   { re: /\bmanager\b/i, reason: 'Title indicates a management role.' },
   {
-    re: /\b(?:[Ee]ngineer|[Dd]eveloper)\s*(?:II|III|IV|2|3|4)\b/,
-    reason: 'Title level indicator (II/III/IV or 2/3/4) indicates a non-entry level.',
+    re: /\b(?:[Ee]ngineer|[Dd]eveloper)\s*(?:II|III|IV|V|VI|2|3|4|5|6|7|8|9)\b/,
+    reason: 'Title level indicator (II or higher / 2 or higher) indicates a non-entry level.',
   },
 ]
 
@@ -214,6 +240,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'excluded',
       softwareRelevance: 'not_software',
+      roleFamily: null,
       reviewState: 'auto',
       evidence: [softwareRelevance.reason],
       excerpts: [],
@@ -225,6 +252,7 @@ export function classifyEligibility({ title, description = '' }) {
       return {
         category: 'excluded',
         softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
         reviewState: 'auto',
         evidence: [reason],
         excerpts: [],
@@ -240,6 +268,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'excluded',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState: 'auto',
       evidence: ['Posting explicitly redirects or excludes new grads/interns from applying via this listing (our assessment).'],
       excerpts: [exclusionClause],
@@ -251,6 +280,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'excluded',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState: 'auto',
       evidence: ['Description requires experience beyond typical new-grad level (required, not preferred) — our assessment.'],
       excerpts: [requiredYears.clauseText],
@@ -263,6 +293,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'rotational_tdp',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState,
       evidence: ['Title matches a rotational/TDP/LDP program pattern (our assessment).'],
       excerpts: [],
@@ -273,6 +304,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'explicit_new_grad',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState,
       evidence: ['Title explicitly says "new grad" (our assessment).'],
       excerpts: [],
@@ -283,6 +315,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'explicit_new_grad',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState,
       evidence: ['Description accepts new grads (our assessment) — see excerpt.'],
       excerpts: [descNewGradMatch[0]],
@@ -293,6 +326,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'entry_level',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState,
       evidence: ['Title indicates an entry-level position (e.g. "Software Engineer I", "Associate") — our assessment.'],
       excerpts: [],
@@ -302,6 +336,7 @@ export function classifyEligibility({ title, description = '' }) {
     return {
       category: 'entry_level',
       softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
       reviewState,
       evidence: ['Description requires limited (0-2 year range) experience — see excerpt for the source\'s exact wording.'],
       excerpts: [requiredYears.clauseText],
@@ -311,6 +346,7 @@ export function classifyEligibility({ title, description = '' }) {
   return {
     category: 'possibly_eligible',
     softwareRelevance: softwareRelevance.relevance,
+      roleFamily: softwareRelevance.roleFamily,
     reviewState: 'needs_review',
     evidence: [
       'Software-relevant role with no explicit new-grad, entry-level, or seniority signal in the available text — review requirements before applying (our assessment, not a guarantee).',

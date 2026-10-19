@@ -41,7 +41,7 @@ export default function JobDrawer({ job, onClose, onUpdate, onRemove }) {
       <button
         aria-label="Close"
         onClick={onClose}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-zinc-100/40 backdrop-blur-[2px]"
       />
       <div className="relative flex h-full w-full max-w-md flex-col overflow-y-auto border-l border-zinc-800 bg-zinc-950 p-6 shadow-2xl">
         <div className="flex items-start justify-between">

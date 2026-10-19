@@ -138,3 +138,22 @@ describe('sortJobs', () => {
     expect(sorted[0].eligibility).toBe('rotational_tdp')
   })
 })
+
+describe('filterJobs: top companies and role family', () => {
+  const jobs = [
+    { id: 'a', companyName: 'Jane Street', isTopCompany: true, roleFamily: 'swe', locationScope: 'US', status: 'open' },
+    { id: 'b', companyName: 'Small Co', isTopCompany: false, roleFamily: 'swe', locationScope: 'US', status: 'open' },
+    { id: 'c', companyName: 'Apple', isTopCompany: true, roleFamily: 'tech_ops', locationScope: 'US', status: 'open' },
+    { id: 'd', companyName: 'Older Record', isTopCompany: true, locationScope: 'US', status: 'open' },
+  ]
+  it('keeps only top-tier companies when topOnly is set', () => {
+    expect(filterJobs(jobs, { topOnly: true }).map((j) => j.id)).toEqual(['a', 'c', 'd'])
+  })
+  it('does not filter by tier when topOnly is off', () => {
+    expect(filterJobs(jobs, { topOnly: false })).toHaveLength(4)
+  })
+  it('filters by role family and treats records without one as software', () => {
+    expect(filterJobs(jobs, { roleFamily: 'tech_ops' }).map((j) => j.id)).toEqual(['c'])
+    expect(filterJobs(jobs, { roleFamily: 'swe' }).map((j) => j.id)).toEqual(['a', 'b', 'd'])
+  })
+})

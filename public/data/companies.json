@@ -1,9 +1,175 @@
 [
   {
+    "companyId": "amazon",
+    "name": "Amazon",
+    "industry": "Big Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "amazon",
+      "token": "amazon-jobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "apple",
+    "name": "Apple",
+    "industry": "Big Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "apple",
+      "token": "apple-jobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "jpmorgan-chase",
+    "name": "JPMorgan Chase",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "jpmorgan",
+      "token": "jpmc-cx-1001"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "jane-street",
+    "name": "Jane Street",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "janestreet"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "jump-trading",
+    "name": "Jump Trading",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "jumptrading"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "imc-trading",
+    "name": "IMC Trading",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "imc"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "drw",
+    "name": "DRW",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "drweng"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "point72",
+    "name": "Point72",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "point72"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "virtu-financial",
+    "name": "Virtu Financial",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "virtu"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "akuna-capital",
+    "name": "Akuna Capital",
+    "industry": "Quant/Trading",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "akunacapital"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "waymo",
+    "name": "Waymo",
+    "industry": "Autonomous Vehicles",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "greenhouse",
+      "token": "waymo"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
     "companyId": "stripe",
     "name": "Stripe",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "greenhouse",
       "token": "stripe"
@@ -18,6 +184,7 @@
     "name": "Airbnb",
     "industry": "Travel Tech",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "greenhouse",
       "token": "airbnb"
@@ -32,6 +199,7 @@
     "name": "Robinhood",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "robinhood"
@@ -46,6 +214,7 @@
     "name": "Affirm",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "affirm"
@@ -60,6 +229,7 @@
     "name": "Asana",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "asana"
@@ -74,6 +244,7 @@
     "name": "Coinbase",
     "industry": "Fintech/Crypto",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "greenhouse",
       "token": "coinbase"
@@ -88,6 +259,7 @@
     "name": "Databricks",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "greenhouse",
       "token": "databricks"
@@ -102,6 +274,7 @@
     "name": "Discord",
     "industry": "Consumer Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "discord"
@@ -116,6 +289,7 @@
     "name": "Dropbox",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "dropbox"
@@ -130,6 +304,7 @@
     "name": "Figma",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "figma"
@@ -144,6 +319,7 @@
     "name": "Instacart",
     "industry": "Retail Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "instacart"
@@ -158,6 +334,7 @@
     "name": "Lyft",
     "industry": "Transportation Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "lyft"
@@ -172,6 +349,7 @@
     "name": "Notion",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "notion"
@@ -186,6 +364,7 @@
     "name": "Okta",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "okta"
@@ -200,6 +379,7 @@
     "name": "Pinterest",
     "industry": "Consumer Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "pinterest"
@@ -214,9 +394,25 @@
     "name": "Reddit",
     "industry": "Consumer Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "reddit"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "snowflake",
+    "name": "Snowflake",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "ashby",
+      "token": "snowflake"
     },
     "careersUrl": null,
     "programName": null,
@@ -228,6 +424,7 @@
     "name": "Squarespace",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "squarespace"
@@ -242,6 +439,7 @@
     "name": "Twilio",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "twilio"
@@ -256,6 +454,7 @@
     "name": "Webflow",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "webflow"
@@ -270,6 +469,7 @@
     "name": "Gusto",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "gusto"
@@ -284,6 +484,7 @@
     "name": "Brex",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "brex"
@@ -298,6 +499,7 @@
     "name": "Ramp",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "ramp"
@@ -312,6 +514,7 @@
     "name": "Scale AI",
     "industry": "AI/ML",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "scaleai"
@@ -326,9 +529,25 @@
     "name": "Anthropic",
     "industry": "AI/ML",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "greenhouse",
       "token": "anthropic"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "openai",
+    "name": "OpenAI",
+    "industry": "AI/ML",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "ashby",
+      "token": "openai"
     },
     "careersUrl": null,
     "programName": null,
@@ -340,6 +559,7 @@
     "name": "MongoDB",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "mongodb"
@@ -354,6 +574,7 @@
     "name": "Elastic",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "elastic"
@@ -368,6 +589,7 @@
     "name": "GitLab",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "gitlab"
@@ -382,6 +604,7 @@
     "name": "Datadog",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "datadog"
@@ -396,23 +619,10 @@
     "name": "PagerDuty",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "pagerduty"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {}
-  },
-  {
-    "companyId": "amplitude",
-    "name": "Amplitude",
-    "industry": "SaaS",
-    "status": "connected",
-    "source": {
-      "adapter": "greenhouse",
-      "token": "amplitude"
     },
     "careersUrl": null,
     "programName": null,
@@ -424,6 +634,7 @@
     "name": "Braze",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "braze"
@@ -438,6 +649,7 @@
     "name": "Duolingo",
     "industry": "EdTech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "duolingo"
@@ -452,6 +664,7 @@
     "name": "Roblox",
     "industry": "Gaming",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "roblox"
@@ -466,6 +679,7 @@
     "name": "Cloudflare",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "cloudflare"
@@ -480,6 +694,7 @@
     "name": "Samsara",
     "industry": "IoT",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "samsara"
@@ -494,6 +709,7 @@
     "name": "Toast",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "toast"
@@ -508,6 +724,7 @@
     "name": "Carta",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "greenhouse",
       "token": "carta"
@@ -522,6 +739,7 @@
     "name": "Palantir Technologies",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "lever",
       "token": "palantir"
@@ -536,6 +754,7 @@
     "name": "Linear",
     "industry": "SaaS",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "linear"
@@ -550,6 +769,7 @@
     "name": "Vanta",
     "industry": "Enterprise Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "vanta"
@@ -564,6 +784,7 @@
     "name": "Mercury",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "mercury"
@@ -578,6 +799,7 @@
     "name": "Watershed",
     "industry": "Climate Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "watershed"
@@ -592,6 +814,7 @@
     "name": "Modern Treasury",
     "industry": "Fintech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "moderntreasury"
@@ -606,6 +829,7 @@
     "name": "Deel",
     "industry": "HR Tech",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "ashby",
       "token": "deel"
@@ -616,10 +840,143 @@
     "coverageStats": {}
   },
   {
+    "companyId": "nvidia",
+    "name": "NVIDIA",
+    "industry": "Semiconductors",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "nvidia",
+      "wd": "wd5",
+      "site": "NVIDIAExternalCareerSite"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 119,
+      "detailsFetched": 119
+    }
+  },
+  {
+    "companyId": "adobe",
+    "name": "Adobe",
+    "industry": "SaaS",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "adobe",
+      "wd": "wd5",
+      "site": "external_experienced"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 80,
+      "detailsFetched": 80
+    }
+  },
+  {
+    "companyId": "intel",
+    "name": "Intel",
+    "industry": "Semiconductors",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "intel",
+      "wd": "wd1",
+      "site": "External"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 105,
+      "detailsFetched": 105
+    }
+  },
+  {
+    "companyId": "mastercard",
+    "name": "Mastercard",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "mastercard",
+      "wd": "wd1",
+      "site": "CorporateCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 101,
+      "detailsFetched": 101
+    }
+  },
+  {
+    "companyId": "cisco",
+    "name": "Cisco",
+    "industry": "Networking",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "cisco",
+      "wd": "wd5",
+      "site": "Cisco_Careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 360,
+      "detailsFetched": 116
+    }
+  },
+  {
+    "companyId": "ebay",
+    "name": "eBay",
+    "industry": "E-commerce",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ebay",
+      "wd": "wd5",
+      "site": "apply"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 69,
+      "detailsFetched": 47
+    }
+  },
+  {
     "companyId": "capital-one",
     "name": "Capital One",
     "industry": "Finance",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "workday",
       "tenant": "capitalone",
@@ -632,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 448,
+      "candidatesFound": 350,
       "detailsFetched": 120
     }
   },
@@ -641,6 +998,7 @@
     "name": "Fidelity Investments",
     "industry": "Finance",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "workday",
       "tenant": "fmr",
@@ -653,29 +1011,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 86,
-      "detailsFetched": 86
-    }
-  },
-  {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "pnc",
-      "wd": "wd5",
-      "site": "External"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 90
+      "candidatesFound": 103,
+      "detailsFetched": 103
     }
   },
   {
@@ -683,6 +1020,7 @@
     "name": "U.S. Bank",
     "industry": "Finance",
     "status": "connected",
+    "isTopCompany": false,
     "source": {
       "adapter": "workday",
       "tenant": "usbank",
@@ -696,28 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 66,
-      "detailsFetched": 66
-    }
-  },
-  {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "vanguard",
-      "wd": "wd5",
-      "site": "vanguard_external"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 96
+      "detailsFetched": 63
     }
   },
   {
@@ -725,6 +1042,7 @@
     "name": "Barclays",
     "industry": "Finance",
     "status": "connected",
+    "isTopCompany": true,
     "source": {
       "adapter": "workday",
       "tenant": "barclays",
@@ -737,239 +1055,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 385,
+      "candidatesFound": 313,
       "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "target",
-    "name": "Target",
-    "industry": "Retail",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "target",
-      "wd": "wd5",
-      "site": "targetcareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
-    }
-  },
-  {
-    "companyId": "cvs-health",
-    "name": "CVS Health",
-    "industry": "Healthcare",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cvshealth",
-      "wd": "wd1",
-      "site": "CVS_Health_Careers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": false,
-      "candidatesFound": 172,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cat",
-      "wd": "wd5",
-      "site": "CaterpillarCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 87,
-      "detailsFetched": 49
-    }
-  },
-  {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "generalmotors",
-      "wd": "wd5",
-      "site": "Careers_GM"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 64
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 427,
-      "detailsFetched": 32
-    }
-  },
-  {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "bah",
-      "wd": "wd1",
-      "site": "BAH_Jobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 108,
-      "detailsFetched": 45
-    }
-  },
-  {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "wf",
-      "wd": "wd1",
-      "site": "WellsFargoJobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 79,
-      "detailsFetched": 19
-    }
-  },
-  {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "usaa",
-      "wd": "wd1",
-      "site": "USAAJOBSWD"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 54,
-      "detailsFetched": 54
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 52
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 3,
-      "detailsFetched": 3
-    }
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "connected",
-    "source": {
-      "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 233,
-      "detailsFetched": 87
     }
   },
   {
@@ -977,6 +1064,7 @@
     "name": "DoorDash",
     "industry": "Logistics Tech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -984,21 +1072,11 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "snowflake",
-    "name": "Snowflake",
-    "industry": "Enterprise Tech",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "greenhouse:snowflake -> Greenhouse snowflake: HTTP 404",
-    "failureCategory": "not_found"
-  },
-  {
     "companyId": "wealthfront",
     "name": "Wealthfront",
     "industry": "Fintech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1010,6 +1088,7 @@
     "name": "Plaid",
     "industry": "Fintech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1021,6 +1100,7 @@
     "name": "Rippling",
     "industry": "SaaS",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1028,21 +1108,11 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "openai",
-    "name": "OpenAI",
-    "industry": "AI/ML",
-    "status": "source_failing",
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "greenhouse:openai -> Greenhouse openai: HTTP 404",
-    "failureCategory": "not_found"
-  },
-  {
     "companyId": "hashicorp",
     "name": "HashiCorp",
     "industry": "Enterprise Tech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1054,6 +1124,7 @@
     "name": "Confluent",
     "industry": "Enterprise Tech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1061,10 +1132,23 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "amplitude",
+    "name": "Amplitude",
+    "industry": "SaaS",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "greenhouse:amplitude -> Greenhouse amplitude: HTTP 404",
+    "failureCategory": "not_found"
+  },
+  {
     "companyId": "grammarly",
     "name": "Grammarly",
     "industry": "AI/ML",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1076,6 +1160,7 @@
     "name": "Unity",
     "industry": "Gaming",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1087,6 +1172,7 @@
     "name": "Benchling",
     "industry": "Biotech Software",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1098,6 +1184,7 @@
     "name": "Attentive",
     "industry": "MarTech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1109,6 +1196,7 @@
     "name": "Postman",
     "industry": "Enterprise Tech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1120,6 +1208,7 @@
     "name": "Betterment",
     "industry": "Fintech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1131,6 +1220,7 @@
     "name": "SeatGeek",
     "industry": "Consumer Tech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1142,6 +1232,7 @@
     "name": "Retool",
     "industry": "Enterprise Tech",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1149,10 +1240,83 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:pnc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:vanguard -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:target -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "cvs-health",
+    "name": "CVS Health",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cvshealth -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:generalmotors -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "rtx-raytheon",
     "name": "RTX (Raytheon)",
     "industry": "Aerospace/Defense",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1160,10 +1324,95 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:bah -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": true,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:wf -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:usaa -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "state-street",
     "name": "State Street",
     "industry": "Finance",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1175,6 +1424,7 @@
     "name": "Raymond James",
     "industry": "Finance",
     "status": "source_failing",
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
@@ -1182,20 +1432,11 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "jpmorgan-chase",
-    "name": "JPMorgan Chase",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://careers.jpmorgan.com",
-    "programName": "Software Engineer Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "goldman-sachs",
     "name": "Goldman Sachs",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.goldmansachs.com/careers",
     "programName": "New Analyst Program",
     "source": null,
@@ -1206,6 +1447,7 @@
     "name": "Morgan Stanley",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.morganstanley.com/careers",
     "programName": "Technology Analyst Program",
     "source": null,
@@ -1216,6 +1458,7 @@
     "name": "Bank of America",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://careers.bankofamerica.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1226,6 +1469,7 @@
     "name": "Citigroup",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://jobs.citi.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1236,6 +1480,7 @@
     "name": "American Express",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.americanexpress.com/en-us/careers",
     "programName": "Technology Rotation Program",
     "source": null,
@@ -1246,6 +1491,7 @@
     "name": "BNY Mellon",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.bny.com/careers",
     "programName": "Technology Early Talent Program",
     "source": null,
@@ -1256,6 +1502,7 @@
     "name": "Charles Schwab",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.schwabjobs.com",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1266,18 +1513,9 @@
     "name": "Visa",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://usa.visa.com/careers.html",
     "programName": "Technology Engineering Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "mastercard",
-    "name": "Mastercard",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://careers.mastercard.com",
-    "programName": "Software Engineer New Grad",
     "source": null,
     "error": null
   },
@@ -1286,6 +1524,7 @@
     "name": "PayPal",
     "industry": "Fintech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://careers.pypl.com",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1296,6 +1535,7 @@
     "name": "Synchrony",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.synchronycareers.com",
     "programName": "Technology Leadership Program",
     "source": null,
@@ -1306,6 +1546,7 @@
     "name": "Discover Financial Services",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.discover.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1316,6 +1557,7 @@
     "name": "Ally Financial",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://ally.com/careers",
     "programName": "Technology Development Program",
     "source": null,
@@ -1326,6 +1568,7 @@
     "name": "Northern Trust",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.northerntrust.com",
     "programName": "Technology Graduate Program",
     "source": null,
@@ -1336,6 +1579,7 @@
     "name": "Truist Financial",
     "industry": "Finance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.truist.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1346,6 +1590,7 @@
     "name": "Progressive Insurance",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.progressive.com/careers",
     "programName": "Technology Development Program",
     "source": null,
@@ -1356,6 +1601,7 @@
     "name": "State Farm",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.statefarm.com/careers",
     "programName": "Technology Associate Program",
     "source": null,
@@ -1366,6 +1612,7 @@
     "name": "Allstate",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.allstate.com/careers",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1376,6 +1623,7 @@
     "name": "Liberty Mutual",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.libertymutualgroup.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1386,6 +1634,7 @@
     "name": "Nationwide",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.nationwide.com/careers",
     "programName": "Technology Leadership Program",
     "source": null,
@@ -1396,6 +1645,7 @@
     "name": "Travelers",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.travelers.com",
     "programName": "Technology Leadership Development Program",
     "source": null,
@@ -1406,6 +1656,7 @@
     "name": "MetLife",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.metlife.com/careers",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1416,6 +1667,7 @@
     "name": "Prudential Financial",
     "industry": "Insurance",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.prudential.com",
     "programName": "Technology Leadership Program",
     "source": null,
@@ -1426,6 +1678,7 @@
     "name": "UnitedHealth Group",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.unitedhealthgroup.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1436,6 +1689,7 @@
     "name": "Humana",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.humana.com",
     "programName": "Technology Leadership Development Program",
     "source": null,
@@ -1446,6 +1700,7 @@
     "name": "Elevance Health",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.elevancehealth.com",
     "programName": "Technology Associate Program",
     "source": null,
@@ -1456,6 +1711,7 @@
     "name": "Johnson & Johnson",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.careers.jnj.com",
     "programName": "Technology Leadership Development Program",
     "source": null,
@@ -1466,6 +1722,7 @@
     "name": "Medtronic",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.medtronic.com/careers",
     "programName": "Engineering Leadership Development Program",
     "source": null,
@@ -1476,6 +1733,7 @@
     "name": "GE HealthCare",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.gehealthcare.com/careers",
     "programName": "Edison Engineering Development Program",
     "source": null,
@@ -1486,6 +1744,7 @@
     "name": "Stryker",
     "industry": "Healthcare",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.stryker.com",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1496,6 +1755,7 @@
     "name": "Walmart",
     "industry": "Retail",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://careers.walmart.com",
     "programName": "Software Engineering Development Program",
     "source": null,
@@ -1506,6 +1766,7 @@
     "name": "The Home Depot",
     "industry": "Retail",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.homedepot.com",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1516,6 +1777,7 @@
     "name": "Best Buy",
     "industry": "Retail",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.bestbuy.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1526,6 +1788,7 @@
     "name": "Kroger",
     "industry": "Retail",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.kroger.com",
     "programName": "Technology Leadership Program",
     "source": null,
@@ -1536,6 +1799,7 @@
     "name": "Costco Wholesale",
     "industry": "Retail",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.costco.com/careers.html",
     "programName": "IT Development Program",
     "source": null,
@@ -1546,6 +1810,7 @@
     "name": "TJX Companies",
     "industry": "Retail",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.tjx.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1556,6 +1821,7 @@
     "name": "General Electric",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.ge.com/careers",
     "programName": "Edison Engineering Development Program",
     "source": null,
@@ -1566,6 +1832,7 @@
     "name": "Honeywell",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.honeywell.com",
     "programName": "Technology Leadership Program",
     "source": null,
@@ -1576,6 +1843,7 @@
     "name": "3M",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.3m.com/3M/en_US/careers-us",
     "programName": "Engineering Rotational Program",
     "source": null,
@@ -1586,6 +1854,7 @@
     "name": "John Deere",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.deere.com/en/our-company/careers",
     "programName": "Technology & Engineering Leadership Program",
     "source": null,
@@ -1596,6 +1865,7 @@
     "name": "Emerson Electric",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.emerson.com/en-us/careers",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1606,6 +1876,7 @@
     "name": "Parker Hannifin",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.parker.com/us/en/careers.html",
     "programName": "Engineering Leadership Development Program",
     "source": null,
@@ -1616,6 +1887,7 @@
     "name": "Eaton Corporation",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.eaton.com/us/en-us/company/careers.html",
     "programName": "Engineering Leadership Development Program",
     "source": null,
@@ -1626,6 +1898,7 @@
     "name": "Rockwell Automation",
     "industry": "Industrial",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.rockwellautomation.com/en-us/company/careers.html",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1636,6 +1909,7 @@
     "name": "Boeing",
     "industry": "Aerospace/Defense",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.boeing.com",
     "programName": "Engineering Rotation Program",
     "source": null,
@@ -1646,6 +1920,7 @@
     "name": "Lockheed Martin",
     "industry": "Aerospace/Defense",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.lockheedmartinjobs.com",
     "programName": "Engineering Leadership Development Program",
     "source": null,
@@ -1656,6 +1931,7 @@
     "name": "General Dynamics",
     "industry": "Aerospace/Defense",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.gd.com/careers",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1666,6 +1942,7 @@
     "name": "L3Harris Technologies",
     "industry": "Aerospace/Defense",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.l3harris.com",
     "programName": "Engineering Rotational Program",
     "source": null,
@@ -1676,6 +1953,7 @@
     "name": "Textron",
     "industry": "Aerospace/Defense",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.textron.com/careers",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1686,6 +1964,7 @@
     "name": "Verizon",
     "industry": "Telecom",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.verizon.com/about/careers",
     "programName": "Technology Development Program",
     "source": null,
@@ -1696,6 +1975,7 @@
     "name": "T-Mobile",
     "industry": "Telecom",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.t-mobile.com/careers",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1706,6 +1986,7 @@
     "name": "Comcast",
     "industry": "Telecom",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.comcast.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1716,6 +1997,7 @@
     "name": "Charter Communications",
     "industry": "Telecom",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.spectrum.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1726,6 +2008,7 @@
     "name": "Deloitte",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www2.deloitte.com/us/en/careers.html",
     "programName": "Technology Consulting Rotation",
     "source": null,
@@ -1736,6 +2019,7 @@
     "name": "Accenture",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.accenture.com/us-en/careers",
     "programName": "Technology Development Program",
     "source": null,
@@ -1746,6 +2030,7 @@
     "name": "PwC",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.pwc.com/us/en/careers.html",
     "programName": "Technology Associate Program",
     "source": null,
@@ -1756,6 +2041,7 @@
     "name": "EY",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.ey.com/en_us/careers",
     "programName": "Technology Consulting Program",
     "source": null,
@@ -1766,6 +2052,7 @@
     "name": "KPMG",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.kpmguscareers.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1776,6 +2063,7 @@
     "name": "McKinsey & Company",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.mckinsey.com/careers",
     "programName": "Technology Fellow Program",
     "source": null,
@@ -1786,6 +2074,7 @@
     "name": "Capgemini",
     "industry": "Consulting",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.capgemini.com/careers",
     "programName": "Technology Development Program",
     "source": null,
@@ -1796,6 +2085,7 @@
     "name": "UPS",
     "industry": "Logistics",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.jobs-ups.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1806,6 +2096,7 @@
     "name": "FedEx",
     "industry": "Logistics",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.fedex.com",
     "programName": "Technology Rotational Program",
     "source": null,
@@ -1816,6 +2107,7 @@
     "name": "XPO",
     "industry": "Logistics",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.xpo.com",
     "programName": "Technology Development Program",
     "source": null,
@@ -1826,6 +2118,7 @@
     "name": "J.B. Hunt",
     "industry": "Logistics",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.jbhunt.jobs",
     "programName": "Technology Development Program",
     "source": null,
@@ -1836,6 +2129,7 @@
     "name": "ExxonMobil",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://corporate.exxonmobil.com/careers",
     "programName": "Engineering Rotational Program",
     "source": null,
@@ -1846,6 +2140,7 @@
     "name": "Chevron",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.chevron.com/careers",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1856,6 +2151,7 @@
     "name": "ConocoPhillips",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.conocophillips.com",
     "programName": "Engineering Rotational Program",
     "source": null,
@@ -1866,6 +2162,7 @@
     "name": "SLB (Schlumberger)",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.slb.com",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1876,6 +2173,7 @@
     "name": "NextEra Energy",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.nexteraenergy.com/company/careers.html",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1886,6 +2184,7 @@
     "name": "Duke Energy",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://www.duke-energy.com/our-company/careers",
     "programName": "Engineering Development Program",
     "source": null,
@@ -1896,8 +2195,86 @@
     "name": "Southern Company",
     "industry": "Energy",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://careers.southerncompany.com",
     "programName": "Engineering Rotational Program",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "citadel",
+    "name": "Citadel",
+    "industry": "Quant/Trading",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://www.citadel.com/careers/",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "citadel-securities",
+    "name": "Citadel Securities",
+    "industry": "Quant/Trading",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://www.citadelsecurities.com/careers/",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "two-sigma",
+    "name": "Two Sigma",
+    "industry": "Quant/Trading",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://careers.twosigma.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "hudson-river-trading",
+    "name": "Hudson River Trading",
+    "industry": "Quant/Trading",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://www.hudsonrivertrading.com/careers/",
+    "programName": "Algo Developer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "d-e-shaw",
+    "name": "D. E. Shaw",
+    "industry": "Quant/Trading",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://www.deshaw.com/careers",
+    "programName": "Software Developer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "netflix",
+    "name": "Netflix",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://jobs.netflix.com",
+    "programName": "Software Engineer, New Grad",
+    "source": null,
+    "error": null
+  },
+  {
+    "companyId": "tesla",
+    "name": "Tesla",
+    "industry": "Big Tech",
+    "status": "manual_verification_needed",
+    "isTopCompany": true,
+    "careersUrl": "https://www.tesla.com/careers",
+    "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null
   },
@@ -1906,6 +2283,7 @@
     "name": "Google",
     "industry": "Big Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://careers.google.com",
     "programName": "Software Engineer, New Grad",
     "source": null,
@@ -1916,18 +2294,9 @@
     "name": "Meta",
     "industry": "Big Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.metacareers.com",
     "programName": "Software Engineer, University Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "amazon",
-    "name": "Amazon",
-    "industry": "Big Tech",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.amazon.jobs",
-    "programName": "Software Development Engineer I",
     "source": null,
     "error": null
   },
@@ -1936,18 +2305,9 @@
     "name": "Microsoft",
     "industry": "Big Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://careers.microsoft.com",
     "programName": "Software Engineer, New Grad (MACH)",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "apple",
-    "name": "Apple",
-    "industry": "Big Tech",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://jobs.apple.com",
-    "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null
   },
@@ -1956,6 +2316,7 @@
     "name": "Salesforce",
     "industry": "SaaS",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.salesforce.com/company/careers",
     "programName": "Software Engineer, New Grad",
     "source": null,
@@ -1966,6 +2327,7 @@
     "name": "Oracle",
     "industry": "Enterprise Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.oracle.com/careers",
     "programName": "Software Developer, New Grad",
     "source": null,
@@ -1976,38 +2338,9 @@
     "name": "IBM",
     "industry": "Enterprise Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.ibm.com/careers",
     "programName": "Early Professional Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "cisco",
-    "name": "Cisco",
-    "industry": "Networking",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://jobs.cisco.com",
-    "programName": "Engineering Leadership Development Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "adobe",
-    "name": "Adobe",
-    "industry": "SaaS",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.adobe.com/careers.html",
-    "programName": "Software Development Engineer, New College Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "intel",
-    "name": "Intel",
-    "industry": "Semiconductors",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://jobs.intel.com",
-    "programName": "Technology Rotation Program",
     "source": null,
     "error": null
   },
@@ -2016,18 +2349,9 @@
     "name": "Qualcomm",
     "industry": "Semiconductors",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.qualcomm.com/company/careers",
     "programName": "Engineering Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "nvidia",
-    "name": "NVIDIA",
-    "industry": "Semiconductors",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://www.nvidia.com/en-us/about-nvidia/careers",
-    "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null
   },
@@ -2036,6 +2360,7 @@
     "name": "SAP",
     "industry": "Enterprise Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": false,
     "careersUrl": "https://jobs.sap.com",
     "programName": "Technology Associate Program",
     "source": null,
@@ -2046,6 +2371,7 @@
     "name": "ServiceNow",
     "industry": "SaaS",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://careers.servicenow.com",
     "programName": "Software Engineer, New Grad",
     "source": null,
@@ -2056,17 +2382,8 @@
     "name": "Intuit",
     "industry": "Fintech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://jobs.intuit.com",
-    "programName": "Software Engineer, New Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "ebay",
-    "name": "eBay",
-    "industry": "E-commerce",
-    "status": "manual_verification_needed",
-    "careersUrl": "https://careers.ebayinc.com",
     "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null
@@ -2076,6 +2393,7 @@
     "name": "Uber",
     "industry": "Transportation Tech",
     "status": "manual_verification_needed",
+    "isTopCompany": true,
     "careersUrl": "https://www.uber.com/careers",
     "programName": "Software Engineer, New Grad",
     "source": null,

@@ -14,6 +14,8 @@ export function filterJobs(
     postedWithin,
     eligibility,
     includeNeedsReview,
+    topOnly,
+    roleFamily,
   },
 ) {
   const now = Date.now()
@@ -22,6 +24,9 @@ export function filterJobs(
     if (programType && programType !== 'All' && job.programType !== programType) return false
     if (status && status !== 'All' && job.status !== status) return false
     if (eligibility && eligibility !== 'All' && job.eligibility !== eligibility) return false
+    if (topOnly && !job.isTopCompany) return false
+    // Jobs collected before roleFamily existed are software roles.
+    if (roleFamily && roleFamily !== 'All' && (job.roleFamily ?? 'swe') !== roleFamily) return false
     // "Posting is open" (status) and "candidate is eligible" are kept as
     // separate axes throughout — this toggle hides the uncertain bucket
     // by default without ever touching job.status.

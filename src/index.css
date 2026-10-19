@@ -1,14 +1,95 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+/*
+ * Palette: warm paper, ink, and one muted oxblood accent. The existing
+ * components are written against Tailwind's zinc / indigo / emerald /
+ * amber / red scales, so those scales are redefined here (zinc runs from
+ * ink at 50 to paper at 950) rather than touching every class. No glows,
+ * gradients or saturated colour anywhere.
+ */
+@theme {
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Newsreader', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+
+  --color-zinc-50: #14120f;
+  --color-zinc-100: #1d1a16;
+  --color-zinc-200: #2b2721;
+  --color-zinc-300: #48423a;
+  --color-zinc-400: #6a6358;
+  --color-zinc-500: #877f71;
+  --color-zinc-600: #a39b8b;
+  --color-zinc-700: #d4ccbb;
+  --color-zinc-800: #e5dfd2;
+  --color-zinc-900: #fbf9f4;
+  --color-zinc-950: #f3efe7;
+
+  --color-indigo-200: #6d2a1b;
+  --color-indigo-300: #7a2e1d;
+  --color-indigo-400: #8a3622;
+  --color-indigo-500: #7a2e1d;
+  --color-indigo-600: #65251a;
+
+  --color-emerald-200: #1f4f38;
+  --color-emerald-300: #2c6247;
+  --color-emerald-400: #2f6a4a;
+  --color-emerald-500: #3d7d5a;
+
+  --color-amber-200: #6a4410;
+  --color-amber-300: #85561a;
+  --color-amber-400: #94621f;
+  --color-amber-500: #a8741f;
+
+  --color-red-300: #9c3a2c;
+  --color-red-400: #a6422f;
+  --color-red-500: #b14a35;
+
+  --color-blue-300: #3d5b80;
+  --color-blue-500: #486a93;
+  --color-purple-300: #6a4b7c;
+  --color-purple-400: #75528a;
+  --color-purple-500: #7b5a8c;
+}
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
+  background: #f3efe7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: 'ss01', 'tnum';
+  background: #f3efe7;
+}
+
+h1,
+h2,
+.font-display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: #e4cfc4;
+  color: #1d1a16;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+input[type='checkbox'] {
+  accent-color: #7a2e1d;
+}
+
+:focus-visible {
+  outline: 2px solid #7a2e1d;
+  outline-offset: 2px;
 }
 
 ::-webkit-scrollbar {
@@ -19,9 +100,9 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3f3f46;
+  background: #d4ccbb;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #52525b;
+  background: #b9b09c;
 }

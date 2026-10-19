@@ -857,8 +857,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 120,
-      "detailsFetched": 120
+      "candidatesFound": 119,
+      "detailsFetched": 118
     }
   },
   {
@@ -879,8 +879,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 80,
-      "detailsFetched": 80
+      "candidatesFound": 82,
+      "detailsFetched": 82
     }
   },
   {
@@ -901,8 +901,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 104,
-      "detailsFetched": 104
+      "candidatesFound": 102,
+      "detailsFetched": 102
     }
   },
   {
@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 101,
-      "detailsFetched": 101
+      "candidatesFound": 99,
+      "detailsFetched": 99
     }
   },
   {
@@ -946,7 +946,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 360,
-      "detailsFetched": 74
+      "detailsFetched": 89
     }
   },
   {
@@ -967,8 +967,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 69
+      "candidatesFound": 70,
+      "detailsFetched": 70
     }
   },
   {
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 349,
+      "candidatesFound": 351,
       "detailsFetched": 120
     }
   },
@@ -1011,8 +1011,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 103,
-      "detailsFetched": 103
+      "candidatesFound": 105,
+      "detailsFetched": 105
     }
   },
   {
@@ -1033,8 +1033,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 16
+      "candidatesFound": 72,
+      "detailsFetched": 2
     }
   },
   {
@@ -1055,8 +1055,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 63,
-      "detailsFetched": 63
+      "candidatesFound": 59,
+      "detailsFetched": 58
     }
   },
   {
@@ -1077,30 +1077,30 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 314,
+      "candidatesFound": 312,
       "detailsFetched": 120
     }
   },
   {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
+    "companyId": "cvs-health",
+    "name": "CVS Health",
+    "industry": "Healthcare",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "generalmotors",
-      "wd": "wd5",
-      "site": "Careers_GM"
+      "tenant": "cvshealth",
+      "wd": "wd1",
+      "site": "CVS_Health_Careers"
     },
     "careersUrl": null,
     "programName": null,
-    "coverageComplete": true,
+    "coverageComplete": false,
     "coverageStats": {
       "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 102,
-      "detailsFetched": 70
+      "detailCoverageComplete": false,
+      "candidatesFound": 154,
+      "detailsFetched": 40
     }
   },
   {
@@ -1308,18 +1308,6 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "cvs-health",
-    "name": "CVS Health",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cvshealth -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "caterpillar",
     "name": "Caterpillar",
     "industry": "Industrial",
@@ -1329,6 +1317,18 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:generalmotors -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

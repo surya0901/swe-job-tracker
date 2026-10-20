@@ -857,8 +857,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 119,
-      "detailsFetched": 118
+      "candidatesFound": 120,
+      "detailsFetched": 114
     }
   },
   {
@@ -901,8 +901,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 102,
-      "detailsFetched": 102
+      "candidatesFound": 104,
+      "detailsFetched": 104
     }
   },
   {
@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 99,
-      "detailsFetched": 99
+      "candidatesFound": 98,
+      "detailsFetched": 98
     }
   },
   {
@@ -945,8 +945,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 360,
-      "detailsFetched": 89
+      "candidatesFound": 358,
+      "detailsFetched": 105
     }
   },
   {
@@ -968,7 +968,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 70,
-      "detailsFetched": 70
+      "detailsFetched": 67
     }
   },
   {
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 351,
+      "candidatesFound": 349,
       "detailsFetched": 120
     }
   },
@@ -1011,30 +1011,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 105
-    }
-  },
-  {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "pnc",
-      "wd": "wd5",
-      "site": "External"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 72,
-      "detailsFetched": 2
+      "candidatesFound": 106,
+      "detailsFetched": 106
     }
   },
   {
@@ -1056,7 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 59,
-      "detailsFetched": 58
+      "detailsFetched": 35
     }
   },
   {
@@ -1077,7 +1055,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 312,
+      "candidatesFound": 313,
       "detailsFetched": 120
     }
   },
@@ -1099,8 +1077,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 154,
-      "detailsFetched": 40
+      "candidatesFound": 153,
+      "detailsFetched": 64
     }
   },
   {
@@ -1282,6 +1260,18 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:pnc -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "vanguard",

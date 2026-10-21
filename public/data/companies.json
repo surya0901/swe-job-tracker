@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 91
+      "candidatesFound": 92,
+      "detailsFetched": 92
     }
   },
   {
@@ -945,8 +945,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 353,
-      "detailsFetched": 120
+      "candidatesFound": 352,
+      "detailsFetched": 95
     }
   },
   {
@@ -968,7 +968,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 69,
-      "detailsFetched": 69
+      "detailsFetched": 68
     }
   },
   {
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 358,
+      "candidatesFound": 363,
       "detailsFetched": 120
     }
   },
@@ -1011,30 +1011,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
-    }
-  },
-  {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "pnc",
-      "wd": "wd5",
-      "site": "External"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 72,
-      "detailsFetched": 69
+      "candidatesFound": 84,
+      "detailsFetched": 84
     }
   },
   {
@@ -1056,29 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 60,
-      "detailsFetched": 60
-    }
-  },
-  {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "vanguard",
-      "wd": "wd5",
-      "site": "vanguard_external"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 90
+      "detailsFetched": 55
     }
   },
   {
@@ -1099,30 +1055,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 312,
+      "candidatesFound": 315,
       "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "target",
-    "name": "Target",
-    "industry": "Retail",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "target",
-      "wd": "wd5",
-      "site": "targetcareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 92
     }
   },
   {
@@ -1143,272 +1077,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 177,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "cat",
-      "wd": "wd5",
-      "site": "CaterpillarCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 87,
-      "detailsFetched": 86
-    }
-  },
-  {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "generalmotors",
-      "wd": "wd5",
-      "site": "Careers_GM"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 103,
-      "detailsFetched": 97
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 385,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 438,
-      "detailsFetched": 112
-    }
-  },
-  {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "bah",
-      "wd": "wd1",
-      "site": "BAH_Jobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 111,
-      "detailsFetched": 110
-    }
-  },
-  {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": true,
-    "source": {
-      "adapter": "workday",
-      "tenant": "wf",
-      "wd": "wd1",
-      "site": "WellsFargoJobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 65,
-      "detailsFetched": 56
-    }
-  },
-  {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "usaa",
-      "wd": "wd1",
-      "site": "USAAJOBSWD"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 68
-    }
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 4,
-      "detailsFetched": 4
-    }
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 252,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 92,
-      "detailsFetched": 87
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 64
+      "candidatesFound": 187,
+      "detailsFetched": 28
     }
   },
   {
@@ -1590,6 +1260,186 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:pnc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:vanguard -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:target -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:generalmotors -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:bah -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": true,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:wf -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:usaa -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "goldman-sachs",

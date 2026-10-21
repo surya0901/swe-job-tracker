@@ -945,7 +945,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 352,
+      "candidatesFound": 351,
       "detailsFetched": 95
     }
   },
@@ -968,7 +968,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 69,
-      "detailsFetched": 68
+      "detailsFetched": 67
     }
   },
   {
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 363,
+      "candidatesFound": 361,
       "detailsFetched": 120
     }
   },
@@ -1011,8 +1011,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 84,
-      "detailsFetched": 84
+      "candidatesFound": 81,
+      "detailsFetched": 81
     }
   },
   {
@@ -1034,7 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 60,
-      "detailsFetched": 55
+      "detailsFetched": 54
     }
   },
   {
@@ -1055,7 +1055,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 315,
+      "candidatesFound": 314,
       "detailsFetched": 120
     }
   },
@@ -1078,7 +1078,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
       "candidatesFound": 187,
-      "detailsFetched": 28
+      "detailsFetched": 49
     }
   },
   {

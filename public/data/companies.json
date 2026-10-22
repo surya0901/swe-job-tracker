@@ -858,7 +858,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 120,
-      "detailsFetched": 120
+      "detailsFetched": 104
     }
   },
   {
@@ -945,8 +945,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 350,
-      "detailsFetched": 120
+      "candidatesFound": 348,
+      "detailsFetched": 115
     }
   },
   {
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 361,
+      "candidatesFound": 360,
       "detailsFetched": 120
     }
   },
@@ -1016,28 +1016,6 @@
     }
   },
   {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "pnc",
-      "wd": "wd5",
-      "site": "External"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 73,
-      "detailsFetched": 57
-    }
-  },
-  {
     "companyId": "u-s-bank",
     "name": "U.S. Bank",
     "industry": "Finance",
@@ -1055,30 +1033,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 59,
-      "detailsFetched": 59
-    }
-  },
-  {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "vanguard",
-      "wd": "wd5",
-      "site": "vanguard_external"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 81
+      "candidatesFound": 58,
+      "detailsFetched": 58
     }
   },
   {
@@ -1099,7 +1055,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 313,
+      "candidatesFound": 314,
       "detailsFetched": 120
     }
   },
@@ -1121,96 +1077,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 187,
-      "detailsFetched": 114
+      "candidatesFound": 182,
+      "detailsFetched": 82
     }
   },
   {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "cat",
+      "tenant": "globalhr",
       "wd": "wd5",
-      "site": "CaterpillarCareers"
+      "site": "REC_RTX_Ext_Gateway"
     },
     "careersUrl": null,
     "programName": null,
-    "coverageComplete": true,
+    "coverageComplete": false,
     "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 88,
-      "detailsFetched": 77
-    }
-  },
-  {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "generalmotors",
-      "wd": "wd5",
-      "site": "Careers_GM"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 102,
-      "detailsFetched": 95
-    }
-  },
-  {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "bah",
-      "wd": "wd1",
-      "site": "BAH_Jobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 102
-    }
-  },
-  {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "usaa",
-      "wd": "wd1",
-      "site": "USAAJOBSWD"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 73,
-      "detailsFetched": 66
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 393,
+      "detailsFetched": 84
     }
   },
   {
@@ -1231,8 +1121,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 87,
-      "detailsFetched": 85
+      "candidatesFound": 88,
+      "detailsFetched": 42
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 4,
+      "detailsFetched": 1
     }
   },
   {
@@ -1253,8 +1165,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 256,
-      "detailsFetched": 119
+      "candidatesFound": 254,
+      "detailsFetched": 115
     }
   },
   {
@@ -1276,7 +1188,29 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 89,
-      "detailsFetched": 87
+      "detailsFetched": 34
+    }
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "raymondjames",
+      "wd": "wd1",
+      "site": "RaymondJamesCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 69,
+      "detailsFetched": 23
     }
   },
   {
@@ -1460,6 +1394,30 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:pnc -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:vanguard -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "target",
     "name": "Target",
     "industry": "Retail",
@@ -1472,15 +1430,27 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
+    "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:generalmotors -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
@@ -1496,6 +1466,18 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:bah -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "wells-fargo",
     "name": "Wells Fargo",
     "industry": "Finance",
@@ -1508,27 +1490,15 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:att -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:raymondjames -> HTTP 429",
+    "error": "workday:usaa -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

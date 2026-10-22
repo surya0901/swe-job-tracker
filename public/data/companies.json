@@ -879,8 +879,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 82,
-      "detailsFetched": 82
+      "candidatesFound": 81,
+      "detailsFetched": 81
     }
   },
   {
@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 89
+      "candidatesFound": 88,
+      "detailsFetched": 88
     }
   },
   {
@@ -945,7 +945,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 359,
+      "candidatesFound": 357,
       "detailsFetched": 120
     }
   },
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 364,
+      "candidatesFound": 365,
       "detailsFetched": 120
     }
   },
@@ -1033,8 +1033,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 55
+      "candidatesFound": 73,
+      "detailsFetched": 71
     }
   },
   {
@@ -1057,28 +1057,6 @@
       "detailCoverageComplete": true,
       "candidatesFound": 58,
       "detailsFetched": 58
-    }
-  },
-  {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "vanguard",
-      "wd": "wd5",
-      "site": "vanguard_external"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 84
     }
   },
   {
@@ -1121,52 +1099,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 195,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "generalmotors",
-      "wd": "wd5",
-      "site": "Careers_GM"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 99,
-      "detailsFetched": 99
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 391,
-      "detailsFetched": 120
+      "candidatesFound": 211,
+      "detailsFetched": 115
     }
   },
   {
@@ -1187,8 +1121,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 442,
-      "detailsFetched": 115
+      "candidatesFound": 446,
+      "detailsFetched": 71
     }
   },
   {
@@ -1209,7 +1143,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 111,
+      "candidatesFound": 110,
       "detailsFetched": 99
     }
   },
@@ -1232,7 +1166,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 69,
-      "detailsFetched": 59
+      "detailsFetched": 67
     }
   },
   {
@@ -1253,8 +1187,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 75,
-      "detailsFetched": 71
+      "candidatesFound": 78,
+      "detailsFetched": 69
     }
   },
   {
@@ -1275,30 +1209,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 87,
-      "detailsFetched": 87
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 4,
-      "detailsFetched": 4
+      "candidatesFound": 86,
+      "detailsFetched": 82
     }
   },
   {
@@ -1320,7 +1232,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 251,
-      "detailsFetched": 120
+      "detailsFetched": 114
     }
   },
   {
@@ -1342,29 +1254,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 92,
-      "detailsFetched": 90
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 69
+      "detailsFetched": 41
     }
   },
   {
@@ -1548,6 +1438,18 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:vanguard -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "target",
     "name": "Target",
     "industry": "Retail",
@@ -1569,6 +1471,54 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:generalmotors -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

@@ -501,7 +501,7 @@
     "status": "connected",
     "isTopCompany": false,
     "source": {
-      "adapter": "ashby",
+      "adapter": "greenhouse",
       "token": "ramp"
     },
     "careersUrl": null,
@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 86,
-      "detailsFetched": 86
+      "candidatesFound": 85,
+      "detailsFetched": 85
     }
   },
   {
@@ -945,7 +945,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 349,
+      "candidatesFound": 351,
       "detailsFetched": 120
     }
   },
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 360,
+      "candidatesFound": 363,
       "detailsFetched": 120
     }
   },
@@ -1033,7 +1033,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 72,
+      "candidatesFound": 73,
       "detailsFetched": 72
     }
   },
@@ -1078,7 +1078,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 91
+      "detailsFetched": 89
     }
   },
   {
@@ -1099,30 +1099,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 315,
+      "candidatesFound": 314,
       "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "target",
-    "name": "Target",
-    "industry": "Retail",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "target",
-      "wd": "wd5",
-      "site": "targetcareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 86
     }
   },
   {
@@ -1143,52 +1121,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 180,
-      "detailsFetched": 120
+      "candidatesFound": 186,
+      "detailsFetched": 106
     }
   },
   {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "cat",
-      "wd": "wd5",
-      "site": "CaterpillarCareers"
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
     },
     "careersUrl": null,
     "programName": null,
-    "coverageComplete": true,
+    "coverageComplete": false,
     "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 95,
-      "detailsFetched": 91
-    }
-  },
-  {
-    "companyId": "general-motors",
-    "name": "General Motors",
-    "industry": "Automotive",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "generalmotors",
-      "wd": "wd5",
-      "site": "Careers_GM"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 102,
-      "detailsFetched": 98
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 443,
+      "detailsFetched": 102
     }
   },
   {
@@ -1209,8 +1165,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 104
+      "candidatesFound": 111,
+      "detailsFetched": 102
     }
   },
   {
@@ -1231,8 +1187,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 58
+      "candidatesFound": 71,
+      "detailsFetched": 56
     }
   },
   {
@@ -1253,8 +1209,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 72,
-      "detailsFetched": 66
+      "candidatesFound": 73,
+      "detailsFetched": 62
     }
   },
   {
@@ -1276,29 +1232,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 87,
-      "detailsFetched": 87
-    }
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "lowes",
-      "wd": "wd5",
-      "site": "LWS_External_CS"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 253,
-      "detailsFetched": 120
+      "detailsFetched": 82
     }
   },
   {
@@ -1319,30 +1253,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 91,
-      "detailsFetched": 88
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 69
+      "candidatesFound": 92,
+      "detailsFetched": 90
     }
   },
   {
@@ -1526,6 +1438,42 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:target -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "general-motors",
+    "name": "General Motors",
+    "industry": "Automotive",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:generalmotors -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "rtx-raytheon",
     "name": "RTX (Raytheon)",
     "industry": "Aerospace/Defense",
@@ -1538,18 +1486,6 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:ngc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "at-t",
     "name": "AT&T",
     "industry": "Telecom",
@@ -1559,6 +1495,30 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

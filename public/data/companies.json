@@ -858,7 +858,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 120,
-      "detailsFetched": 120
+      "detailsFetched": 116
     }
   },
   {
@@ -946,7 +946,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 364,
-      "detailsFetched": 120
+      "detailsFetched": 112
     }
   },
   {
@@ -968,7 +968,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 69,
-      "detailsFetched": 67
+      "detailsFetched": 63
     }
   },
   {
@@ -1033,8 +1033,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 55,
-      "detailsFetched": 55
+      "candidatesFound": 54,
+      "detailsFetched": 50
     }
   },
   {
@@ -1077,43 +1077,21 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 202,
-      "detailsFetched": 103
+      "candidatesFound": 201,
+      "detailsFetched": 79
     }
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 398,
-      "detailsFetched": 111
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
+      "tenant": "usaa",
       "wd": "wd1",
-      "site": "Global"
+      "site": "USAAJOBSWD"
     },
     "careersUrl": null,
     "programName": null,
@@ -1121,8 +1099,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 93,
-      "detailsFetched": 53
+      "candidatesFound": 77,
+      "detailsFetched": 36
     }
   },
   {
@@ -1366,6 +1344,18 @@
     "failureCategory": "rate_limited"
   },
   {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
     "companyId": "northrop-grumman",
     "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
@@ -1402,18 +1392,6 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:usaa -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "the-cigna-group",
     "name": "The Cigna Group",
     "industry": "Healthcare",
@@ -1447,6 +1425,18 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:lowes -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

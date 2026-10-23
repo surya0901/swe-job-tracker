@@ -901,8 +901,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 109,
-      "detailsFetched": 109
+      "candidatesFound": 110,
+      "detailsFetched": 110
     }
   },
   {
@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 89,
-      "detailsFetched": 89
+      "candidatesFound": 86,
+      "detailsFetched": 86
     }
   },
   {
@@ -945,8 +945,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 357,
-      "detailsFetched": 113
+      "candidatesFound": 358,
+      "detailsFetched": 120
     }
   },
   {
@@ -1034,7 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 73,
-      "detailsFetched": 64
+      "detailsFetched": 69
     }
   },
   {
@@ -1055,8 +1055,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 58,
-      "detailsFetched": 58
+      "candidatesFound": 57,
+      "detailsFetched": 57
+    }
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "vanguard",
+      "wd": "wd5",
+      "site": "vanguard_external"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 90,
+      "detailsFetched": 70
     }
   },
   {
@@ -1077,7 +1099,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 311,
+      "candidatesFound": 313,
       "detailsFetched": 120
     }
   },
@@ -1099,8 +1121,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 93,
-      "detailsFetched": 91
+      "candidatesFound": 91,
+      "detailsFetched": 85
     }
   },
   {
@@ -1121,30 +1143,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 211,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "cat",
-      "wd": "wd5",
-      "site": "CaterpillarCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 85
+      "candidatesFound": 195,
+      "detailsFetched": 115
     }
   },
   {
@@ -1165,52 +1165,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 99,
-      "detailsFetched": 99
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 399,
-      "detailsFetched": 112
-    }
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "ngc",
-      "wd": "wd1",
-      "site": "Northrop_Grumman_External_Site"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 446,
-      "detailsFetched": 113
+      "candidatesFound": 97,
+      "detailsFetched": 89
     }
   },
   {
@@ -1231,43 +1187,21 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 94
+      "candidatesFound": 109,
+      "detailsFetched": 95
     }
   },
   {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
-    }
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
+      "tenant": "usaa",
       "wd": "wd1",
-      "site": "ATTCollege"
+      "site": "USAAJOBSWD"
     },
     "careersUrl": null,
     "programName": null,
@@ -1275,8 +1209,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 4,
-      "detailsFetched": 2
+      "candidatesFound": 69,
+      "detailsFetched": 60
     }
   },
   {
@@ -1298,29 +1232,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 251,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "statestreet",
-      "wd": "wd1",
-      "site": "Global"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 92,
-      "detailsFetched": 90
+      "detailsFetched": 116
     }
   },
   {
@@ -1342,7 +1254,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 66
+      "detailsFetched": 70
     }
   },
   {
@@ -1526,15 +1438,39 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:vanguard -> HTTP 429",
+    "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:ngc -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
@@ -1550,15 +1486,39 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:usaa -> HTTP 429",
+    "error": "workday:cigna -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:att -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:statestreet -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

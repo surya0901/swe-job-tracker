@@ -858,7 +858,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 120,
-      "detailsFetched": 117
+      "detailsFetched": 120
     }
   },
   {
@@ -901,8 +901,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 110,
-      "detailsFetched": 110
+      "candidatesFound": 109,
+      "detailsFetched": 109
     }
   },
   {
@@ -923,8 +923,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
+      "candidatesFound": 88,
+      "detailsFetched": 88
     }
   },
   {
@@ -945,8 +945,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 359,
-      "detailsFetched": 114
+      "candidatesFound": 361,
+      "detailsFetched": 120
     }
   },
   {
@@ -968,7 +968,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 69,
-      "detailsFetched": 58
+      "detailsFetched": 69
     }
   },
   {
@@ -989,7 +989,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 364,
+      "candidatesFound": 363,
       "detailsFetched": 120
     }
   },
@@ -1011,8 +1011,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 77,
-      "detailsFetched": 77
+      "candidatesFound": 79,
+      "detailsFetched": 79
+    }
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "pnc",
+      "wd": "wd5",
+      "site": "External"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 70,
+      "detailsFetched": 52
     }
   },
   {
@@ -1033,8 +1055,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 56,
-      "detailsFetched": 52
+      "candidatesFound": 55,
+      "detailsFetched": 55
+    }
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "vanguard",
+      "wd": "wd5",
+      "site": "vanguard_external"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 90,
+      "detailsFetched": 70
     }
   },
   {
@@ -1077,21 +1121,21 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 195,
-      "detailsFetched": 89
+      "candidatesFound": 200,
+      "detailsFetched": 115
     }
   },
   {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
     "status": "connected",
     "isTopCompany": false,
     "source": {
       "adapter": "workday",
-      "tenant": "cigna",
-      "wd": "wd5",
-      "site": "cignacareers"
+      "tenant": "bah",
+      "wd": "wd1",
+      "site": "BAH_Jobs"
     },
     "careersUrl": null,
     "programName": null,
@@ -1099,8 +1143,30 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 84,
-      "detailsFetched": 73
+      "candidatesFound": 106,
+      "detailsFetched": 98
+    }
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "usaa",
+      "wd": "wd1",
+      "site": "USAAJOBSWD"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 74,
+      "detailsFetched": 58
     }
   },
   {
@@ -1122,7 +1188,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 4,
-      "detailsFetched": 0
+      "detailsFetched": 3
     }
   },
   {
@@ -1143,8 +1209,30 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 251,
-      "detailsFetched": 111
+      "candidatesFound": 253,
+      "detailsFetched": 110
+    }
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "statestreet",
+      "wd": "wd1",
+      "site": "Global"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 93,
+      "detailsFetched": 83
     }
   },
   {
@@ -1166,7 +1254,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 71
+      "detailsFetched": 62
     }
   },
   {
@@ -1350,30 +1438,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:pnc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:vanguard -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "target",
     "name": "Target",
     "industry": "Retail",
@@ -1434,18 +1498,6 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:bah -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "wells-fargo",
     "name": "Wells Fargo",
     "industry": "Finance",
@@ -1458,27 +1510,15 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:usaa -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:statestreet -> HTTP 429",
+    "error": "workday:cigna -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

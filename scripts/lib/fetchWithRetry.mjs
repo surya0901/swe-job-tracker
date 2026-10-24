@@ -21,7 +21,7 @@ export async function fetchWithRetry(url, options = {}) {
       if (attempt < retries) {
         // A 429 means the host is throttling us, so wait much longer than for
         // a transient network error before the next attempt.
-        const base = err.rateLimited ? 3000 : 400
+        const base = err.rateLimited ? 8000 : 400
         const backoffMs = base * 2 ** attempt + Math.random() * 200
         await new Promise((r) => setTimeout(r, backoffMs))
       }

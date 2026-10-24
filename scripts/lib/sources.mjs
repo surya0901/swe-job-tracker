@@ -13,7 +13,10 @@ import { fetchOracleJobs } from './adapters/oracle.mjs'
 import { fetchEightfoldJobs } from './adapters/eightfold.mjs'
 import { fetchGoldmanJobs } from './adapters/goldman.mjs'
 import { fetchGoogleJobs } from './adapters/google.mjs'
-import { fetchMicrosoftJobs } from './adapters/microsoft.mjs'
+import { fetchEightfoldPcsxJobs } from './adapters/eightfoldPcsx.mjs'
+import { fetchWalmartJobs } from './adapters/walmart.mjs'
+import { fetchIntuitJobs } from './adapters/intuit.mjs'
+import { fetchIbmJobs } from './adapters/ibm.mjs'
 
 // "full" is the thorough collection (deep paging); "watch" is the light
 // newest-first poll used every minute — one or two pages, and Workday
@@ -42,7 +45,11 @@ const ADAPTERS = {
   goldman: (_source, { mode }) =>
     fetchGoldmanJobs({ searchTerms: mode === 'watch' ? ['software engineer'] : ['software engineer', 'engineer'], maxPages: mode === 'watch' ? 1 : 3 }),
   google: (_source, { mode }) => fetchGoogleJobs({ queries: ['software engineer'], maxPages: mode === 'watch' ? 1 : 3 }),
-  microsoft: (_source, { mode }) => fetchMicrosoftJobs({ queries: ['software engineer'], maxPages: mode === 'watch' ? 1 : 4 }),
+  walmart: (_source, { mode }) => fetchWalmartJobs({ maxPages: mode === 'watch' ? 1 : 4 }),
+  intuit: (_source, { mode }) => fetchIntuitJobs({ maxPages: mode === 'watch' ? 1 : 3 }),
+  ibm: (_source, { mode }) => fetchIbmJobs({ maxPages: mode === 'watch' ? 1 : 4 }),
+  eightfoldPcsx: (source, { mode }) =>
+    fetchEightfoldPcsxJobs({ host: source.host, domain: source.domain, queries: ['software engineer'], maxPages: mode === 'watch' ? 1 : 4 }),
   amazon: (_source, { mode }) =>
     fetchAmazonJobs({
       categories: ['software-development', 'systems-quality-security-engineering'],

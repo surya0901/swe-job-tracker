@@ -17,7 +17,12 @@ export const atsCandidateCompanies = [
   // Apple / JPMorgan: each company's own careers-site JSON, verified live.
   ['Apple', 'Big Tech', [{ adapter: 'apple', token: 'apple-jobs' }]],
   ['Google', 'Big Tech', [{ adapter: 'google', token: 'google-careers' }]],
-  ['Microsoft', 'Big Tech', [{ adapter: 'microsoft', token: 'microsoft-careers' }]],
+  ['Microsoft', 'Big Tech', [{ adapter: 'eightfoldPcsx', host: 'apply.careers.microsoft.com', domain: 'microsoft.com' }]],
+  ['Morgan Stanley', 'Finance', [{ adapter: 'eightfoldPcsx', host: 'morganstanley.eightfold.ai', domain: 'morganstanley.com' }]],
+  ['Qualcomm', 'Semiconductors', [{ adapter: 'eightfoldPcsx', host: 'qualcomm.eightfold.ai', domain: 'qualcomm.com' }]],
+  ['IBM', 'Enterprise Tech', [{ adapter: 'ibm', token: 'ibm-careers' }]],
+  ['Intuit', 'Fintech', [{ adapter: 'intuit', token: 'intuit-jobs' }]],
+  ['Walmart', 'Retail', [{ adapter: 'walmart', token: 'walmart-careers' }]],
   ['Netflix', 'Big Tech', [{ adapter: 'eightfold', host: 'explore.jobs.netflix.net', domain: 'netflix.com' }]],
   ['Goldman Sachs', 'Finance', [{ adapter: 'goldman', token: 'gs-higher' }]],
   ['Oracle', 'Enterprise Tech', [{ adapter: 'oracle', host: 'eeho.fa.us2.oraclecloud.com', site: 'CX_45001' }]],
@@ -103,7 +108,6 @@ export const atsCandidateCompanies = [
 // confirmed live feed. Status is always "manual_verification_needed".
 export const manualCompanies = [
   // Finance
-  ['Morgan Stanley', 'Finance', 'https://www.morganstanley.com/careers', 'Technology Analyst Program'],
   ['American Express', 'Finance', 'https://www.americanexpress.com/en-us/careers', 'Technology Rotation Program'],
   ['BNY Mellon', 'Finance', 'https://www.bny.com/careers', 'Technology Early Talent Program'],
   ['Charles Schwab', 'Finance', 'https://www.schwabjobs.com', 'Technology Rotational Program'],
@@ -129,7 +133,6 @@ export const manualCompanies = [
   ['GE HealthCare', 'Healthcare', 'https://www.gehealthcare.com/careers', 'Edison Engineering Development Program'],
   ['Stryker', 'Healthcare', 'https://careers.stryker.com', 'Engineering Development Program'],
   // Retail
-  ['Walmart', 'Retail', 'https://careers.walmart.com', 'Software Engineering Development Program'],
   ['The Home Depot', 'Retail', 'https://careers.homedepot.com', 'Technology Rotational Program'],
   ['Best Buy', 'Retail', 'https://jobs.bestbuy.com', 'Technology Development Program'],
   ['Kroger', 'Retail', 'https://jobs.kroger.com', 'Technology Leadership Program'],
@@ -186,11 +189,8 @@ export const manualCompanies = [
   ['D. E. Shaw', 'Quant/Trading', 'https://www.deshaw.com/careers', 'Software Developer, New Grad'],
   ['Tesla', 'Big Tech', 'https://www.tesla.com/careers', 'Software Engineer, New Grad'],
   ['Meta', 'Big Tech', 'https://www.metacareers.com', 'Software Engineer, University Grad'],
-  ['IBM', 'Enterprise Tech', 'https://www.ibm.com/careers', 'Early Professional Rotational Program'],
-  ['Qualcomm', 'Semiconductors', 'https://www.qualcomm.com/company/careers', 'Engineering Rotational Program'],
   ['SAP', 'Enterprise Tech', 'https://jobs.sap.com', 'Technology Associate Program'],
   ['ServiceNow', 'SaaS', 'https://careers.servicenow.com', 'Software Engineer, New Grad'],
-  ['Intuit', 'Fintech', 'https://jobs.intuit.com', 'Software Engineer, New Grad'],
 ]
 
 // Workday tenant/site pairs. Unlike the ATS candidates above, Workday has

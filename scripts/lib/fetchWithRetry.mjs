@@ -1,5 +1,5 @@
 const DEFAULT_TIMEOUT_MS = 12000
-const DEFAULT_RETRIES = 2
+const DEFAULT_RETRIES = 3
 
 export async function fetchWithRetry(url, options = {}) {
   const { timeoutMs = DEFAULT_TIMEOUT_MS, retries = DEFAULT_RETRIES, ...fetchOptions } = options
@@ -12,14 +12,17 @@ export async function fetchWithRetry(url, options = {}) {
       const res = await fetch(url, { ...fetchOptions, signal: controller.signal })
       clearTimeout(timer)
       if (res.status === 429 || res.status >= 500) {
-        throw new Error(`HTTP ${res.status}`)
+        throw Object.assign(new Error(`HTTP ${res.status}`), { rateLimited: res.status === 429 })
       }
       return res
     } catch (err) {
       clearTimeout(timer)
       lastError = err
       if (attempt < retries) {
-        const backoffMs = 400 * 2 ** attempt + Math.random() * 200
+        // A 429 means the host is throttling us, so wait much longer than for
+        // a transient network error before the next attempt.
+        const base = err.rateLimited ? 3000 : 400
+        const backoffMs = base * 2 ** attempt + Math.random() * 200
         await new Promise((r) => setTimeout(r, backoffMs))
       }
     }

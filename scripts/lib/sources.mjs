@@ -9,6 +9,11 @@ import { fetchWorkdayJobs } from './adapters/workday.mjs'
 import { fetchAmazonJobs } from './adapters/amazon.mjs'
 import { fetchAppleJobs } from './adapters/apple.mjs'
 import { fetchJpmorganJobs } from './adapters/jpmorgan.mjs'
+import { fetchOracleJobs } from './adapters/oracle.mjs'
+import { fetchEightfoldJobs } from './adapters/eightfold.mjs'
+import { fetchGoldmanJobs } from './adapters/goldman.mjs'
+import { fetchGoogleJobs } from './adapters/google.mjs'
+import { fetchMicrosoftJobs } from './adapters/microsoft.mjs'
 
 // "full" is the thorough collection (deep paging); "watch" is the light
 // newest-first poll used every minute — one or two pages, and Workday
@@ -26,6 +31,18 @@ const ADAPTERS = {
     mode === 'watch'
       ? fetchJpmorganJobs({ keywords: ['software engineer', 'technology'], maxPages: 1 })
       : fetchJpmorganJobs({ maxPages: 3 }),
+  oracle: (source, { mode }) =>
+    fetchOracleJobs({
+      host: source.host,
+      site: source.site,
+      keywords: mode === 'watch' ? ['software engineer'] : ['software engineer', 'software engineer program', 'technology'],
+      maxPages: mode === 'watch' ? 1 : 3,
+    }),
+  eightfold: (source, { mode }) => fetchEightfoldJobs({ host: source.host, domain: source.domain, maxPages: mode === 'watch' ? 1 : 4 }),
+  goldman: (_source, { mode }) =>
+    fetchGoldmanJobs({ searchTerms: mode === 'watch' ? ['software engineer'] : ['software engineer', 'engineer'], maxPages: mode === 'watch' ? 1 : 3 }),
+  google: (_source, { mode }) => fetchGoogleJobs({ queries: ['software engineer'], maxPages: mode === 'watch' ? 1 : 3 }),
+  microsoft: (_source, { mode }) => fetchMicrosoftJobs({ queries: ['software engineer'], maxPages: mode === 'watch' ? 1 : 4 }),
   amazon: (_source, { mode }) =>
     fetchAmazonJobs({
       categories: ['software-development', 'systems-quality-security-engineering'],
@@ -36,7 +53,7 @@ const ADAPTERS = {
 // A source's stable identity component for job-id construction: the ATS
 // board token, or the Workday tenant.
 export function sourceKey(source) {
-  return source.token ?? source.tenant
+  return source.token ?? source.tenant ?? source.site ?? source.domain
 }
 
 export function slugify(name) {

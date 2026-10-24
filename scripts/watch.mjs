@@ -15,6 +15,26 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const STATE_PATH = process.env.WATCH_STATE_PATH || path.join(ROOT, '.watch', 'state.json')
 const dry = process.argv.includes('--dry')
 
+if (process.argv.includes('--test')) {
+  const { deliver, configuredChannels } = await import('./lib/notify.mjs')
+  const channels = configuredChannels(process.env)
+  if (channels.length === 0) {
+    console.log('No channel configured: set NTFY_TOPIC and/or RESEND_API_KEY + ALERT_EMAIL_TO.')
+    process.exit(1)
+  }
+  const result = await deliver(
+    {
+      subject: 'Test alert: job alerts are working',
+      text: 'This is a test from your job tracker watcher. Real alerts look like this, with an Apply link.',
+      html: '<p>This is a test from your job tracker watcher. Real alerts look like this, with an Apply link.</p>',
+      firstUrl: process.env.SITE_URL || 'https://surya0901.github.io/swe-job-tracker/',
+    },
+    process.env,
+  )
+  console.log(`Test alert: delivered=[${result.delivered}] failed=${JSON.stringify(result.failed)}`)
+  process.exit(result.delivered.length ? 0 : 1)
+}
+
 async function readJson(p, fallback) {
   try {
     return JSON.parse(await readFile(p, 'utf-8'))

@@ -30,6 +30,99 @@
     "coverageStats": {}
   },
   {
+    "companyId": "google",
+    "name": "Google",
+    "industry": "Big Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "google",
+      "token": "google-careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "microsoft",
+    "name": "Microsoft",
+    "industry": "Big Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "microsoft",
+      "token": "microsoft-careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "netflix",
+    "name": "Netflix",
+    "industry": "Big Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "eightfold",
+      "host": "explore.jobs.netflix.net",
+      "domain": "netflix.com"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "goldman-sachs",
+    "name": "Goldman Sachs",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "goldman",
+      "token": "gs-higher"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "oracle",
+    "name": "Oracle",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "oracle",
+      "host": "eeho.fa.us2.oraclecloud.com",
+      "site": "CX_45001"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "uber",
+    "name": "Uber",
+    "industry": "Mobility Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "oracle",
+      "host": "iaziqy.fa.ocs.oraclecloud.com",
+      "site": "CX_1"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
     "companyId": "jpmorgan-chase",
     "name": "JPMorgan Chase",
     "industry": "Finance",
@@ -994,6 +1087,116 @@
     }
   },
   {
+    "companyId": "salesforce",
+    "name": "Salesforce",
+    "industry": "SaaS",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "salesforce",
+      "wd": "wd12",
+      "site": "External_Career_Site"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 99,
+      "detailsFetched": 99
+    }
+  },
+  {
+    "companyId": "visa",
+    "name": "Visa",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "visa",
+      "wd": "wd5",
+      "site": "Visa"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 94,
+      "detailsFetched": 90
+    }
+  },
+  {
+    "companyId": "paypal",
+    "name": "PayPal",
+    "industry": "Fintech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "paypal",
+      "wd": "wd1",
+      "site": "jobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 72,
+      "detailsFetched": 72
+    }
+  },
+  {
+    "companyId": "citigroup",
+    "name": "Citigroup",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "citi",
+      "wd": "wd5",
+      "site": "2"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 99,
+      "detailsFetched": 98
+    }
+  },
+  {
+    "companyId": "bank-of-america",
+    "name": "Bank of America",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ghr",
+      "wd": "wd1",
+      "site": "Lateral-US"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 277,
+      "detailsFetched": 120
+    }
+  },
+  {
     "companyId": "fidelity-investments",
     "name": "Fidelity Investments",
     "industry": "Finance",
@@ -1034,7 +1237,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 70,
-      "detailsFetched": 68
+      "detailsFetched": 62
     }
   },
   {
@@ -1078,7 +1281,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 89
+      "detailsFetched": 78
     }
   },
   {
@@ -1122,7 +1325,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 98,
-      "detailsFetched": 83
+      "detailsFetched": 96
     }
   },
   {
@@ -1144,7 +1347,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
       "candidatesFound": 197,
-      "detailsFetched": 112
+      "detailsFetched": 120
     }
   },
   {
@@ -1166,7 +1369,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 98,
-      "detailsFetched": 97
+      "detailsFetched": 91
     }
   },
   {
@@ -1188,7 +1391,51 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 97,
-      "detailsFetched": 96
+      "detailsFetched": 97
+    }
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 397,
+      "detailsFetched": 118
+    }
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 444,
+      "detailsFetched": 120
     }
   },
   {
@@ -1210,7 +1457,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 110,
-      "detailsFetched": 107
+      "detailsFetched": 110
     }
   },
   {
@@ -1253,8 +1500,52 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 72,
+      "candidatesFound": 71,
       "detailsFetched": 71
+    }
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 85,
+      "detailsFetched": 85
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 4,
+      "detailsFetched": 4
     }
   },
   {
@@ -1298,7 +1589,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 93,
-      "detailsFetched": 90
+      "detailsFetched": 93
     }
   },
   {
@@ -1320,7 +1611,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 65
+      "detailsFetched": 70
     }
   },
   {
@@ -1504,65 +1795,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:ngc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cigna -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "goldman-sachs",
-    "name": "Goldman Sachs",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.goldmansachs.com/careers",
-    "programName": "New Analyst Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "morgan-stanley",
     "name": "Morgan Stanley",
     "industry": "Finance",
@@ -1570,28 +1802,6 @@
     "isTopCompany": true,
     "careersUrl": "https://www.morganstanley.com/careers",
     "programName": "Technology Analyst Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "bank-of-america",
-    "name": "Bank of America",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://careers.bankofamerica.com",
-    "programName": "Technology Development Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "citigroup",
-    "name": "Citigroup",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://jobs.citi.com",
-    "programName": "Technology Development Program",
     "source": null,
     "error": null
   },
@@ -1624,28 +1834,6 @@
     "status": "manual_verification_needed",
     "isTopCompany": false,
     "careersUrl": "https://www.schwabjobs.com",
-    "programName": "Technology Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "visa",
-    "name": "Visa",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://usa.visa.com/careers.html",
-    "programName": "Technology Engineering Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "paypal",
-    "name": "PayPal",
-    "industry": "Fintech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://careers.pypl.com",
     "programName": "Technology Rotational Program",
     "source": null,
     "error": null
@@ -2377,34 +2565,12 @@
     "error": null
   },
   {
-    "companyId": "netflix",
-    "name": "Netflix",
-    "industry": "Big Tech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://jobs.netflix.com",
-    "programName": "Software Engineer, New Grad",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "tesla",
     "name": "Tesla",
     "industry": "Big Tech",
     "status": "manual_verification_needed",
     "isTopCompany": true,
     "careersUrl": "https://www.tesla.com/careers",
-    "programName": "Software Engineer, New Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "google",
-    "name": "Google",
-    "industry": "Big Tech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://careers.google.com",
     "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null
@@ -2417,39 +2583,6 @@
     "isTopCompany": true,
     "careersUrl": "https://www.metacareers.com",
     "programName": "Software Engineer, University Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "microsoft",
-    "name": "Microsoft",
-    "industry": "Big Tech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://careers.microsoft.com",
-    "programName": "Software Engineer, New Grad (MACH)",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "salesforce",
-    "name": "Salesforce",
-    "industry": "SaaS",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.salesforce.com/company/careers",
-    "programName": "Software Engineer, New Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "oracle",
-    "name": "Oracle",
-    "industry": "Enterprise Tech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.oracle.com/careers",
-    "programName": "Software Developer, New Grad",
     "source": null,
     "error": null
   },
@@ -2504,17 +2637,6 @@
     "status": "manual_verification_needed",
     "isTopCompany": true,
     "careersUrl": "https://jobs.intuit.com",
-    "programName": "Software Engineer, New Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "uber",
-    "name": "Uber",
-    "industry": "Transportation Tech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.uber.com/careers",
     "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null

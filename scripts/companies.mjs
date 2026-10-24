@@ -16,6 +16,12 @@ export const atsCandidateCompanies = [
   ['Amazon', 'Big Tech', [{ adapter: 'amazon', token: 'amazon-jobs' }]],
   // Apple / JPMorgan: each company's own careers-site JSON, verified live.
   ['Apple', 'Big Tech', [{ adapter: 'apple', token: 'apple-jobs' }]],
+  ['Google', 'Big Tech', [{ adapter: 'google', token: 'google-careers' }]],
+  ['Microsoft', 'Big Tech', [{ adapter: 'microsoft', token: 'microsoft-careers' }]],
+  ['Netflix', 'Big Tech', [{ adapter: 'eightfold', host: 'explore.jobs.netflix.net', domain: 'netflix.com' }]],
+  ['Goldman Sachs', 'Finance', [{ adapter: 'goldman', token: 'gs-higher' }]],
+  ['Oracle', 'Enterprise Tech', [{ adapter: 'oracle', host: 'eeho.fa.us2.oraclecloud.com', site: 'CX_45001' }]],
+  ['Uber', 'Mobility Tech', [{ adapter: 'oracle', host: 'iaziqy.fa.ocs.oraclecloud.com', site: 'CX_1' }]],
   ['JPMorgan Chase', 'Finance', [{ adapter: 'jpmorgan', token: 'jpmc-cx-1001' }]],
   // Quant / trading firms — public Greenhouse boards, each returned HTTP
   // 200 with live postings when probed.
@@ -97,15 +103,10 @@ export const atsCandidateCompanies = [
 // confirmed live feed. Status is always "manual_verification_needed".
 export const manualCompanies = [
   // Finance
-  ['Goldman Sachs', 'Finance', 'https://www.goldmansachs.com/careers', 'New Analyst Program'],
   ['Morgan Stanley', 'Finance', 'https://www.morganstanley.com/careers', 'Technology Analyst Program'],
-  ['Bank of America', 'Finance', 'https://careers.bankofamerica.com', 'Technology Development Program'],
-  ['Citigroup', 'Finance', 'https://jobs.citi.com', 'Technology Development Program'],
   ['American Express', 'Finance', 'https://www.americanexpress.com/en-us/careers', 'Technology Rotation Program'],
   ['BNY Mellon', 'Finance', 'https://www.bny.com/careers', 'Technology Early Talent Program'],
   ['Charles Schwab', 'Finance', 'https://www.schwabjobs.com', 'Technology Rotational Program'],
-  ['Visa', 'Finance', 'https://usa.visa.com/careers.html', 'Technology Engineering Rotational Program'],
-  ['PayPal', 'Fintech', 'https://careers.pypl.com', 'Technology Rotational Program'],
   ['Synchrony', 'Finance', 'https://www.synchronycareers.com', 'Technology Leadership Program'],
   ['Discover Financial Services', 'Finance', 'https://jobs.discover.com', 'Technology Development Program'],
   ['Ally Financial', 'Finance', 'https://ally.com/careers', 'Technology Development Program'],
@@ -183,19 +184,13 @@ export const manualCompanies = [
   ['Two Sigma', 'Quant/Trading', 'https://careers.twosigma.com', 'Software Engineer, New Grad'],
   ['Hudson River Trading', 'Quant/Trading', 'https://www.hudsonrivertrading.com/careers/', 'Algo Developer, New Grad'],
   ['D. E. Shaw', 'Quant/Trading', 'https://www.deshaw.com/careers', 'Software Developer, New Grad'],
-  ['Netflix', 'Big Tech', 'https://jobs.netflix.com', 'Software Engineer, New Grad'],
   ['Tesla', 'Big Tech', 'https://www.tesla.com/careers', 'Software Engineer, New Grad'],
-  ['Google', 'Big Tech', 'https://careers.google.com', 'Software Engineer, New Grad'],
   ['Meta', 'Big Tech', 'https://www.metacareers.com', 'Software Engineer, University Grad'],
-  ['Microsoft', 'Big Tech', 'https://careers.microsoft.com', 'Software Engineer, New Grad (MACH)'],
-  ['Salesforce', 'SaaS', 'https://www.salesforce.com/company/careers', 'Software Engineer, New Grad'],
-  ['Oracle', 'Enterprise Tech', 'https://www.oracle.com/careers', 'Software Developer, New Grad'],
   ['IBM', 'Enterprise Tech', 'https://www.ibm.com/careers', 'Early Professional Rotational Program'],
   ['Qualcomm', 'Semiconductors', 'https://www.qualcomm.com/company/careers', 'Engineering Rotational Program'],
   ['SAP', 'Enterprise Tech', 'https://jobs.sap.com', 'Technology Associate Program'],
   ['ServiceNow', 'SaaS', 'https://careers.servicenow.com', 'Software Engineer, New Grad'],
   ['Intuit', 'Fintech', 'https://jobs.intuit.com', 'Software Engineer, New Grad'],
-  ['Uber', 'Transportation Tech', 'https://www.uber.com/careers', 'Software Engineer, New Grad'],
 ]
 
 // Workday tenant/site pairs. Unlike the ATS candidates above, Workday has
@@ -219,6 +214,12 @@ export const workdayCandidateCompanies = [
   ['Cisco', 'Networking', wd('cisco', 'wd5', 'Cisco_Careers')],
   ['eBay', 'E-commerce', wd('ebay', 'wd5', 'apply')],
   ['Capital One', 'Finance', wd('capitalone', 'wd12', 'Capital_One')],
+  // Verified live: each returned HTTP 200 with a real total at verification time.
+  ['Salesforce', 'SaaS', wd('salesforce', 'wd12', 'External_Career_Site')],
+  ['Visa', 'Finance', wd('visa', 'wd5', 'Visa')],
+  ['PayPal', 'Fintech', wd('paypal', 'wd1', 'jobs')],
+  ['Citigroup', 'Finance', wd('citi', 'wd5', '2')],
+  ['Bank of America', 'Finance', wd('ghr', 'wd1', 'Lateral-US')],
   ['Fidelity Investments', 'Finance', wd('fmr', 'wd1', 'FidelityCareers')],
   ['PNC Financial Services', 'Finance', wd('pnc', 'wd5', 'External')],
   ['U.S. Bank', 'Finance', wd('usbank', 'wd1', 'US_Bank_Careers')],

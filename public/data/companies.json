@@ -1034,7 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 70,
-      "detailsFetched": 70
+      "detailsFetched": 69
     }
   },
   {
@@ -1077,8 +1077,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 90,
-      "detailsFetched": 90
+      "candidatesFound": 91,
+      "detailsFetched": 86
     }
   },
   {
@@ -1099,30 +1099,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 309,
+      "candidatesFound": 308,
       "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "target",
-    "name": "Target",
-    "industry": "Retail",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "target",
-      "wd": "wd5",
-      "site": "targetcareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 98,
-      "detailsFetched": 98
     }
   },
   {
@@ -1144,29 +1122,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
       "candidatesFound": 197,
-      "detailsFetched": 120
-    }
-  },
-  {
-    "companyId": "caterpillar",
-    "name": "Caterpillar",
-    "industry": "Industrial",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "cat",
-      "wd": "wd5",
-      "site": "CaterpillarCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 98,
-      "detailsFetched": 97
+      "detailsFetched": 115
     }
   },
   {
@@ -1188,29 +1144,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 97,
-      "detailsFetched": 84
-    }
-  },
-  {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "globalhr",
-      "wd": "wd5",
-      "site": "REC_RTX_Ext_Gateway"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {
-      "listCoverageComplete": false,
-      "detailCoverageComplete": false,
-      "candidatesFound": 397,
-      "detailsFetched": 114
+      "detailsFetched": 97
     }
   },
   {
@@ -1232,7 +1166,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 444,
-      "detailsFetched": 114
+      "detailsFetched": 118
     }
   },
   {
@@ -1254,20 +1188,20 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 110,
-      "detailsFetched": 96
+      "detailsFetched": 102
     }
   },
   {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
     "status": "connected",
-    "isTopCompany": false,
+    "isTopCompany": true,
     "source": {
       "adapter": "workday",
-      "tenant": "usaa",
+      "tenant": "wf",
       "wd": "wd1",
-      "site": "USAAJOBSWD"
+      "site": "WellsFargoJobs"
     },
     "careersUrl": null,
     "programName": null,
@@ -1275,8 +1209,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 73,
-      "detailsFetched": 65
+      "candidatesFound": 63,
+      "detailsFetched": 54
     }
   },
   {
@@ -1298,7 +1232,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 85,
-      "detailsFetched": 75
+      "detailsFetched": 84
     }
   },
   {
@@ -1320,7 +1254,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 4,
-      "detailsFetched": 3
+      "detailsFetched": 4
     }
   },
   {
@@ -1342,7 +1276,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 249,
-      "detailsFetched": 115
+      "detailsFetched": 119
     }
   },
   {
@@ -1386,7 +1320,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 71
+      "detailsFetched": 69
     }
   },
   {
@@ -1570,15 +1504,51 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
     "status": "source_failing",
-    "isTopCompany": true,
+    "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:wf -> HTTP 429",
+    "error": "workday:target -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "caterpillar",
+    "name": "Caterpillar",
+    "industry": "Industrial",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:cat -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:globalhr -> HTTP 429",
+    "failureCategory": "rate_limited"
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "source_failing",
+    "isTopCompany": false,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "workday:usaa -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

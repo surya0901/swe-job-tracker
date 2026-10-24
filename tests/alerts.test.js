@@ -4,6 +4,7 @@ import { classifyEligibility } from '../scripts/lib/eligibility.mjs'
 import { isTopCompany } from '../scripts/bigCompanies.mjs'
 import { deliver, configuredChannels, headerText } from '../scripts/lib/notify.mjs'
 import { runWatch, emptyState } from '../scripts/lib/watch.mjs'
+import { detectLocationScope } from '../scripts/lib/geography.mjs'
 
 const base = {
   id: 'greenhouse:janestreet:1',
@@ -162,5 +163,11 @@ describe('runWatch', () => {
     })
     expect(r.alerts).toHaveLength(1)
     expect(r.state.seen['greenhouse:janestreet:9']).toBeUndefined()
+  })
+})
+
+describe('geography: more countries', () => {
+  it('treats Taiwan as international, not unknown', () => {
+    expect(detectLocationScope('Taiwan')).toBe('International')
   })
 })

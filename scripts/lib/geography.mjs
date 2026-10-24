@@ -36,6 +36,19 @@ const COUNTRY_HINTS = [
   { re: /\b(poland|warsaw)\b/i, country: 'PL' },
   { re: /\b(romania|bucharest)\b/i, country: 'RO' },
   { re: /\b(spain|barcelona|madrid)\b/i, country: 'ES' },
+  { re: /\b(taiwan|taipei)\b/i, country: 'TW' },
+  { re: /\b(korea|seoul)\b/i, country: 'KR' },
+  { re: /\b(hong kong)\b/i, country: 'HK' },
+  { re: /\b(israel|tel aviv)\b/i, country: 'IL' },
+  { re: /\b(uae|dubai|abu dhabi)\b/i, country: 'AE' },
+  { re: /\b(switzerland|zurich)\b/i, country: 'CH' },
+  { re: /\b(sweden|stockholm)\b/i, country: 'SE' },
+  { re: /\b(italy|milan)\b/i, country: 'IT' },
+  { re: /\b(philippines|manila)\b/i, country: 'PH' },
+  { re: /\b(thailand|bangkok)\b/i, country: 'TH' },
+  { re: /\b(vietnam)\b/i, country: 'VN' },
+  { re: /\b(argentina|buenos aires)\b/i, country: 'AR' },
+  { re: /\b(colombia|bogot[aá])\b/i, country: 'CO' },
 ]
 
 function detectSegmentCountry(segment) {

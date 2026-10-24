@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { isAlertWorthy, buildAlertMessage } from '../scripts/lib/alerts.mjs'
 import { classifyEligibility } from '../scripts/lib/eligibility.mjs'
 import { isTopCompany } from '../scripts/bigCompanies.mjs'
-import { deliver, configuredChannels } from '../scripts/lib/notify.mjs'
+import { deliver, configuredChannels, headerText } from '../scripts/lib/notify.mjs'
 import { runWatch, emptyState } from '../scripts/lib/watch.mjs'
 
 const base = {
@@ -81,6 +81,24 @@ describe('notify', () => {
     expect(r.delivered).toEqual(['push'])
     expect(r.failed[0].channel).toBe('email')
     expect(calls).toHaveLength(2)
+  })
+  it('sends push headers that real fetch accepts when the title has non-Latin-1 characters', async () => {
+    let sent
+    // new Headers() enforces the same ByteString rule that made fetch throw in CI.
+    const fetchImpl = async (_url, init) => {
+      sent = new Headers(init.headers)
+      return { ok: true, status: 200 }
+    }
+    const msg = { subject: 'Stripe — Software Engineer, New Grad (Taiwan)', text: 'x', firstUrl: 'https://stripe.com/jobs/ü' }
+    const r = await deliver(msg, { NTFY_TOPIC: 't' }, fetchImpl)
+    expect(r.failed).toEqual([])
+    expect(r.delivered).toEqual(['push'])
+    const b64 = sent.get('Title').match(/^=\?UTF-8\?B\?(.+)\?=$/)[1]
+    expect(Buffer.from(b64, 'base64').toString('utf8')).toBe(msg.subject)
+    expect(sent.get('Click')).toBe('https://stripe.com/jobs/%C3%BC')
+  })
+  it('leaves plain ASCII titles untouched', () => {
+    expect(headerText('3 new roles at Jane Street')).toBe('3 new roles at Jane Street')
   })
 })
 

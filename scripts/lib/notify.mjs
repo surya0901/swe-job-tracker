@@ -27,15 +27,24 @@ async function sendEmail(message, env, fetchImpl) {
   if (!res.ok) throw new Error(`Resend HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`)
 }
 
+// HTTP header values must be Latin-1, so fetch throws on titles like
+// "Stripe — Software Engineer". ntfy decodes RFC 2047 encoded-words, so
+// non-ASCII text goes through as =?UTF-8?B?...?=.
+export function headerText(value) {
+  return /^[\x20-\x7e]*$/.test(value) ? value : `=?UTF-8?B?${Buffer.from(value, 'utf8').toString('base64')}?=`
+}
+
+const asciiUrl = (url) => url.replace(/[^\x21-\x7e]/g, (ch) => encodeURIComponent(ch))
+
 async function sendPush(message, env, fetchImpl) {
   const server = (env.NTFY_SERVER || 'https://ntfy.sh').replace(/\/$/, '')
   const res = await fetchImpl(`${server}/${encodeURIComponent(env.NTFY_TOPIC)}`, {
     method: 'POST',
     headers: {
-      Title: message.subject,
+      Title: headerText(message.subject),
       Priority: 'high',
       Tags: 'briefcase',
-      ...(message.firstUrl ? { Click: message.firstUrl } : {}),
+      ...(message.firstUrl ? { Click: asciiUrl(message.firstUrl) } : {}),
     },
     body: message.text.slice(0, 3500),
   })

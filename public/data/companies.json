@@ -51,12 +51,90 @@
     "status": "connected",
     "isTopCompany": true,
     "source": {
-      "adapter": "microsoft",
-      "token": "microsoft-careers"
+      "adapter": "eightfoldPcsx",
+      "host": "apply.careers.microsoft.com",
+      "domain": "microsoft.com"
     },
     "careersUrl": null,
     "programName": null,
     "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "morgan-stanley",
+    "name": "Morgan Stanley",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "eightfoldPcsx",
+      "host": "morganstanley.eightfold.ai",
+      "domain": "morganstanley.com"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "qualcomm",
+    "name": "Qualcomm",
+    "industry": "Semiconductors",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "eightfoldPcsx",
+      "host": "qualcomm.eightfold.ai",
+      "domain": "qualcomm.com"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "ibm",
+    "name": "IBM",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "ibm",
+      "token": "ibm-careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "intuit",
+    "name": "Intuit",
+    "industry": "Fintech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "intuit",
+      "token": "intuit-jobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
+    "companyId": "walmart",
+    "name": "Walmart",
+    "industry": "Retail",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "walmart",
+      "token": "walmart-careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
     "coverageStats": {}
   },
   {
@@ -951,7 +1029,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 120,
-      "detailsFetched": 120
+      "detailsFetched": 101
     }
   },
   {
@@ -1039,7 +1117,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 364,
-      "detailsFetched": 88
+      "detailsFetched": 116
     }
   },
   {
@@ -1061,7 +1139,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 69,
-      "detailsFetched": 69
+      "detailsFetched": 67
     }
   },
   {
@@ -1109,6 +1187,28 @@
     }
   },
   {
+    "companyId": "visa",
+    "name": "Visa",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "visa",
+      "wd": "wd5",
+      "site": "Visa"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 94,
+      "detailsFetched": 72
+    }
+  },
+  {
     "companyId": "paypal",
     "name": "PayPal",
     "industry": "Fintech",
@@ -1131,6 +1231,28 @@
     }
   },
   {
+    "companyId": "citigroup",
+    "name": "Citigroup",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "citi",
+      "wd": "wd5",
+      "site": "2"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 99,
+      "detailsFetched": 99
+    }
+  },
+  {
     "companyId": "bank-of-america",
     "name": "Bank of America",
     "industry": "Finance",
@@ -1149,7 +1271,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 277,
-      "detailsFetched": 90
+      "detailsFetched": 115
     }
   },
   {
@@ -1171,7 +1293,29 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 80,
-      "detailsFetched": 73
+      "detailsFetched": 75
+    }
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "pnc",
+      "wd": "wd5",
+      "site": "External"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 70,
+      "detailsFetched": 70
     }
   },
   {
@@ -1369,7 +1513,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 444,
-      "detailsFetched": 113
+      "detailsFetched": 120
     }
   },
   {
@@ -1391,7 +1535,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 110,
-      "detailsFetched": 104
+      "detailsFetched": 110
     }
   },
   {
@@ -1413,7 +1557,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 63,
-      "detailsFetched": 47
+      "detailsFetched": 63
     }
   },
   {
@@ -1435,7 +1579,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 68
+      "detailsFetched": 71
     }
   },
   {
@@ -1545,7 +1689,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 68
+      "detailsFetched": 71
     }
   },
   {
@@ -1727,53 +1871,6 @@
     "programName": null,
     "error": "ashby:retool -> Ashby retool: HTTP 404",
     "failureCategory": "not_found"
-  },
-  {
-    "companyId": "visa",
-    "name": "Visa",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:visa -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "citigroup",
-    "name": "Citigroup",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:citi -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:pnc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "morgan-stanley",
-    "name": "Morgan Stanley",
-    "industry": "Finance",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.morganstanley.com/careers",
-    "programName": "Technology Analyst Program",
-    "source": null,
-    "error": null
   },
   {
     "companyId": "american-express",
@@ -2025,17 +2122,6 @@
     "isTopCompany": false,
     "careersUrl": "https://careers.stryker.com",
     "programName": "Engineering Development Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "walmart",
-    "name": "Walmart",
-    "industry": "Retail",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://careers.walmart.com",
-    "programName": "Software Engineering Development Program",
     "source": null,
     "error": null
   },
@@ -2557,28 +2643,6 @@
     "error": null
   },
   {
-    "companyId": "ibm",
-    "name": "IBM",
-    "industry": "Enterprise Tech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.ibm.com/careers",
-    "programName": "Early Professional Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "qualcomm",
-    "name": "Qualcomm",
-    "industry": "Semiconductors",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://www.qualcomm.com/company/careers",
-    "programName": "Engineering Rotational Program",
-    "source": null,
-    "error": null
-  },
-  {
     "companyId": "sap",
     "name": "SAP",
     "industry": "Enterprise Tech",
@@ -2596,17 +2660,6 @@
     "status": "manual_verification_needed",
     "isTopCompany": true,
     "careersUrl": "https://careers.servicenow.com",
-    "programName": "Software Engineer, New Grad",
-    "source": null,
-    "error": null
-  },
-  {
-    "companyId": "intuit",
-    "name": "Intuit",
-    "industry": "Fintech",
-    "status": "manual_verification_needed",
-    "isTopCompany": true,
-    "careersUrl": "https://jobs.intuit.com",
     "programName": "Software Engineer, New Grad",
     "source": null,
     "error": null

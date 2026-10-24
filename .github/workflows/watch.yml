@@ -10,6 +10,11 @@ on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
+    inputs:
+      test:
+        description: 'Send a test alert to every configured channel instead of polling'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -42,7 +47,7 @@ jobs:
           restore-keys: watch-state-
 
       - name: Poll and alert
-        run: node scripts/watch.mjs
+        run: node scripts/watch.mjs ${{ inputs.test && '--test' || '' }}
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}

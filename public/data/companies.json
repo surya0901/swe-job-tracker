@@ -1034,7 +1034,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 70,
-      "detailsFetched": 69
+      "detailsFetched": 57
     }
   },
   {
@@ -1078,7 +1078,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 91,
-      "detailsFetched": 86
+      "detailsFetched": 78
     }
   },
   {
@@ -1104,6 +1104,28 @@
     }
   },
   {
+    "companyId": "target",
+    "name": "Target",
+    "industry": "Retail",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "target",
+      "wd": "wd5",
+      "site": "targetcareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 98,
+      "detailsFetched": 94
+    }
+  },
+  {
     "companyId": "cvs-health",
     "name": "CVS Health",
     "industry": "Healthcare",
@@ -1122,7 +1144,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
       "candidatesFound": 197,
-      "detailsFetched": 115
+      "detailsFetched": 120
     }
   },
   {
@@ -1148,6 +1170,28 @@
     }
   },
   {
+    "companyId": "rtx-raytheon",
+    "name": "RTX (Raytheon)",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "globalhr",
+      "wd": "wd5",
+      "site": "REC_RTX_Ext_Gateway"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 397,
+      "detailsFetched": 109
+    }
+  },
+  {
     "companyId": "northrop-grumman",
     "name": "Northrop Grumman",
     "industry": "Aerospace/Defense",
@@ -1166,7 +1210,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 444,
-      "detailsFetched": 118
+      "detailsFetched": 108
     }
   },
   {
@@ -1188,7 +1232,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 110,
-      "detailsFetched": 102
+      "detailsFetched": 93
     }
   },
   {
@@ -1210,7 +1254,29 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 63,
-      "detailsFetched": 54
+      "detailsFetched": 58
+    }
+  },
+  {
+    "companyId": "usaa",
+    "name": "USAA",
+    "industry": "Insurance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "usaa",
+      "wd": "wd1",
+      "site": "USAAJOBSWD"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 73,
+      "detailsFetched": 62
     }
   },
   {
@@ -1236,28 +1302,6 @@
     }
   },
   {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "att",
-      "wd": "wd1",
-      "site": "ATTCollege"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 4,
-      "detailsFetched": 4
-    }
-  },
-  {
     "companyId": "lowe-s",
     "name": "Lowe's",
     "industry": "Retail",
@@ -1276,7 +1320,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 249,
-      "detailsFetched": 119
+      "detailsFetched": 120
     }
   },
   {
@@ -1298,29 +1342,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 93,
-      "detailsFetched": 90
-    }
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": false,
-    "source": {
-      "adapter": "workday",
-      "tenant": "raymondjames",
-      "wd": "wd1",
-      "site": "RaymondJamesCareers"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 71,
-      "detailsFetched": 69
+      "detailsFetched": 91
     }
   },
   {
@@ -1504,18 +1526,6 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "target",
-    "name": "Target",
-    "industry": "Retail",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:target -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
     "companyId": "caterpillar",
     "name": "Caterpillar",
     "industry": "Industrial",
@@ -1528,27 +1538,27 @@
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "rtx-raytheon",
-    "name": "RTX (Raytheon)",
-    "industry": "Aerospace/Defense",
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:globalhr -> HTTP 429",
+    "error": "workday:att -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {
-    "companyId": "usaa",
-    "name": "USAA",
-    "industry": "Insurance",
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
     "status": "source_failing",
     "isTopCompany": false,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:usaa -> HTTP 429",
+    "error": "workday:raymondjames -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

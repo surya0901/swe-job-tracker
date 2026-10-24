@@ -901,8 +901,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 109,
-      "detailsFetched": 109
+      "candidatesFound": 108,
+      "detailsFetched": 108
     }
   },
   {
@@ -1055,8 +1055,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 54,
-      "detailsFetched": 54
+      "candidatesFound": 56,
+      "detailsFetched": 56
     }
   },
   {
@@ -1122,7 +1122,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 98,
-      "detailsFetched": 94
+      "detailsFetched": 98
     }
   },
   {
@@ -1143,7 +1143,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 198,
+      "candidatesFound": 197,
       "detailsFetched": 120
     }
   },
@@ -1166,7 +1166,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 98,
-      "detailsFetched": 86
+      "detailsFetched": 97
     }
   },
   {
@@ -1188,7 +1188,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 97,
-      "detailsFetched": 92
+      "detailsFetched": 84
     }
   },
   {
@@ -1210,7 +1210,29 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 397,
-      "detailsFetched": 119
+      "detailsFetched": 114
+    }
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 444,
+      "detailsFetched": 114
     }
   },
   {
@@ -1231,30 +1253,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 97
-    }
-  },
-  {
-    "companyId": "wells-fargo",
-    "name": "Wells Fargo",
-    "industry": "Finance",
-    "status": "connected",
-    "isTopCompany": true,
-    "source": {
-      "adapter": "workday",
-      "tenant": "wf",
-      "wd": "wd1",
-      "site": "WellsFargoJobs"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {
-      "listCoverageComplete": true,
-      "detailCoverageComplete": true,
-      "candidatesFound": 64,
-      "detailsFetched": 58
+      "candidatesFound": 110,
+      "detailsFetched": 96
     }
   },
   {
@@ -1275,8 +1275,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 77,
-      "detailsFetched": 70
+      "candidatesFound": 73,
+      "detailsFetched": 65
     }
   },
   {
@@ -1298,7 +1298,29 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 85,
-      "detailsFetched": 85
+      "detailsFetched": 75
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 4,
+      "detailsFetched": 3
     }
   },
   {
@@ -1320,7 +1342,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 249,
-      "detailsFetched": 119
+      "detailsFetched": 115
     }
   },
   {
@@ -1341,8 +1363,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 93
+      "candidatesFound": 93,
+      "detailsFetched": 90
     }
   },
   {
@@ -1364,7 +1386,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 71,
-      "detailsFetched": 70
+      "detailsFetched": 71
     }
   },
   {
@@ -1548,27 +1570,15 @@
     "failureCategory": "not_found"
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
+    "companyId": "wells-fargo",
+    "name": "Wells Fargo",
+    "industry": "Finance",
     "status": "source_failing",
-    "isTopCompany": false,
+    "isTopCompany": true,
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:ngc -> HTTP 429",
-    "failureCategory": "rate_limited"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> HTTP 429",
+    "error": "workday:wf -> HTTP 429",
     "failureCategory": "rate_limited"
   },
   {

@@ -138,22 +138,6 @@
     "coverageStats": {}
   },
   {
-    "companyId": "netflix",
-    "name": "Netflix",
-    "industry": "Big Tech",
-    "status": "connected",
-    "isTopCompany": true,
-    "source": {
-      "adapter": "eightfold",
-      "host": "explore.jobs.netflix.net",
-      "domain": "netflix.com"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {}
-  },
-  {
     "companyId": "goldman-sachs",
     "name": "Goldman Sachs",
     "industry": "Finance",
@@ -1011,6 +995,94 @@
     "coverageStats": {}
   },
   {
+    "companyId": "adobe",
+    "name": "Adobe",
+    "industry": "SaaS",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "adobe",
+      "wd": "wd5",
+      "site": "external_experienced"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 79,
+      "detailsFetched": 79
+    }
+  },
+  {
+    "companyId": "mastercard",
+    "name": "Mastercard",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "mastercard",
+      "wd": "wd1",
+      "site": "CorporateCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 104,
+      "detailsFetched": 104
+    }
+  },
+  {
+    "companyId": "cisco",
+    "name": "Cisco",
+    "industry": "Networking",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "cisco",
+      "wd": "wd5",
+      "site": "Cisco_Careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 364,
+      "detailsFetched": 120
+    }
+  },
+  {
+    "companyId": "ebay",
+    "name": "eBay",
+    "industry": "E-commerce",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ebay",
+      "wd": "wd5",
+      "site": "apply"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 68,
+      "detailsFetched": 68
+    }
+  },
+  {
     "companyId": "capital-one",
     "name": "Capital One",
     "industry": "Finance",
@@ -1051,7 +1123,117 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 95,
-      "detailsFetched": 95
+      "detailsFetched": 90
+    }
+  },
+  {
+    "companyId": "visa",
+    "name": "Visa",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "visa",
+      "wd": "wd5",
+      "site": "Visa"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 101,
+      "detailsFetched": 101
+    }
+  },
+  {
+    "companyId": "citigroup",
+    "name": "Citigroup",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "citi",
+      "wd": "wd5",
+      "site": "2"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 97,
+      "detailsFetched": 97
+    }
+  },
+  {
+    "companyId": "bank-of-america",
+    "name": "Bank of America",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ghr",
+      "wd": "wd1",
+      "site": "Lateral-US"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 258,
+      "detailsFetched": 120
+    }
+  },
+  {
+    "companyId": "pnc-financial-services",
+    "name": "PNC Financial Services",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "pnc",
+      "wd": "wd5",
+      "site": "External"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 71,
+      "detailsFetched": 71
+    }
+  },
+  {
+    "companyId": "vanguard",
+    "name": "Vanguard",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "vanguard",
+      "wd": "wd5",
+      "site": "vanguard_external"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 86,
+      "detailsFetched": 86
     }
   },
   {
@@ -1075,6 +1257,194 @@
       "candidatesFound": 298,
       "detailsFetched": 120
     }
+  },
+  {
+    "companyId": "cvs-health",
+    "name": "CVS Health",
+    "industry": "Healthcare",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "cvshealth",
+      "wd": "wd1",
+      "site": "CVS_Health_Careers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": false,
+      "candidatesFound": 190,
+      "detailsFetched": 112
+    }
+  },
+  {
+    "companyId": "northrop-grumman",
+    "name": "Northrop Grumman",
+    "industry": "Aerospace/Defense",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "ngc",
+      "wd": "wd1",
+      "site": "Northrop_Grumman_External_Site"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 439,
+      "detailsFetched": 120
+    }
+  },
+  {
+    "companyId": "booz-allen-hamilton",
+    "name": "Booz Allen Hamilton",
+    "industry": "Consulting",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "bah",
+      "wd": "wd1",
+      "site": "BAH_Jobs"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 105,
+      "detailsFetched": 104
+    }
+  },
+  {
+    "companyId": "the-cigna-group",
+    "name": "The Cigna Group",
+    "industry": "Healthcare",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "cigna",
+      "wd": "wd5",
+      "site": "cignacareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 79,
+      "detailsFetched": 79
+    }
+  },
+  {
+    "companyId": "at-t",
+    "name": "AT&T",
+    "industry": "Telecom",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "att",
+      "wd": "wd1",
+      "site": "ATTCollege"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 4,
+      "detailsFetched": 1
+    }
+  },
+  {
+    "companyId": "lowe-s",
+    "name": "Lowe's",
+    "industry": "Retail",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "lowes",
+      "wd": "wd5",
+      "site": "LWS_External_CS"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {
+      "listCoverageComplete": false,
+      "detailCoverageComplete": false,
+      "candidatesFound": 242,
+      "detailsFetched": 120
+    }
+  },
+  {
+    "companyId": "state-street",
+    "name": "State Street",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "statestreet",
+      "wd": "wd1",
+      "site": "Global"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 95,
+      "detailsFetched": 95
+    }
+  },
+  {
+    "companyId": "raymond-james",
+    "name": "Raymond James",
+    "industry": "Finance",
+    "status": "connected",
+    "isTopCompany": false,
+    "source": {
+      "adapter": "workday",
+      "tenant": "raymondjames",
+      "wd": "wd1",
+      "site": "RaymondJamesCareers"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": true,
+    "coverageStats": {
+      "listCoverageComplete": true,
+      "detailCoverageComplete": true,
+      "candidatesFound": 70,
+      "detailsFetched": 70
+    }
+  },
+  {
+    "companyId": "netflix",
+    "name": "Netflix",
+    "industry": "Big Tech",
+    "status": "source_failing",
+    "isTopCompany": true,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "eightfold:netflix.com -> HTTP 429",
+    "failureCategory": "rate_limited"
   },
   {
     "companyId": "doordash",
@@ -1269,18 +1639,6 @@
     "failureCategory": "unknown"
   },
   {
-    "companyId": "adobe",
-    "name": "Adobe",
-    "industry": "SaaS",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:adobe -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
     "companyId": "intel",
     "name": "Intel",
     "industry": "Semiconductors",
@@ -1290,54 +1648,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:intel -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "mastercard",
-    "name": "Mastercard",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:mastercard -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "cisco",
-    "name": "Cisco",
-    "industry": "Networking",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cisco -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "ebay",
-    "name": "eBay",
-    "industry": "E-commerce",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:ebay -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "visa",
-    "name": "Visa",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:visa -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
     "failureCategory": "unknown"
   },
   {
@@ -1353,30 +1663,6 @@
     "failureCategory": "unknown"
   },
   {
-    "companyId": "citigroup",
-    "name": "Citigroup",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:citi -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "bank-of-america",
-    "name": "Bank of America",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:ghr -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
     "companyId": "fidelity-investments",
     "name": "Fidelity Investments",
     "industry": "Finance",
@@ -1386,18 +1672,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:fmr -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "pnc-financial-services",
-    "name": "PNC Financial Services",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:pnc -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
     "failureCategory": "unknown"
   },
   {
@@ -1413,18 +1687,6 @@
     "failureCategory": "unknown"
   },
   {
-    "companyId": "vanguard",
-    "name": "Vanguard",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:vanguard -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
     "companyId": "target",
     "name": "Target",
     "industry": "Retail",
@@ -1434,18 +1696,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:target -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "cvs-health",
-    "name": "CVS Health",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cvshealth -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
     "failureCategory": "unknown"
   },
   {
@@ -1485,30 +1735,6 @@
     "failureCategory": "unknown"
   },
   {
-    "companyId": "northrop-grumman",
-    "name": "Northrop Grumman",
-    "industry": "Aerospace/Defense",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:ngc -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "booz-allen-hamilton",
-    "name": "Booz Allen Hamilton",
-    "industry": "Consulting",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:bah -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
     "companyId": "wells-fargo",
     "name": "Wells Fargo",
     "industry": "Finance",
@@ -1530,66 +1756,6 @@
     "careersUrl": null,
     "programName": null,
     "error": "workday:usaa -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "the-cigna-group",
-    "name": "The Cigna Group",
-    "industry": "Healthcare",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:cigna -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "at-t",
-    "name": "AT&T",
-    "industry": "Telecom",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:att -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "lowe-s",
-    "name": "Lowe's",
-    "industry": "Retail",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:lowes -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "state-street",
-    "name": "State Street",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:statestreet -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-    "failureCategory": "unknown"
-  },
-  {
-    "companyId": "raymond-james",
-    "name": "Raymond James",
-    "industry": "Finance",
-    "status": "source_failing",
-    "isTopCompany": false,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "workday:raymondjames -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
     "failureCategory": "unknown"
   },
   {

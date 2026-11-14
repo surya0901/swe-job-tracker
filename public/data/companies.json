@@ -169,6 +169,22 @@
     "coverageStats": {}
   },
   {
+    "companyId": "oracle",
+    "name": "Oracle",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "oracle",
+      "host": "eeho.fa.us2.oraclecloud.com",
+      "site": "CX_45001"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
     "companyId": "uber",
     "name": "Uber",
     "industry": "Mobility Tech",
@@ -1012,8 +1028,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 352,
-      "detailsFetched": 117
+      "candidatesFound": 348,
+      "detailsFetched": 115
     }
   },
   {
@@ -1056,21 +1072,9 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 299,
+      "candidatesFound": 298,
       "detailsFetched": 120
     }
-  },
-  {
-    "companyId": "oracle",
-    "name": "Oracle",
-    "industry": "Enterprise Tech",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "oracle:CX_45001 -> HTTP 503",
-    "failureCategory": "temporarily_unavailable"
   },
   {
     "companyId": "doordash",
@@ -1261,8 +1265,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:nvidia -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:nvidia -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "adobe",
@@ -1273,8 +1277,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:adobe -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:adobe -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "intel",
@@ -1285,8 +1289,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:intel -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:intel -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "mastercard",
@@ -1297,8 +1301,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:mastercard -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:mastercard -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "cisco",
@@ -1309,8 +1313,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:cisco -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:cisco -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "ebay",
@@ -1321,8 +1325,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:ebay -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:ebay -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "visa",
@@ -1333,8 +1337,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:visa -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:visa -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "paypal",
@@ -1345,8 +1349,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:paypal -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:paypal -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "citigroup",
@@ -1357,8 +1361,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:citi -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:citi -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "bank-of-america",
@@ -1369,8 +1373,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:ghr -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:ghr -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "fidelity-investments",
@@ -1381,8 +1385,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:fmr -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:fmr -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "pnc-financial-services",
@@ -1393,8 +1397,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:pnc -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:pnc -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "u-s-bank",
@@ -1405,8 +1409,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:usbank -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:usbank -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "vanguard",
@@ -1417,8 +1421,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:vanguard -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:vanguard -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "target",
@@ -1429,8 +1433,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:target -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:target -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "cvs-health",
@@ -1441,8 +1445,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:cvshealth -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:cvshealth -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "caterpillar",
@@ -1453,8 +1457,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:cat -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:cat -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "general-motors",
@@ -1465,8 +1469,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:generalmotors -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:generalmotors -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "rtx-raytheon",
@@ -1477,8 +1481,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:globalhr -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:globalhr -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "northrop-grumman",
@@ -1489,8 +1493,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:ngc -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:ngc -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "booz-allen-hamilton",
@@ -1501,8 +1505,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:bah -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:bah -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "wells-fargo",
@@ -1513,8 +1517,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:wf -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:wf -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "usaa",
@@ -1525,8 +1529,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:usaa -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:usaa -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "the-cigna-group",
@@ -1537,8 +1541,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:cigna -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:cigna -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "at-t",
@@ -1549,8 +1553,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:att -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:att -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "lowe-s",
@@ -1561,8 +1565,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:lowes -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:lowes -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "state-street",
@@ -1573,8 +1577,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:statestreet -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:statestreet -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "raymond-james",
@@ -1585,8 +1589,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "workday:raymondjames -> HTTP 521",
-    "failureCategory": "temporarily_unavailable"
+    "error": "workday:raymondjames -> Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "failureCategory": "unknown"
   },
   {
     "companyId": "american-express",

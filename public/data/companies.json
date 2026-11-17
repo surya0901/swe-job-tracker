@@ -169,22 +169,6 @@
     "coverageStats": {}
   },
   {
-    "companyId": "oracle",
-    "name": "Oracle",
-    "industry": "Enterprise Tech",
-    "status": "connected",
-    "isTopCompany": true,
-    "source": {
-      "adapter": "oracle",
-      "host": "eeho.fa.us2.oraclecloud.com",
-      "site": "CX_45001"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": false,
-    "coverageStats": {}
-  },
-  {
     "companyId": "uber",
     "name": "Uber",
     "industry": "Mobility Tech",
@@ -1072,8 +1056,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 105
+      "candidatesFound": 106,
+      "detailsFetched": 106
     }
   },
   {
@@ -1094,8 +1078,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 105
+      "candidatesFound": 106,
+      "detailsFetched": 106
     }
   },
   {
@@ -1117,7 +1101,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 365,
-      "detailsFetched": 120
+      "detailsFetched": 110
     }
   },
   {
@@ -1138,8 +1122,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 69
+      "candidatesFound": 68,
+      "detailsFetched": 68
     }
   },
   {
@@ -1160,8 +1144,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 344,
-      "detailsFetched": 96
+      "candidatesFound": 346,
+      "detailsFetched": 110
     }
   },
   {
@@ -1182,8 +1166,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 101,
-      "detailsFetched": 101
+      "candidatesFound": 96,
+      "detailsFetched": 96
     }
   },
   {
@@ -1204,8 +1188,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 90
+      "candidatesFound": 97,
+      "detailsFetched": 97
     }
   },
   {
@@ -1226,8 +1210,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 78,
-      "detailsFetched": 78
+      "candidatesFound": 79,
+      "detailsFetched": 79
     }
   },
   {
@@ -1249,7 +1233,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 97,
-      "detailsFetched": 92
+      "detailsFetched": 97
     }
   },
   {
@@ -1270,7 +1254,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 259,
+      "candidatesFound": 260,
       "detailsFetched": 120
     }
   },
@@ -1292,8 +1276,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 91
+      "candidatesFound": 96,
+      "detailsFetched": 96
     }
   },
   {
@@ -1314,8 +1298,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 71,
-      "detailsFetched": 71
+      "candidatesFound": 70,
+      "detailsFetched": 70
     }
   },
   {
@@ -1336,8 +1320,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 61,
-      "detailsFetched": 61
+      "candidatesFound": 62,
+      "detailsFetched": 62
     }
   },
   {
@@ -1358,8 +1342,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 85,
-      "detailsFetched": 85
+      "candidatesFound": 84,
+      "detailsFetched": 84
     }
   },
   {
@@ -1380,7 +1364,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 293,
+      "candidatesFound": 291,
       "detailsFetched": 120
     }
   },
@@ -1403,7 +1387,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 106,
-      "detailsFetched": 106
+      "detailsFetched": 105
     }
   },
   {
@@ -1424,7 +1408,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 182,
+      "candidatesFound": 192,
       "detailsFetched": 120
     }
   },
@@ -1446,8 +1430,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 92
+      "candidatesFound": 95,
+      "detailsFetched": 95
     }
   },
   {
@@ -1468,7 +1452,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 93,
+      "candidatesFound": 94,
       "detailsFetched": 93
     }
   },
@@ -1490,8 +1474,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 382,
-      "detailsFetched": 120
+      "candidatesFound": 383,
+      "detailsFetched": 118
     }
   },
   {
@@ -1534,8 +1518,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 105,
-      "detailsFetched": 104
+      "candidatesFound": 106,
+      "detailsFetched": 106
     }
   },
   {
@@ -1578,8 +1562,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 74,
-      "detailsFetched": 74
+      "candidatesFound": 75,
+      "detailsFetched": 75
     }
   },
   {
@@ -1600,7 +1584,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 78,
+      "candidatesFound": 79,
       "detailsFetched": 78
     }
   },
@@ -1644,7 +1628,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 239,
+      "candidatesFound": 240,
       "detailsFetched": 120
     }
   },
@@ -1667,7 +1651,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 94,
-      "detailsFetched": 93
+      "detailsFetched": 94
     }
   },
   {
@@ -1688,9 +1672,21 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 68
+      "candidatesFound": 69,
+      "detailsFetched": 69
     }
+  },
+  {
+    "companyId": "oracle",
+    "name": "Oracle",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "isTopCompany": true,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "oracle:CX_45001 -> This operation was aborted",
+    "failureCategory": "timeout"
   },
   {
     "companyId": "doordash",

@@ -169,6 +169,22 @@
     "coverageStats": {}
   },
   {
+    "companyId": "oracle",
+    "name": "Oracle",
+    "industry": "Enterprise Tech",
+    "status": "connected",
+    "isTopCompany": true,
+    "source": {
+      "adapter": "oracle",
+      "host": "eeho.fa.us2.oraclecloud.com",
+      "site": "CX_45001"
+    },
+    "careersUrl": null,
+    "programName": null,
+    "coverageComplete": false,
+    "coverageStats": {}
+  },
+  {
     "companyId": "uber",
     "name": "Uber",
     "industry": "Mobility Tech",
@@ -890,21 +906,6 @@
     "coverageStats": {}
   },
   {
-    "companyId": "palantir-technologies",
-    "name": "Palantir Technologies",
-    "industry": "Enterprise Tech",
-    "status": "connected",
-    "isTopCompany": true,
-    "source": {
-      "adapter": "lever",
-      "token": "palantir"
-    },
-    "careersUrl": null,
-    "programName": null,
-    "coverageComplete": true,
-    "coverageStats": {}
-  },
-  {
     "companyId": "linear",
     "name": "Linear",
     "industry": "SaaS",
@@ -1012,8 +1013,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 120,
-      "detailsFetched": 120
+      "candidatesFound": 119,
+      "detailsFetched": 119
     }
   },
   {
@@ -1078,8 +1079,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 106,
-      "detailsFetched": 106
+      "candidatesFound": 104,
+      "detailsFetched": 104
     }
   },
   {
@@ -1100,8 +1101,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 365,
-      "detailsFetched": 110
+      "candidatesFound": 368,
+      "detailsFetched": 120
     }
   },
   {
@@ -1122,8 +1123,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 68,
-      "detailsFetched": 68
+      "candidatesFound": 67,
+      "detailsFetched": 67
     }
   },
   {
@@ -1144,8 +1145,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 346,
-      "detailsFetched": 110
+      "candidatesFound": 345,
+      "detailsFetched": 101
     }
   },
   {
@@ -1188,8 +1189,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 97,
-      "detailsFetched": 97
+      "candidatesFound": 96,
+      "detailsFetched": 96
     }
   },
   {
@@ -1232,8 +1233,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 97,
-      "detailsFetched": 97
+      "candidatesFound": 96,
+      "detailsFetched": 96
     }
   },
   {
@@ -1254,8 +1255,8 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 260,
-      "detailsFetched": 120
+      "candidatesFound": 259,
+      "detailsFetched": 105
     }
   },
   {
@@ -1276,8 +1277,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 96,
-      "detailsFetched": 96
+      "candidatesFound": 97,
+      "detailsFetched": 83
     }
   },
   {
@@ -1320,8 +1321,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 62,
-      "detailsFetched": 62
+      "candidatesFound": 64,
+      "detailsFetched": 64
     }
   },
   {
@@ -1342,8 +1343,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 84,
-      "detailsFetched": 84
+      "candidatesFound": 86,
+      "detailsFetched": 85
     }
   },
   {
@@ -1364,7 +1365,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 291,
+      "candidatesFound": 294,
       "detailsFetched": 120
     }
   },
@@ -1386,8 +1387,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 106,
-      "detailsFetched": 105
+      "candidatesFound": 104,
+      "detailsFetched": 103
     }
   },
   {
@@ -1408,7 +1409,7 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": false,
-      "candidatesFound": 192,
+      "candidatesFound": 185,
       "detailsFetched": 120
     }
   },
@@ -1431,7 +1432,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 95,
-      "detailsFetched": 95
+      "detailsFetched": 94
     }
   },
   {
@@ -1453,7 +1454,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 94,
-      "detailsFetched": 93
+      "detailsFetched": 94
     }
   },
   {
@@ -1475,7 +1476,7 @@
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
       "candidatesFound": 383,
-      "detailsFetched": 118
+      "detailsFetched": 120
     }
   },
   {
@@ -1496,7 +1497,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 439,
+      "candidatesFound": 437,
       "detailsFetched": 120
     }
   },
@@ -1519,7 +1520,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 106,
-      "detailsFetched": 106
+      "detailsFetched": 105
     }
   },
   {
@@ -1562,8 +1563,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 75,
-      "detailsFetched": 75
+      "candidatesFound": 68,
+      "detailsFetched": 68
     }
   },
   {
@@ -1585,7 +1586,7 @@
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
       "candidatesFound": 79,
-      "detailsFetched": 78
+      "detailsFetched": 79
     }
   },
   {
@@ -1628,7 +1629,7 @@
     "coverageStats": {
       "listCoverageComplete": false,
       "detailCoverageComplete": false,
-      "candidatesFound": 240,
+      "candidatesFound": 239,
       "detailsFetched": 120
     }
   },
@@ -1650,8 +1651,8 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 94,
-      "detailsFetched": 94
+      "candidatesFound": 95,
+      "detailsFetched": 95
     }
   },
   {
@@ -1672,21 +1673,9 @@
     "coverageStats": {
       "listCoverageComplete": true,
       "detailCoverageComplete": true,
-      "candidatesFound": 69,
-      "detailsFetched": 69
+      "candidatesFound": 68,
+      "detailsFetched": 68
     }
-  },
-  {
-    "companyId": "oracle",
-    "name": "Oracle",
-    "industry": "Enterprise Tech",
-    "status": "source_failing",
-    "isTopCompany": true,
-    "source": null,
-    "careersUrl": null,
-    "programName": null,
-    "error": "oracle:CX_45001 -> This operation was aborted",
-    "failureCategory": "timeout"
   },
   {
     "companyId": "doordash",
@@ -1809,6 +1798,18 @@
     "failureCategory": "not_found"
   },
   {
+    "companyId": "palantir-technologies",
+    "name": "Palantir Technologies",
+    "industry": "Enterprise Tech",
+    "status": "source_failing",
+    "isTopCompany": true,
+    "source": null,
+    "careersUrl": null,
+    "programName": null,
+    "error": "lever:palantir -> HTTP 500",
+    "failureCategory": "temporarily_unavailable"
+  },
+  {
     "companyId": "attentive",
     "name": "Attentive",
     "industry": "MarTech",
@@ -1817,8 +1818,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:attentive -> Lever attentive: HTTP 404",
-    "failureCategory": "not_found"
+    "error": "lever:attentive -> This operation was aborted",
+    "failureCategory": "timeout"
   },
   {
     "companyId": "postman",
@@ -1829,8 +1830,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:postman -> Lever postman: HTTP 404",
-    "failureCategory": "not_found"
+    "error": "lever:postman -> This operation was aborted",
+    "failureCategory": "timeout"
   },
   {
     "companyId": "betterment",
@@ -1841,8 +1842,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:betterment -> Lever betterment: HTTP 404",
-    "failureCategory": "not_found"
+    "error": "lever:betterment -> This operation was aborted",
+    "failureCategory": "timeout"
   },
   {
     "companyId": "seatgeek",
@@ -1853,8 +1854,8 @@
     "source": null,
     "careersUrl": null,
     "programName": null,
-    "error": "lever:seatgeek -> Lever seatgeek: HTTP 404",
-    "failureCategory": "not_found"
+    "error": "lever:seatgeek -> This operation was aborted",
+    "failureCategory": "timeout"
   },
   {
     "companyId": "retool",

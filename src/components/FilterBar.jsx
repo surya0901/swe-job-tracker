@@ -24,13 +24,14 @@ export default function FilterBar({
   showStatus = true,
   showAvailability = false,
   showDateFilters = false,
+  showTierToggle = false,
   rightSlot = null,
 }) {
   const update = (key, value) => onChange({ ...filters, [key]: value })
 
   return (
     <div className="flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900 p-3">
-      {showDateFilters && (
+      {showTierToggle && (
         <div className="flex items-center rounded-full border border-zinc-700 p-0.5 text-xs font-medium" role="group" aria-label="Company tier">
           {[
             { v: true, label: 'Top companies' },

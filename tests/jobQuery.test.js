@@ -149,6 +149,12 @@ describe('filterJobs: top companies and role family', () => {
   it('keeps only top-tier companies when topOnly is set', () => {
     expect(filterJobs(jobs, { topOnly: true }).map((j) => j.id)).toEqual(['a', 'c', 'd'])
   })
+  it('splits big companies and everyone else into separate pages', () => {
+    const top = filterJobs(jobs, { tier: 'top' }).map((j) => j.id)
+    const other = filterJobs(jobs, { tier: 'other' }).map((j) => j.id)
+    expect(top).toEqual(['a', 'c', 'd'])
+    expect(other).toEqual(['b'])
+  })
   it('does not filter by tier when topOnly is off', () => {
     expect(filterJobs(jobs, { topOnly: false })).toHaveLength(4)
   })

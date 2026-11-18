@@ -1,7 +1,8 @@
 import { STALE_THRESHOLD_MS } from '../lib/constants'
 
 const VIEWS = [
-  { key: 'openings', label: 'Openings' },
+  { key: 'big', label: 'Big companies' },
+  { key: 'newgrad', label: 'New grad SWE' },
   { key: 'tracker', label: 'Tracker' },
   { key: 'alerts', label: 'Alerts' },
   { key: 'directory', label: 'Directory' },
@@ -19,6 +20,7 @@ export default function TopBar({
   onAddCompany,
   meta,
   stats,
+  newCounts = {},
 }) {
   const isStale =
     meta?.lastSuccessAt && Date.now() - new Date(meta.lastSuccessAt).getTime() > STALE_THRESHOLD_MS
@@ -40,7 +42,7 @@ export default function TopBar({
                 <span className="font-medium text-zinc-200">{stats.employersWithOpenings}</span> employers,{' '}
                 <span className="font-medium text-zinc-200">{meta.counts.supportedEarlyCareerJobs}</span> clearly
                 early-career.
-                {(activeView === 'openings' || activeView === 'tracker') && ` ${stats.resultsAfterFilters} shown with current filters.`}
+                {(activeView === 'big' || activeView === 'newgrad' || activeView === 'tracker') && ` ${stats.resultsAfterFilters} shown with current filters.`}
               </p>
             )}
           </div>
@@ -85,6 +87,11 @@ export default function TopBar({
               }`}
             >
               {v.label}
+              {newCounts[v.key] > 0 && (
+                <span className="ml-1.5 rounded-full bg-emerald-400 px-1.5 py-px text-[10px] font-semibold text-zinc-950">
+                  {newCounts[v.key]} new
+                </span>
+              )}
             </button>
           ))}
         </nav>

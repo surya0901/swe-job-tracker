@@ -19,6 +19,9 @@ export function loadUserData() {
       return {
         overrides: parsed?.overrides ?? {},
         customJobs: Array.isArray(parsed?.customJobs) ? parsed.customJobs : [],
+        // Needed for "new since last visit". Dropping it here meant every
+        // load looked like a first visit, so nothing was ever marked new.
+        lastVisitAt: typeof parsed?.lastVisitAt === 'string' ? parsed.lastVisitAt : null,
       }
     }
   } catch {

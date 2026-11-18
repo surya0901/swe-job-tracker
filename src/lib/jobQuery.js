@@ -15,6 +15,7 @@ export function filterJobs(
     eligibility,
     includeNeedsReview,
     topOnly,
+    tier,
     roleFamily,
   },
 ) {
@@ -25,6 +26,10 @@ export function filterJobs(
     if (status && status !== 'All' && job.status !== status) return false
     if (eligibility && eligibility !== 'All' && job.eligibility !== eligibility) return false
     if (topOnly && !job.isTopCompany) return false
+    // Two separate pages: big companies vs everyone else (new grad SWE at
+    // smaller employers). Jobs without the flag count as not top tier.
+    if (tier === 'top' && !job.isTopCompany) return false
+    if (tier === 'other' && job.isTopCompany) return false
     // Jobs collected before roleFamily existed are software roles.
     if (roleFamily && roleFamily !== 'All' && (job.roleFamily ?? 'swe') !== roleFamily) return false
     // "Posting is open" (status) and "candidate is eligible" are kept as

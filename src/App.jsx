@@ -7,6 +7,7 @@ import DirectoryView from './components/DirectoryView'
 import AlertsView from './components/AlertsView'
 import JobDrawer from './components/JobDrawer'
 import AddJobModal from './components/AddJobModal'
+import NewRolesBanner from './components/NewRolesBanner'
 import { loadCatalog } from './lib/catalog'
 import { loadUserData, saveUserData } from './lib/userData'
 import { mergeJobs } from './lib/mergeJobs'
@@ -65,7 +66,7 @@ export default function App() {
 
   const [userData, setUserData] = useState(() => loadUserData())
 
-  const [activeView, setActiveView] = useState('openings')
+  const [activeView, setActiveView] = useState('big')
   const [boardView, setBoardView] = useState('kanban')
   const [selectedJobId, setSelectedJobId] = useState(null)
   const [showAddModal, setShowAddModal] = useState(false)
@@ -80,6 +81,11 @@ export default function App() {
   // last had the app open — captured once on mount, before we overwrite
   // it, so this session can still show what's new since last time.
   const previousVisitAtRef = useRef(userData.lastVisitAt ?? null)
+  const [since, setSince] = useState(previousVisitAtRef.current)
+  // Roles that showed up while this tab was open (auto refresh picks them
+  // up every few minutes). Seeded on first load so nothing is "new" yet.
+  const knownIdsRef = useRef(null)
+  const [liveNewIds, setLiveNewIds] = useState(() => new Set())
 
   useEffect(() => {
     setUserData((prev) => ({ ...prev, lastVisitAt: new Date().toISOString() }))
@@ -204,14 +210,15 @@ export default function App() {
     [allJobs],
   )
 
-  const activeJobs = activeView === 'openings' ? openJobs : trackedJobs
+  const isOpenings = activeView === 'big' || activeView === 'newgrad'
+  const activeJobs = isOpenings ? openJobs : trackedJobs
 
   // Country/posted-date filters are discovery filters for browsing the
   // catalog — they only apply on Openings. The Tracker always shows every
   // job the user actually chose to track, regardless of where it is or
   // when it was posted.
   const effectiveFilters = useMemo(() => {
-    if (activeView === 'openings') return filters
+    if (isOpenings) return { ...filters, topOnly: false, tier: activeView === 'big' ? 'top' : 'other' }
     const {
       locationScope: _locationScope,
       includeUnknownLocations: _includeUnknownLocations,
@@ -222,7 +229,7 @@ export default function App() {
       ...rest
     } = filters
     return { ...rest, includeNeedsReview: true } // Tracker always shows everything the user tracked
-  }, [filters, activeView])
+  }, [filters, activeView, isOpenings])
 
   const filtered = useMemo(
     () => filterJobs(activeJobs, { search, ...effectiveFilters }),
@@ -232,11 +239,65 @@ export default function App() {
   const paged = useMemo(() => paginate(sorted, page, PAGE_SIZE), [sorted, page])
 
   const newJobIds = useMemo(() => {
-    const since = previousVisitAtRef.current
-    if (!since) return new Set() // first-ever visit: nothing is "new" yet
+    const ids = new Set(liveNewIds)
+    if (!since) return ids // first-ever visit: nothing is "new" yet
     const sinceMs = new Date(since).getTime()
-    return new Set(openJobs.filter((j) => new Date(j.firstSeenAt).getTime() > sinceMs).map((j) => j.id))
-  }, [openJobs])
+    for (const j of openJobs) if (new Date(j.firstSeenAt).getTime() > sinceMs) ids.add(j.id)
+    return ids
+  }, [openJobs, since, liveNewIds])
+
+  // What deserves a heads up: open, software, and confidently early career
+  // (the uncertain "possibly eligible" bucket is still marked New in the
+  // list, just not announced).
+  const alertJobs = useMemo(
+    () =>
+      openJobs
+        .filter((j) => newJobIds.has(j.id) && isAlertWorthy(j))
+        .sort((a, b) => Number(!!b.isTopCompany) - Number(!!a.isTopCompany)),
+    [openJobs, newJobIds],
+  )
+  const newCounts = useMemo(
+    () => ({
+      big: alertJobs.filter((j) => j.isTopCompany).length,
+      newgrad: alertJobs.filter((j) => !j.isTopCompany).length,
+    }),
+    [alertJobs],
+  )
+
+  useEffect(() => {
+    if (!catalog?.jobs) return
+    const ids = catalog.jobs.map((j) => j.id)
+    if (!knownIdsRef.current) {
+      knownIdsRef.current = new Set(ids)
+      return
+    }
+    const known = knownIdsRef.current
+    const added = catalog.jobs.filter((j) => !known.has(j.id) && j.status !== 'closed')
+    ids.forEach((id) => known.add(id))
+    if (!added.length) return
+    setLiveNewIds((prev) => new Set([...prev, ...added.map((j) => j.id)]))
+    const worthy = added.filter(isAlertWorthy)
+    if (worthy.length && typeof Notification !== 'undefined' && Notification.permission === 'granted') {
+      const top = worthy.find((j) => j.isTopCompany) ?? worthy[0]
+      try {
+        const n = new Notification(
+          worthy.length === 1 ? `New role: ${top.companyName}` : `${worthy.length} new roles just dropped`,
+          { body: `${top.companyName} ${top.title}`, tag: 'swe-tracker-new' },
+        )
+        n.onclick = () => {
+          window.focus()
+          if (top.applyUrl) window.open(top.applyUrl, '_blank', 'noopener')
+        }
+      } catch {
+        /* some browsers only allow notifications from a service worker */
+      }
+    }
+  }, [catalog])
+
+  const markAllSeen = () => {
+    setSince(new Date().toISOString())
+    setLiveNewIds(new Set())
+  }
 
   const stats = useMemo(() => {
     const employerIds = new Set(openJobs.map((j) => j.companyId))
@@ -250,6 +311,7 @@ export default function App() {
   useEffect(() => {
     setPage(1)
   }, [search, filters, activeView])
+
 
   const updateJob = (id, patch) => {
     setUserData((prev) => {
@@ -324,6 +386,7 @@ export default function App() {
         onAddCompany={() => setShowAddModal(true)}
         meta={catalog?.meta ?? null}
         stats={stats}
+        newCounts={newCounts}
       />
 
       <main className="mx-auto max-w-7xl px-6 py-8">
@@ -336,6 +399,15 @@ export default function App() {
             is safe in your browser — try Refresh Openings, or check back after the next
             scheduled collection run.
           </div>
+        )}
+
+        {(isOpenings || activeView === 'tracker') && (
+          <NewRolesBanner
+            jobs={alertJobs}
+            onOpen={(job) => setSelectedJobId(job.id)}
+            onDismiss={markAllSeen}
+            onShowPage={setActiveView}
+          />
         )}
 
         {activeView === 'alerts' ? (
@@ -354,7 +426,7 @@ export default function App() {
               shows jobs you've actually chosen to track.
             </p>
             <button
-              onClick={() => setActiveView('openings')}
+              onClick={() => setActiveView('newgrad')}
               className="mt-2 rounded-md bg-indigo-500 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-400"
             >
               Browse openings
@@ -369,8 +441,8 @@ export default function App() {
               search={search}
               onSearchChange={setSearch}
               showStatus={activeView === 'tracker'}
-              showAvailability={activeView === 'openings'}
-              showDateFilters={activeView === 'openings'}
+              showAvailability={isOpenings}
+              showDateFilters={isOpenings}
               rightSlot={
                 activeView === 'tracker' ? (
                   <div className="flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-900 p-0.5">
@@ -403,7 +475,7 @@ export default function App() {
                 totalCount={sorted.length}
                 onOpen={(job) => setSelectedJobId(job.id)}
                 onStatusChange={(id, status) => updateJob(id, { status })}
-                showTrackAction={activeView === 'openings'}
+                showTrackAction={isOpenings}
                 onTrack={trackJob}
                 sortKey={sortKey}
                 onSortChange={setSortKey}
@@ -429,4 +501,16 @@ export default function App() {
       {showAddModal && <AddJobModal onClose={() => setShowAddModal(false)} onAdd={addCustomJob} />}
     </div>
   )
+}
+
+const US_HINT = /united states|\busa?\b|\bremote\b|,\s*(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIVY])\b/i
+
+function isAlertWorthy(job) {
+  if (job.status === 'closed' || job.verified === false) return false
+  if (job.reviewState === 'needs_review' || job.eligibility === 'possibly_eligible') return false
+  if (job.locationScope === 'International') return false
+  // "Unknown" often hides plainly foreign cities, so only announce those
+  // when the text itself looks US or remote.
+  if (job.locationScope === 'Unknown' && !US_HINT.test(job.location || '')) return false
+  return (job.roleFamily ?? 'swe') === 'swe'
 }

@@ -54,6 +54,9 @@ jobs:
       - name: Collect job postings
         run: npm run collect
 
+      - name: Build the daily apply feed for pyforge
+        run: node scripts/applyFeed.mjs
+
       - name: Run tests
         run: npm test
 
